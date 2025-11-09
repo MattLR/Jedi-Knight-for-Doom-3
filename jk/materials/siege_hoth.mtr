@@ -1,0 +1,291 @@
+textures/factory/blastshield
+{
+    diffusemap textures/factory/blastshield
+}
+
+textures/factory/crate_trim5
+{
+    diffusemap textures/factory/crate_trim5
+}
+
+textures/factory/crate_trim6
+{
+    diffusemap textures/factory/crate_trim6
+}
+
+textures/factory/crate_trim7
+{
+    diffusemap textures/factory/crate_trim7
+}
+
+textures/factory/largepipe4
+{
+    diffusemap textures/factory/largepipe4
+}
+
+textures/hoth/basic2_vertex
+{
+    diffusemap textures/hoth/basic2_vertex
+}
+
+textures/hoth/bed_cushion_wall
+{
+    diffusemap textures/hoth/bed_cushion_wall
+}
+
+textures/hoth/blast_panel
+{
+	qer_editorimage	textures/hoth/blast_panel
+
+       diffusemap textures/imperial/etest3
+	{
+        map textures/hoth/blast_panel
+        blend GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+    }
+}
+
+textures/hoth/copper_pipe_nospec
+{
+    diffusemap textures/hoth/copper_pipe_nospec
+}
+
+textures/hoth/crate1
+{
+    diffusemap textures/hoth/crate1
+}
+
+textures/hoth/crate1b_vertex
+{
+    diffusemap textures/hoth/crate1b_vertex
+}
+
+textures/hoth/cut_ice_phong
+{
+    diffusemap textures/hoth/cut_ice_phong
+}
+
+textures/hoth/door_02_onoff
+{
+    diffusemap textures/hoth/door_02_onoff
+}
+
+textures/hoth/exit_beam
+{
+    diffusemap textures/hoth/exit_beam
+}
+
+textures/hoth/exit_beam_side
+{
+    diffusemap textures/hoth/exit_beam_side
+}
+
+textures/hoth/exit_plate
+{
+    diffusemap textures/hoth/exit_plate
+}
+
+textures/hoth/exit_trim
+{
+    diffusemap textures/hoth/exit_trim
+}
+
+textures/hoth/grey_snow_phong
+{
+	qer_editorimage	textures/hoth/h_floor.tga
+	
+    diffusemap textures/hoth/h_floor
+}
+
+textures/hoth/h_basicwall_2
+{
+    diffusemap textures/hoth/h_basicwall_2
+}
+
+textures/hoth/h_control_01
+{
+    diffusemap textures/hoth/h_control_01
+}
+
+textures/hoth/h_control_03
+{
+    diffusemap textures/hoth/h_control_03
+}
+
+textures/hoth/h_control_04
+{
+    diffusemap textures/hoth/h_control_04
+}
+
+textures/hoth/h_control_metal
+{
+    diffusemap textures/hoth/h_control_metal
+}
+
+textures/hoth/h_door2_onoff
+{
+    diffusemap textures/hoth/h_door2_onoff
+}
+
+textures/hoth/h_floor_01
+{
+    diffusemap textures/hoth/h_floor_01
+}
+
+textures/hoth/h_floor_02
+{
+    diffusemap textures/hoth/h_floor_02
+}
+
+textures/hoth/h_floor_03
+{
+    diffusemap textures/hoth/h_floor_03
+}
+
+textures/hoth/h_tile_02
+{
+    diffusemap textures/hoth/h_tile_02
+}
+
+textures/hoth/h_wall_01
+{
+    diffusemap textures/hoth/h_wall_01
+}
+
+textures/hoth/h_wall_02
+{
+    diffusemap textures/hoth/h_wall_02
+}
+
+textures/hoth/h_wall_03
+{
+    diffusemap textures/hoth/h_wall_03
+}
+
+textures/hoth/h_wall_04b
+{
+    diffusemap textures/hoth/h_wall_04b
+}
+
+textures/hoth/ion_panel_04
+{
+    diffusemap textures/hoth/ion_panel_04
+}
+
+textures/hoth/ion_panel_07
+{
+    diffusemap textures/hoth/ion_panel_07
+}
+
+textures/hoth/ion_screen_03
+{
+    diffusemap textures/hoth/ion_screen_03
+}
+
+textures/hoth/light_01b
+{
+    diffusemap textures/hoth/light_01b
+}
+
+textures/hoth/light_ceiling
+{
+    diffusemap textures/hoth/light_ceiling
+}
+
+textures/hoth/lights_tube
+{
+    diffusemap textures/hoth/lights_tube
+}
+
+textures/hoth/metal_lg_dk_vertex
+{
+    diffusemap textures/hoth/metal_lg_dk_vertex
+}
+
+textures/hoth/metal_lg_lt_vertex
+{
+    diffusemap textures/hoth/metal_lg_lt_vertex
+}
+
+textures/hoth/trim_01
+{
+    diffusemap textures/hoth/trim_01
+}
+
+textures/imp_mine/blastdoor_piece
+{
+    diffusemap textures/imp_mine/blastdoor_piece
+}
+
+textures/impdetention/light_blue
+{
+    diffusemap textures/impdetention/light_blue
+}
+
+textures/impdetention/metalpanel1c
+{
+    diffusemap textures/impdetention/metalpanel1c
+}
+
+textures/imperial/imp_forcefield
+{
+    diffusemap textures/imperial/imp_forcefield
+}
+
+textures/kejim/grate02
+{
+    diffusemap textures/kejim/grate02
+}
+
+textures/kejim/redlights
+{
+    diffusemap textures/kejim/redlights
+}
+
+textures/kejim/wallpanel11
+{
+    diffusemap textures/kejim/wallpanel11
+}
+
+textures/rocky_ruins/arrow1
+{
+    diffusemap textures/rocky_ruins/arrow1
+}
+
+textures/rocky_ruins/pipe
+{
+    diffusemap textures/rocky_ruins/pipe
+}
+
+textures/siege/hoth_cliff1
+{
+	qer_editorimage	textures/hoth/mp_rock
+
+    diffusemap textures/hoth/mp_rock
+}
+
+textures/siege/ice_phong
+{
+    diffusemap textures/siege/ice_phong
+}
+
+textures/siege/outgroundlightmap
+{
+    diffusemap textures/siege/outgroundlightmap
+}
+
+textures/siege/snowwallphong2
+{
+	qer_editorimage	textures/hoth/h_basicwall.tga
+
+    diffusemap textures/hoth/h_basicwall
+}
+
+textures/yavin/map
+{
+    diffusemap textures/yavin/map
+}
+siege1/terrain
+{
+    diffusemap textures/hoth/h_outground
+}
+

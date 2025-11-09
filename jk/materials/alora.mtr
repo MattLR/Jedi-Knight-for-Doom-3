@@ -1,0 +1,452 @@
+models/players/alora/alora_torso
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora/alora_torso.jpg
+
+}
+
+models/players/alora/alora_arms
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora/alora_arms.jpg
+
+}
+
+models/players/alora/alora_hands
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora/alora_hands.jpg
+}
+
+models/players/alora/alora_legs
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora/alora_legs.jpg
+
+}
+models/players/alora2/alora2_head
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_head.jpg
+
+}
+models/players/alora2/alora2_tentacles
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_tentacles.jpg
+
+}
+models/players/alora2/alora2_forehead
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_forehead.jpg
+
+}
+models/players/alora2/alora2_face
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_face.jpg
+
+}
+
+models/players/alora/alora_teeth
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora/alora_teeth.jpg
+
+}
+
+models/players/alora2/alora2_teeth
+{
+       noSelfShadow
+		unsmoothedTangents
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_teeth.jpg
+
+}
+
+models/players/alora2/alora2_torso
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_torso.jpg
+
+}
+
+models/players/alora/alora2_head
+{
+       	noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora/alora2_head.jpg
+
+}
+models/players/alora2/alora2_torso_arms
+{
+       		noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_torso_arms
+}
+models/players/alora2/alora2_torso_cuffs
+{
+       	noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_torso_cuffs
+}
+models/players/alora2/alora2_torso_hands
+{
+       	noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_torso_hands
+}
+
+models/players/alora2/alora2_legs
+{
+       noSelfShadow
+		unsmoothedTangents
+		flesh
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/alora2/alora2_legs.jpg
+
+}
+
+models/players/stormtrooper/torso_legs
+{
+       noSelfShadow
+		unsmoothedTangents
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/stormtrooper/torso_legs.jpg
+	specularmap models/players/stormtrooper/torso_legs_spec.png
+
+}
+
+models/players/stormtrooper/helmet
+{
+       noSelfShadow
+		unsmoothedTangents
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/stormtrooper/helmet.jpg
+	specularmap 	models/players/stormtrooper/helmet_spec.png
+}
+
+models/players/stormtrooper/armor
+{
+       noSelfShadow
+		unsmoothedTangents
+		forceOverlays
+		clamp
+		collision
+
+        diffusemap	  models/players/stormtrooper/armor.jpg
+	specularmap 	models/players/stormtrooper/armor_spec.jpg
+
+}
+
+models/weapons2/blaster_rifle/blaster_r
+{
+
+        diffusemap	  models/weapons2/blaster_rifle/blaster_r
+	specularmap	models/weapons2/blaster_rifle/blaster_r_spec
+}
+models/weapons2/blaster_rifle/scope
+{
+
+        diffusemap	  models/weapons2/blaster_rifle/scope
+	specularmap	models/weapons2/blaster_rifle/scope_spec
+}
+models/weapons2/blaster_rifle/blaster_w
+{
+
+        diffusemap	  models/weapons2/blaster_rifle/blaster_w
+	//specularmap	models/weapons2/blaster_rifle/scope_spec
+}
+models/weapons2/bowcaster/bowcaster_w
+{
+
+        diffusemap	  models/weapons2/bowcaster/bowcaster_w
+	//specularmap	models/weapons2/blaster_rifle/scope_spec
+}
+models/weapons2/blaster_pistol/blaster_pistol_inview_alpha
+{
+	specularmap models/weapons2/blaster_pistol/w_suppressor_spec
+	{
+	blend diffusemap
+	map models/weapons2/blaster_pistol/blaster_pistol_inview_alpha
+	alphatest 0.5
+	}
+}
+models/weapons2/blaster_pistol/blaster_pistol_inview
+{
+	diffusemap models/weapons2/blaster_pistol/blaster_pistol_inview
+	specularmap models/weapons2/blaster_pistol/blaster_pistol_inview
+
+}
+models/weapons2/blaster_pistol/blaster_pistol_inworld
+{
+	diffusemap models/weapons2/blaster_pistol/blaster_pistol_inworld
+}
+models/players/jan/accesories
+{
+	diffusemap models/players/jan/accesories
+}
+models/players/jan/vest
+{
+	diffusemap models/players/jan/vest
+}
+models/players/jan/torso
+{
+	diffusemap models/players/jan/torso
+}
+models/players/jan/l_hand
+{
+	diffusemap models/players/jan/l_hand
+}
+models/players/jan/head
+{
+	diffusemap models/players/jan/head
+}
+models/players/jan/face
+{
+	diffusemap models/players/jan/face
+}
+models/players/jan/legs
+{
+	diffusemap models/players/jan/legs
+}
+models/players/kyle/mouth_eyes
+{
+	diffusemap models/players/kyle/mouth_eyes
+}
+models/weapons2/bowcaster/bowcaster
+{
+	diffusemap models/weapons2/bowcaster/bowcaster
+	specularmap models/weapons2/bowcaster/bow_caster_spec
+}
+models/weapons2/heavy_repeater/heavy_repeater
+{
+	diffusemap models/weapons2/heavy_repeater/heavy_repeater
+	specularmap models/weapons2/heavy_repeater/heavy_repeater_spec
+}
+models/weapons2/heavy_repeater/heavy_repeater_w
+{
+	diffusemap models/weapons2/heavy_repeater/heavy_repeater_w
+}
+models/weapons2/merr_sonn/merr_sonn_inview
+{
+	diffusemap models/weapons2/merr_sonn/merr_sonn_inview
+	specularmap models/weapons2/merr_sonn/merr_sonn_inview_spec
+}
+models/weapons2/merr_sonn/merr_w
+{
+	diffusemap models/weapons2/merr_sonn/merr_w
+}
+models/weapons2/disruptor/disruptor
+{
+	diffusemap models/weapons2/disruptor/disruptor
+	specularmap models/weapons2/disruptor/disruptor_spec
+}
+models/weapons2/disruptor/hand
+{
+	diffusemap models/weapons2/disruptor/hand
+}
+models/weapons2/disruptor/disruptor_w
+{
+	diffusemap models/weapons2/disruptor/disruptor_w
+}
+models/weapons2/golan_arms/golan_arms
+{
+	diffusemap models/weapons2/golan_arms/golan_arms
+	specularmap models/weapons2/golan_arms/golan_arms_spec
+}
+models/weapons2/golan_arms/canister2
+{
+	diffusemap models/weapons2/golan_arms/canister2
+	specularmap models/weapons2/golan_arms/canister2_spec
+}
+models/weapons2/golan_arms/canister_w
+{
+	diffusemap models/weapons2/golan_arms/canister_w
+}
+models/weapons2/concussion/rifle_inview
+{
+	diffusemap models/weapons2/concussion/rifle_inview
+	specularmap models/weapons2/concussion/concussion_rifle_spec
+}
+models/weapons2/concussion/rifle_energy
+{
+    {
+        map models/weapons2/concussion/power32
+	scroll 0, time*6 //tcMod scroll 0 6
+    }
+    {
+        map models/weapons2/concussion/power38
+	blend GL_DST_COLOR, GL_SRC_ALPHA
+        scroll time*8, time*1//tcMod scroll 8 1
+    }
+}
+models/weapons2/demp2/demp2
+{
+	diffusemap models/weapons2/demp2/demp2
+	specularmap models/weapons2/demp2/demp2_spec
+}
+models/weapons2/demp2/demp2_w
+{
+	diffusemap models/weapons2/demp2/demp2_w
+}
+models/weapons2/saber/saber
+{
+	diffusemap models/weapons2/saber/saber
+	specularmap models/weapons2/saber/saber_spec
+}
+models/players/kyle/kyle_legs
+{
+	diffusemap models/players/kyle/kyle_legs
+}
+models/players/kyle/kyle_torso
+{
+	diffusemap models/players/kyle/kyle_torso
+}
+models/players/kyle/kyle_extras
+{
+	diffusemap models/players/kyle/kyle_extras
+}
+models/players/kyle/basic_hand
+{
+	diffusemap models/players/kyle/basic_hand
+}
+models/players/kyle/kyle_head
+{
+	diffusemap models/players/kyle/kyle_head
+}
+models/players/kyle/kyle_face
+{
+	diffusemap models/players/kyle/kyle_face
+}
+models/players/tauntaun/tauntaun_body
+{
+	diffusemap models/players/tauntaun/tauntaun_body
+}
+models/players/tauntaun/tauntaun_head
+{
+	diffusemap models/players/tauntaun/tauntaun_head
+}
+models/players/tauntaun/tauntaun_teeth_strap
+{
+	diffusemap models/players/tauntaun/tauntaun_teeth_strap
+}
+models/weapons2/concussion/rifle_w
+{
+	diffusemap models/weapons2/concussion/rifle_w
+}
+models/players/wampa/wampa_body
+{
+		diffusemap models/players/wampa/wampa_body
+}
+models/players/wampa/wampa_head
+{
+		diffusemap models/players/wampa/wampa_head
+}
+models/weapons2/thermal/thermal_w_1
+{
+	diffusemap models/weapons2/thermal/thermal_w_1
+}
+textures/desert/t_rockwall1
+{
+	diffusemap textures/desert/t_rockwall1
+}
+models/players/stormtrooper/caps 
+{
+	{
+		map textures/common/caps
+	}
+}

@@ -1,0 +1,85 @@
+
+
+textures/system/caulk
+{
+	qer_editorimage textures/system/caulk
+	noshadows
+	forceOpaque			// will still seal levels
+}
+textures/system/clip
+{
+	qer_editorimage textures/system/clip
+	translucent
+	noimpact
+}
+textures/system/nodraw
+{
+	qer_editorimage textures/system/nodraw
+	translucent
+}
+
+textures/system/physics_clip
+{
+	qer_editorimage textures/system/physics_clip
+	playerclip
+	noshadows
+}
+textures/system/hint
+{
+	qer_editorimage textures/common/trigger
+	nonsolid
+	translucent
+}
+textures/system/trigger
+{
+	qer_editorimage textures/common/trigger
+	nonsolid
+	translucent
+}
+
+textures/system/areaportal
+{
+	qer_editorimage	textures/editor/visportal.tga
+	areaportal
+	noshadows
+}
+textures/system/blocknpc
+{
+	qer_editorimage textures/common/trigger
+	nonsolid
+	translucent
+}
+textures/system/do_not_enter
+{
+	qer_editorimage textures/common/trigger
+	nonsolid
+	translucent
+}
+textures/system/nodrop
+{
+	//qer_editorimage textures/common/trigger
+
+	qer_editorimage textures/common/nodrop.tga
+	qer_nocarve
+	//FIXME bugged for some reason nodrop
+	nonsolid
+	noshadows
+}
+textures/system/skip
+{
+	qer_nocarve
+	//qer_trans	0.3
+	nonsolid
+	noshadows
+	//q3map_structural
+}
+textures/system/inside
+{
+	//qer_trans	0.5
+	//nodraw
+	//surfaceparm	inside
+	nonsolid
+	//surfaceparm	nonopaque
+	translucent
+	twosided
+}

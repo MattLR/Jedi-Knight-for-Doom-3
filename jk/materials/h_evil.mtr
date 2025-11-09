@@ -1,0 +1,13 @@
+textures/h_evil/light3
+{
+	diffusemap textures/h_evil/light3
+    {
+        map textures/h_evil/light3_glow
+        blend GL_ONE, GL_ONE
+    }
+}
+
+textures/h_evil/floor_metal
+{
+	diffusemap textures/h_evil/floor_metal
+}

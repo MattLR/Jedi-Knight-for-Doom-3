@@ -1,0 +1,565 @@
+textures/cairn/basicltgray
+{
+    diffusemap textures/cairn/basicltgray
+}
+
+textures/cairn/catfloor
+{
+    diffusemap textures/cairn/catfloor
+}
+
+textures/cairn/pod_floor
+{
+    diffusemap textures/cairn/pod_floor
+}
+
+textures/colors/black
+{
+    diffusemap textures/colors/black
+}
+
+textures/colors/black_nomarks
+{
+    diffusemap textures/colors/black_nomarks
+}
+
+textures/colors/blue
+{
+    diffusemap textures/colors/blue
+}
+
+textures/colors/orange
+{
+    diffusemap textures/colors/orange
+}
+
+textures/colors/white
+{
+    diffusemap textures/colors/white
+}
+
+textures/common/dark_dust
+{
+    diffusemap textures/common/dark_dust
+}
+
+textures/common/neon_blue
+{
+    diffusemap textures/common/neon_blue
+}
+
+textures/common/neon_purple
+{
+    diffusemap textures/common/neon_purple
+}
+
+textures/common/water_1
+{
+    diffusemap textures/common/water_1
+}
+
+textures/decals/burnmark3
+{
+    diffusemap textures/decals/burnmark3
+}
+
+textures/decals/dirt1
+{
+    diffusemap textures/decals/dirt1
+}
+
+textures/decals/floor_scrapes
+{
+    diffusemap textures/decals/floor_scrapes
+}
+
+textures/decals/scratch1
+{
+    diffusemap textures/decals/scratch1
+}
+
+textures/decals/scratch2
+{
+    diffusemap textures/decals/scratch2
+}
+
+textures/decals/slashmark1
+{
+    diffusemap textures/decals/slashmark1
+}
+
+textures/desert/crate2
+{
+    diffusemap textures/desert/crate2
+}
+
+textures/desert/crate2_lid
+{
+    diffusemap textures/desert/crate2_lid
+}
+
+textures/factory/basemetal1
+{
+    diffusemap textures/factory/basemetal1
+}
+
+textures/factory/basic3
+{
+    diffusemap textures/factory/basic3
+}
+
+textures/factory/env_pipe
+{
+    diffusemap textures/factory/env_pipe
+}
+
+textures/factory/largepipe4
+{
+    diffusemap textures/factory/largepipe4
+}
+
+textures/factory/tickertape
+{
+    diffusemap textures/factory/tickertape
+}
+
+textures/factory/wall3
+{
+    diffusemap textures/factory/wall3
+}
+
+textures/factory/walllinerb
+{
+    diffusemap textures/factory/walllinerb
+}
+
+textures/flares/solid_blue
+{
+    diffusemap textures/flares/solid_blue
+}
+
+textures/flares/solid_orange
+{
+    diffusemap textures/flares/solid_orange
+}
+
+textures/imp_mine/blastshield
+{
+    diffusemap textures/imp_mine/blastshield
+}
+
+textures/imp_mine/wallnew2
+{
+    diffusemap textures/imp_mine/wallnew2
+}
+
+textures/imperial/camera_switch
+{
+    diffusemap textures/imperial/camera_switch
+}
+
+textures/impgarrison/metal_lg_dk
+{
+    diffusemap textures/impgarrison/metal_lg_dk
+}
+
+textures/kejim/grate02_broke
+{
+    diffusemap textures/kejim/grate02_broke
+}
+
+textures/kejim/metal
+{
+    diffusemap textures/kejim/metal
+}
+
+textures/kejim/sentrytrim01
+{
+    diffusemap textures/kejim/sentrytrim01
+}
+
+textures/nar_hideout/bumpfloor
+{
+    diffusemap textures/nar_hideout/bumpfloor
+}
+
+textures/nar_hideout/floor6_frost
+{
+    diffusemap textures/nar_hideout/floor6_frost
+}
+
+textures/nar_hideout/floor7
+{
+    diffusemap textures/nar_hideout/floor7
+}
+
+textures/nar_hideout/wall_bolt
+{
+    diffusemap textures/nar_hideout/wall_bolt
+}
+
+textures/nar_hideout/wall_brushworn
+{
+    diffusemap textures/nar_hideout/wall_brushworn
+}
+
+textures/nar_streets/bar_bottles
+{
+    diffusemap textures/nar_streets/bar_bottles
+}
+
+textures/nar_streets/bar_tapbottle
+{
+    diffusemap textures/nar_streets/bar_tapbottle
+}
+
+textures/nar_streets/bartop2
+{
+    diffusemap textures/nar_streets/bartop2
+}
+
+textures/nar_streets/crane
+{
+    diffusemap textures/nar_streets/crane
+}
+
+textures/nar_streets/eleswitch
+{
+    diffusemap textures/nar_streets/eleswitch
+}
+
+textures/nar_streets/eleswitchon
+{
+    diffusemap textures/nar_streets/eleswitchon
+}
+
+textures/narshaddaa/ll_control
+{
+    diffusemap textures/narshaddaa/ll_control
+}
+
+textures/rocky_ruins/arch
+{
+    diffusemap textures/rocky_ruins/arch
+}
+
+textures/rocky_ruins/arrow1
+{
+    diffusemap textures/rocky_ruins/arrow1
+}
+
+textures/rocky_ruins/arrow1_b
+{
+    diffusemap textures/rocky_ruins/arrow1_b
+}
+
+textures/rocky_ruins/arrow2
+{
+    diffusemap textures/rocky_ruins/arrow2
+}
+
+textures/rocky_ruins/arrow2_b
+{
+    diffusemap textures/rocky_ruins/arrow2_b
+}
+
+textures/rocky_ruins/arrow3
+{
+    diffusemap textures/rocky_ruins/arrow3
+}
+
+textures/rocky_ruins/arrow3_b
+{
+    diffusemap textures/rocky_ruins/arrow3_b
+}
+
+textures/rocky_ruins/arrow4
+{
+    diffusemap textures/rocky_ruins/arrow4
+}
+
+textures/rocky_ruins/arrow4_b
+{
+    diffusemap textures/rocky_ruins/arrow4_b
+}
+
+textures/rocky_ruins/bar_pillar
+{
+    diffusemap textures/rocky_ruins/bar_pillar
+}
+
+textures/rocky_ruins/barsign_paint
+{
+    diffusemap textures/rocky_ruins/barsign_paint
+}
+
+textures/rocky_ruins/base_wall5
+{
+    diffusemap textures/rocky_ruins/base_wall5
+}
+
+textures/rocky_ruins/base_wall7
+{
+    diffusemap textures/rocky_ruins/base_wall7
+}
+
+textures/rocky_ruins/base_walllogo
+{
+    diffusemap textures/rocky_ruins/base_walllogo
+}
+
+textures/rocky_ruins/beam
+{
+    diffusemap textures/rocky_ruins/beam
+}
+
+textures/rocky_ruins/beam_end
+{
+    diffusemap textures/rocky_ruins/beam_end
+}
+
+textures/rocky_ruins/ceiling
+{
+    diffusemap textures/rocky_ruins/ceiling
+}
+
+textures/rocky_ruins/exit_arrows
+{
+    diffusemap textures/rocky_ruins/exit_arrows
+}
+
+textures/rocky_ruins/grate2
+{
+    diffusemap textures/rocky_ruins/grate2
+}
+
+textures/rocky_ruins/grate3_effect
+{
+    diffusemap textures/rocky_ruins/grate3_effect
+}
+
+textures/rocky_ruins/grate_light
+{
+    diffusemap textures/rocky_ruins/grate_light
+}
+
+textures/rocky_ruins/grating_new
+{
+    diffusemap textures/rocky_ruins/grating_new
+}
+
+textures/rocky_ruins/halfwall
+{
+    diffusemap textures/rocky_ruins/halfwall
+}
+
+textures/rocky_ruins/halfwall_top
+{
+    diffusemap textures/rocky_ruins/halfwall_top
+}
+
+textures/rocky_ruins/leatherpading
+{
+    diffusemap textures/rocky_ruins/leatherpading
+}
+
+textures/rocky_ruins/metal1
+{
+    diffusemap textures/rocky_ruins/metal1
+}
+
+textures/rocky_ruins/metal1_bottom
+{
+    diffusemap textures/rocky_ruins/metal1_bottom
+}
+
+textures/rocky_ruins/metal1_top
+{
+    diffusemap textures/rocky_ruins/metal1_top
+}
+
+textures/rocky_ruins/metal2
+{
+    diffusemap textures/rocky_ruins/metal2
+}
+
+textures/rocky_ruins/metal2_bottom
+{
+    diffusemap textures/rocky_ruins/metal2_bottom
+}
+
+textures/rocky_ruins/metal2_top
+{
+    diffusemap textures/rocky_ruins/metal2_top
+}
+
+textures/rocky_ruins/newgrate
+{
+    diffusemap textures/rocky_ruins/newgrate
+}
+
+textures/rocky_ruins/palor_door_switch
+{
+    diffusemap textures/rocky_ruins/palor_door_switch
+}
+
+textures/rocky_ruins/parlor_switch1
+{
+    diffusemap textures/rocky_ruins/parlor_switch1
+}
+
+textures/rocky_ruins/parlor_switch2
+{
+    diffusemap textures/rocky_ruins/parlor_switch2
+}
+
+textures/rocky_ruins/parlor_switch3
+{
+    diffusemap textures/rocky_ruins/parlor_switch3
+}
+
+textures/rocky_ruins/parlor_switch4
+{
+    diffusemap textures/rocky_ruins/parlor_switch4
+}
+
+textures/rocky_ruins/pillar_corner
+{
+    diffusemap textures/rocky_ruins/pillar_corner
+}
+
+textures/rocky_ruins/pillar_front
+{
+    diffusemap textures/rocky_ruins/pillar_front
+}
+
+textures/rocky_ruins/pillar_side
+{
+    diffusemap textures/rocky_ruins/pillar_side
+}
+
+textures/rocky_ruins/pipe
+{
+    diffusemap textures/rocky_ruins/pipe
+}
+
+textures/rocky_ruins/pipe2
+{
+    diffusemap textures/rocky_ruins/pipe2
+}
+
+textures/rocky_ruins/pipes
+{
+    diffusemap textures/rocky_ruins/pipes
+}
+
+textures/rocky_ruins/pipes2
+{
+    diffusemap textures/rocky_ruins/pipes2
+}
+
+textures/rocky_ruins/pipes_wall
+{
+    diffusemap textures/rocky_ruins/pipes_wall
+}
+
+textures/rocky_ruins/port_trim
+{
+    diffusemap textures/rocky_ruins/port_trim
+}
+
+textures/rocky_ruins/port_trim2
+{
+    diffusemap textures/rocky_ruins/port_trim2
+}
+
+textures/rocky_ruins/port_trim3
+{
+    diffusemap textures/rocky_ruins/port_trim3
+}
+
+textures/rocky_ruins/poster
+{
+    diffusemap textures/rocky_ruins/poster
+}
+
+textures/rocky_ruins/r_ceiling
+{
+    diffusemap textures/rocky_ruins/r_ceiling
+}
+
+textures/rocky_ruins/r_diwall
+{
+    diffusemap textures/rocky_ruins/r_diwall
+}
+
+textures/rocky_ruins/r_floor
+{
+    diffusemap textures/rocky_ruins/r_floor
+}
+
+textures/rocky_ruins/r_floor2
+{
+    diffusemap textures/rocky_ruins/r_floor2
+}
+
+textures/rocky_ruins/r_wall
+{
+    diffusemap textures/rocky_ruins/r_wall
+}
+
+textures/rocky_ruins/r_wall2
+{
+    diffusemap textures/rocky_ruins/r_wall2
+}
+
+textures/rocky_ruins/r_wall3
+{
+    diffusemap textures/rocky_ruins/r_wall3
+}
+
+textures/rocky_ruins/ridge_pipe
+{
+    diffusemap textures/rocky_ruins/ridge_pipe
+}
+
+textures/rocky_ruins/rocky_light
+{
+    diffusemap textures/rocky_ruins/rocky_light
+}
+
+textures/rocky_ruins/screen1
+{
+    diffusemap textures/rocky_ruins/screen1
+}
+
+textures/rocky_ruins/screen2
+{
+    diffusemap textures/rocky_ruins/screen2
+}
+
+textures/rocky_ruins/screen3
+{
+    diffusemap textures/rocky_ruins/screen3
+}
+
+textures/rocky_ruins/screen4
+{
+    diffusemap textures/rocky_ruins/screen4
+}
+
+textures/rocky_ruins/screen5
+{
+    diffusemap textures/rocky_ruins/screen5
+}
+
+textures/rocky_ruins/ticket_stubs
+{
+    diffusemap textures/rocky_ruins/ticket_stubs
+}
+
+textures/vjun/grate_light_amber
+{
+    diffusemap textures/vjun/grate_light_amber
+}
+

@@ -1,0 +1,317 @@
+textures/colors
+{
+    diffusemap textures/colors
+}
+
+textures/colors/black
+{
+    diffusemap textures/colors/black
+}
+
+textures/decals/floor_scrapes
+{
+    diffusemap textures/decals/floor_scrapes
+}
+
+textures/rift/base_ornate
+{
+    diffusemap textures/rift/base_ornate
+}
+
+textures/rift/basepiller
+{
+    diffusemap textures/rift/basepiller
+}
+
+textures/rift/basewall
+{
+    diffusemap textures/rift/basewall
+}
+
+textures/rift/basewall_b
+{
+    diffusemap textures/rift/basewall_b
+}
+
+textures/rift/basewall_formal
+{
+    diffusemap textures/rift/basewall_formal
+}
+
+textures/rift/basewall_ornate
+{
+    diffusemap textures/rift/basewall_ornate
+}
+
+textures/rift/basewall_piller_orn
+{
+    diffusemap textures/rift/basewall_piller_orn
+}
+
+textures/rift/blackrock2
+{
+    diffusemap textures/rift/blackrock2
+}
+
+textures/rift/blackrock2_gold
+{
+    diffusemap textures/rift/blackrock2_gold
+}
+
+textures/rift/carved_symbol
+{
+    diffusemap textures/rift/carved_symbol
+}
+
+textures/rift/carvedwall
+{
+    diffusemap textures/rift/carvedwall
+}
+
+textures/rift/carvedwall_lowalpha
+{
+    diffusemap textures/rift/carvedwall_lowalpha
+}
+
+textures/rift/ceiling_formal
+{
+    diffusemap textures/rift/ceiling_formal
+}
+
+textures/rift/cobweb
+{
+    diffusemap textures/rift/cobweb
+}
+
+textures/rift/cobweb2
+{
+    diffusemap textures/rift/cobweb2
+}
+
+textures/rift/crypt_floor
+{
+    diffusemap textures/rift/crypt_floor
+}
+
+textures/rift/env_crystal
+{
+    diffusemap textures/rift/env_crystal
+}
+
+textures/rift/flag1
+{
+    diffusemap textures/rift/flag1
+}
+
+textures/rift/flag2
+{
+    diffusemap textures/rift/flag2
+}
+
+textures/rift/flag3
+{
+    diffusemap textures/rift/flag3
+}
+
+textures/rift/floor1
+{
+    diffusemap textures/rift/floor1
+}
+
+textures/rift/floor1_formal
+{
+    diffusemap textures/rift/floor1_formal
+}
+
+textures/rift/floor1b
+{
+    diffusemap textures/rift/floor1b
+}
+
+textures/rift/floor2
+{
+    diffusemap textures/rift/floor2
+}
+
+textures/rift/frontstepface
+{
+    diffusemap textures/rift/frontstepface
+}
+
+textures/rift/marbly
+{
+    diffusemap textures/rift/marbly
+}
+
+textures/rift/newcolumn
+{
+    diffusemap textures/rift/newcolumn
+}
+
+textures/rift/newcolumn_top
+{
+    diffusemap textures/rift/newcolumn_top
+}
+
+textures/rift/newwall1
+{
+    diffusemap textures/rift/newwall1
+}
+
+textures/rift/pillartop
+{
+    diffusemap textures/rift/pillartop
+}
+
+textures/rift/piller
+{
+    diffusemap textures/rift/piller
+}
+
+textures/rift/piller_formal
+{
+    diffusemap textures/rift/piller_formal
+}
+
+textures/rift/pillerwall2
+{
+    diffusemap textures/rift/pillerwall2
+}
+
+textures/rift/plainwall
+{
+    diffusemap textures/rift/plainwall
+}
+
+textures/rift/rock3_crosssection
+{
+    diffusemap textures/rift/rock3_crosssection
+}
+
+textures/rift/rock3_phong
+{
+	qer_editorimage	textures/yavin/rock3
+
+    	diffusemap textures/rift/rock3
+}
+
+textures/rift/rockdoor
+{
+    diffusemap textures/rift/rockdoor
+}
+
+textures/rift/rockdoor_b
+{
+    diffusemap textures/rift/rockdoor_b
+}
+
+textures/rift/rockdoor_b_dec
+{
+    diffusemap textures/rift/rockdoor_b_dec
+}
+
+textures/rift/rockdoor_b_ruined
+{
+    diffusemap textures/rift/rockdoor_b_ruined
+}
+
+textures/rift/steps
+{
+    diffusemap textures/rift/steps
+}
+
+textures/rift/stone_rim
+{
+    diffusemap textures/rift/stone_rim
+}
+
+textures/rift/stone_rimb
+{
+    diffusemap textures/rift/stone_rimb
+}
+
+textures/rift/symbol2
+{
+    diffusemap textures/rift/symbol2
+}
+
+textures/rift/symbol4
+{
+    diffusemap textures/rift/symbol4
+}
+
+textures/rift/symbol5
+{
+    diffusemap textures/rift/symbol5
+}
+
+textures/rift/symbol8
+{
+    diffusemap textures/rift/symbol8
+}
+
+textures/rift/thick_trim_a
+{
+    diffusemap textures/rift/thick_trim_a
+}
+
+textures/rift/thin_trim1
+{
+    diffusemap textures/rift/thin_trim1
+}
+
+textures/rift/thin_trim2
+{
+    diffusemap textures/rift/thin_trim2
+}
+
+textures/skies/artus_light
+{
+    diffusemap textures/skies/artus_light
+}
+
+textures/stu/black_noimpact
+{
+    diffusemap textures/stu/black_noimpact
+}
+
+textures/stu/nodrop_trigger
+{
+    diffusemap textures/stu/nodrop_trigger
+}
+
+textures/yavin/crackfloor
+{
+    diffusemap textures/yavin/crackfloor
+}
+
+textures/yavin/gardenwall3
+{
+    diffusemap textures/yavin/gardenwall3
+}
+
+textures/yavin/rockwall
+{
+    diffusemap textures/yavin/rockwall
+}
+
+textures/yavin/stone
+{
+    diffusemap textures/yavin/stone
+}
+
+textures/yavin/temple_stonea
+{
+    diffusemap textures/yavin/temple_stonea
+}
+
+textures/yavin/trimblock2
+{
+    diffusemap textures/yavin/trimblock2
+}
+
+textures/yavin/v_floor
+{
+    diffusemap textures/yavin/v_floor
+}
+

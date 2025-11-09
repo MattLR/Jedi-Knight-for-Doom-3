@@ -1,0 +1,16 @@
+textures/flares/flare_red
+{
+	noimpact
+	nonsolid
+	//translucent
+	deform flare 3
+	{
+        map textures/flares/standard_flare
+
+        blend GL_ONE, GL_ONE
+       // depthFunc disable
+       // rgbGen const ( 1.000000 0.384314 0.384314 )
+	color 1, 0.38, 0.38, 1
+       // alphaGen portal 50
+    }
+}

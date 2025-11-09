@@ -1,0 +1,700 @@
+textures/byss/static_field4
+{
+    diffusemap textures/byss/static_field4
+}
+
+textures/colors/blue
+{
+    diffusemap textures/colors/blue
+}
+
+textures/colors/white
+{
+    diffusemap textures/colors/white
+}
+
+textures/danger/guts_glowing
+{
+    diffusemap textures/danger/guts_glowing
+}
+
+textures/factory/basemetal5
+{
+    diffusemap textures/factory/basemetal5
+}
+
+textures/factory/basemetal5_noclip
+{
+    diffusemap textures/factory/basemetal5_noclip
+}
+
+textures/factory/caution2
+{
+    diffusemap textures/factory/caution2
+}
+
+textures/factory/crate_trim2
+{
+    diffusemap textures/factory/crate_trim2
+}
+
+textures/factory/crate_trim6
+{
+    diffusemap textures/factory/crate_trim6
+}
+
+textures/factory/darkmetal
+{
+    diffusemap textures/factory/darkmetal
+}
+
+textures/factory/darkmetal_noclip
+{
+    diffusemap textures/factory/darkmetal_noclip
+}
+
+textures/factory/env_pipe
+{
+    diffusemap textures/factory/env_pipe
+}
+
+textures/factory/env_pipe_noclip
+{
+    diffusemap textures/factory/env_pipe_noclip
+}
+
+textures/factory/goldtop1
+{
+    diffusemap textures/factory/goldtop1
+}
+
+textures/factory/goldtop2
+{
+    diffusemap textures/factory/goldtop2
+}
+
+textures/factory/goldtop2_noclip
+{
+    diffusemap textures/factory/goldtop2_noclip
+}
+
+textures/factory/newcrate1
+{
+    diffusemap textures/factory/newcrate1
+}
+
+textures/factory/newcrate1_side
+{
+    diffusemap textures/factory/newcrate1_side
+}
+
+textures/hoth/ion_panel_03
+{
+    diffusemap textures/hoth/ion_panel_03
+}
+
+textures/imp_mine/grating
+{
+    diffusemap textures/imp_mine/grating
+}
+
+textures/imp_mine/grating_noclip
+{
+    diffusemap textures/imp_mine/grating_noclip
+}
+
+textures/impdetention/bpipe2
+{
+    diffusemap textures/impdetention/bpipe2
+}
+
+textures/impdetention/bpipe2_noclip
+{
+    diffusemap textures/impdetention/bpipe2_noclip
+}
+
+textures/impdetention/doordirt
+{
+    diffusemap textures/impdetention/doordirt
+}
+
+textures/impdetention/doordirt_noclip
+{
+    diffusemap textures/impdetention/doordirt_noclip
+}
+
+textures/impdetention/light_blue
+{
+    diffusemap textures/impdetention/light_blue
+}
+
+textures/impdetention/lightnewglow2
+{
+    diffusemap textures/impdetention/lightnewglow2
+}
+
+textures/impgarrison/metal_lg_dk
+{
+    diffusemap textures/impgarrison/metal_lg_dk
+}
+
+textures/impgarrison/new2
+{
+    diffusemap textures/impgarrison/new2
+}
+
+textures/kejim/metal
+{
+    diffusemap textures/kejim/metal
+}
+
+textures/kejim/metal2
+{
+    diffusemap textures/kejim/metal2
+}
+
+textures/kejim/metal2_noclip
+{
+    diffusemap textures/kejim/metal2_noclip
+}
+
+textures/kejim/metal_noclip
+{
+    diffusemap textures/kejim/metal_noclip
+}
+
+textures/narshaddaa/floor2_b
+{
+    diffusemap textures/narshaddaa/floor2_b
+}
+
+textures/narshaddaa/piller2
+{
+    diffusemap textures/narshaddaa/piller2
+}
+
+textures/narshaddaa/piller2_noclip
+{
+    diffusemap textures/narshaddaa/piller2_noclip
+}
+
+textures/rail/base_bronze
+{
+    diffusemap textures/rail/base_bronze
+}
+
+textures/rail/base_bronze_dark
+{
+    diffusemap textures/rail/base_bronze_dark
+}
+
+textures/rail/base_bronze_dark_noclip
+{
+    diffusemap textures/rail/base_bronze_dark_noclip
+}
+
+textures/rail/blue_base
+{
+    diffusemap textures/rail/blue_base
+}
+
+textures/rail/blue_siderail
+{
+    diffusemap textures/rail/blue_siderail
+}
+
+textures/rail/bracers
+{
+    diffusemap textures/rail/bracers
+}
+
+textures/rail/brasspanel
+{
+    diffusemap textures/rail/brasspanel
+}
+
+textures/rail/building5
+{
+    diffusemap textures/rail/building5
+}
+
+textures/rail/caboose
+{
+    diffusemap textures/rail/caboose
+}
+
+textures/rail/compartments
+{
+    diffusemap textures/rail/compartments
+}
+
+textures/rail/compartments_b
+{
+    diffusemap textures/rail/compartments_b
+}
+
+textures/rail/compartments_plain
+{
+    diffusemap textures/rail/compartments_plain
+}
+
+textures/rail/floor
+{
+    diffusemap textures/rail/floor
+}
+
+textures/rail/freezer_door
+{
+    diffusemap textures/rail/freezer_door
+}
+
+textures/rail/fusebox
+{
+    diffusemap textures/rail/fusebox
+}
+
+textures/rail/fusebox2
+{
+    diffusemap textures/rail/fusebox2
+}
+
+textures/rail/fusebox2_dam
+{
+    diffusemap textures/rail/fusebox2_dam
+}
+
+textures/rail/grail
+{
+    diffusemap textures/rail/grail
+}
+
+textures/rail/grail_frosted
+{
+    diffusemap textures/rail/grail_frosted
+}
+
+textures/rail/gripper
+{
+    diffusemap textures/rail/gripper
+}
+
+textures/rail/gripper_exhaust
+{
+    diffusemap textures/rail/gripper_exhaust
+}
+
+textures/rail/hull2_noclip
+{
+    diffusemap textures/rail/hull2_noclip
+}
+
+textures/rail/hull3_noclip
+{
+    diffusemap textures/rail/hull3_noclip
+}
+
+textures/rail/hull_noclip
+{
+    diffusemap textures/rail/hull_noclip
+}
+
+textures/rail/large_vent
+{
+    diffusemap textures/rail/large_vent
+}
+
+textures/rail/large_vent_panel
+{
+    diffusemap textures/rail/large_vent_panel
+}
+
+textures/rail/light_purple
+{
+    diffusemap textures/rail/light_purple
+}
+
+textures/rail/long_panel
+{
+    diffusemap textures/rail/long_panel
+}
+
+textures/rail/neon_ad_1
+{
+    diffusemap textures/rail/neon_ad_1
+}
+
+textures/rail/pillar
+{
+    diffusemap textures/rail/pillar
+}
+
+textures/rail/pipe_noclip
+{
+    diffusemap textures/rail/pipe_noclip
+}
+
+textures/rail/pipes_noclip
+{
+    diffusemap textures/rail/pipes_noclip
+}
+
+textures/rail/rail_basic
+{
+    diffusemap textures/rail/rail_basic
+}
+
+textures/rail/rail_basic_noclip
+{
+    diffusemap textures/rail/rail_basic_noclip
+}
+
+textures/rail/rail_console
+{
+    diffusemap textures/rail/rail_console
+}
+
+textures/rail/rail_console2
+{
+    diffusemap textures/rail/rail_console2
+}
+
+textures/rail/rail_console4
+{
+    diffusemap textures/rail/rail_console4
+}
+
+textures/rail/rail_console5
+{
+    diffusemap textures/rail/rail_console5
+}
+
+textures/rail/rail_console_large
+{
+    diffusemap textures/rail/rail_console_large
+}
+
+textures/rail/rail_crate
+{
+    diffusemap textures/rail/rail_crate
+}
+
+textures/rail/rail_crate2
+{
+    diffusemap textures/rail/rail_crate2
+}
+
+textures/rail/rail_crate2_top
+{
+    diffusemap textures/rail/rail_crate2_top
+}
+
+textures/rail/rail_dam_console
+{
+    diffusemap textures/rail/rail_dam_console
+}
+
+textures/rail/rail_floor
+{
+    diffusemap textures/rail/rail_floor
+}
+
+textures/rail/rail_floor2
+{
+    diffusemap textures/rail/rail_floor2
+}
+
+textures/rail/rail_floor_noclip
+{
+    diffusemap textures/rail/rail_floor_noclip
+}
+
+textures/rail/rail_grate
+{
+    diffusemap textures/rail/rail_grate
+}
+
+textures/rail/rail_light_inside
+{
+    diffusemap textures/rail/rail_light_inside
+}
+
+textures/rail/rail_light_inside_noclip
+{
+    diffusemap textures/rail/rail_light_inside_noclip
+}
+
+textures/rail/rail_pipe2_noclip
+{
+    diffusemap textures/rail/rail_pipe2_noclip
+}
+
+textures/rail/rail_pipe_noclip
+{
+    diffusemap textures/rail/rail_pipe_noclip
+}
+
+textures/rail/rail_runner
+{
+    diffusemap textures/rail/rail_runner
+}
+
+textures/rail/rail_tracklight
+{
+    diffusemap textures/rail/rail_tracklight
+}
+
+textures/rail/rail_walkway
+{
+    diffusemap textures/rail/rail_walkway
+}
+
+textures/rail/railbase1
+{
+    diffusemap textures/rail/railbase1
+}
+
+textures/rail/railbase2
+{
+    diffusemap textures/rail/railbase2
+}
+
+textures/rail/railing
+{
+    diffusemap textures/rail/railing
+}
+
+textures/rail/railing2
+{
+    diffusemap textures/rail/railing2
+}
+
+textures/rail/railing2_noclip
+{
+    diffusemap textures/rail/railing2_noclip
+}
+
+textures/rail/railing3
+{
+    diffusemap textures/rail/railing3
+}
+
+textures/rail/railing_flat
+{
+    diffusemap textures/rail/railing_flat
+}
+
+textures/rail/railtrim1
+{
+    diffusemap textures/rail/railtrim1
+}
+
+textures/rail/railtrim2
+{
+    diffusemap textures/rail/railtrim2
+}
+
+textures/rail/railtrim3
+{
+    diffusemap textures/rail/railtrim3
+}
+
+textures/rail/railtrim4
+{
+    diffusemap textures/rail/railtrim4
+}
+
+textures/rail/railtrim4_blue
+{
+    diffusemap textures/rail/railtrim4_blue
+}
+
+textures/rail/railtrim4_noclip
+{
+    diffusemap textures/rail/railtrim4_noclip
+}
+
+textures/rail/roundplate1
+{
+    diffusemap textures/rail/roundplate1
+}
+
+textures/rail/roundplate2
+{
+    diffusemap textures/rail/roundplate2
+}
+
+textures/rail/roundplate2_noclip
+{
+    diffusemap textures/rail/roundplate2_noclip
+}
+
+textures/rail/roundplate3
+{
+    diffusemap textures/rail/roundplate3
+}
+
+textures/rail/roundplate4
+{
+    diffusemap textures/rail/roundplate4
+}
+
+textures/rail/roundplate4_noclip
+{
+    diffusemap textures/rail/roundplate4_noclip
+}
+
+textures/rail/runner1
+{
+    diffusemap textures/rail/runner1
+}
+
+textures/rail/runner2
+{
+    diffusemap textures/rail/runner2
+}
+
+textures/rail/runner_slanted
+{
+    diffusemap textures/rail/runner_slanted
+}
+
+textures/rail/spine
+{
+    diffusemap textures/rail/spine
+}
+
+textures/rail/tanker
+{
+    diffusemap textures/rail/tanker
+}
+
+textures/rail/tanker_noclip
+{
+    diffusemap textures/rail/tanker_noclip
+}
+
+textures/rail/tanksymbol1
+{
+    diffusemap textures/rail/tanksymbol1
+}
+
+textures/rail/tanksymbol2
+{
+    diffusemap textures/rail/tanksymbol2
+}
+
+textures/rail/tanksymbol3
+{
+    diffusemap textures/rail/tanksymbol3
+}
+
+textures/rail/thinlight
+{
+    diffusemap textures/rail/thinlight
+}
+
+textures/rail/trainbasic1
+{
+    diffusemap textures/rail/trainbasic1
+}
+
+textures/rail/trainbasic2
+{
+    diffusemap textures/rail/trainbasic2
+}
+
+textures/rail/traindoor
+{
+    diffusemap textures/rail/traindoor
+}
+
+textures/rail/trainfloor
+{
+    diffusemap textures/rail/trainfloor
+}
+
+textures/rail/trim3
+{
+    diffusemap textures/rail/trim3
+}
+
+textures/rail/tunnel_lights
+{
+    diffusemap textures/rail/tunnel_lights
+}
+
+textures/rail/vent_panel
+{
+    diffusemap textures/rail/vent_panel
+}
+
+textures/rail/windows2_new
+{
+    diffusemap textures/rail/windows2_new
+}
+
+textures/rail/windows3_new
+{
+    diffusemap textures/rail/windows3_new
+}
+
+textures/rail/windows4_new
+{
+    diffusemap textures/rail/windows4_new
+}
+
+textures/rail/windows5
+{
+    diffusemap textures/rail/windows5
+}
+
+textures/rail/windows_new
+{
+    diffusemap textures/rail/windows_new
+}
+
+textures/rooftop/building_ext1_new
+{
+    diffusemap textures/rooftop/building_ext1_new
+}
+
+textures/rooftop/building_ext2test_new
+{
+    diffusemap textures/rooftop/building_ext2test_new
+}
+
+textures/rooftop/building_ext3_new
+{
+    diffusemap textures/rooftop/building_ext3_new
+}
+
+textures/rooftop/building_ext4_new
+{
+    diffusemap textures/rooftop/building_ext4_new
+}
+
+textures/rooftop/building_ext6_new
+{
+    diffusemap textures/rooftop/building_ext6_new
+}
+
+textures/rooftop/main_building_ext
+{
+    diffusemap textures/rooftop/main_building_ext
+}
+
+textures/rooftop/window_building_new
+{
+    diffusemap textures/rooftop/window_building_new
+}
+
+textures/taspir/newdoor1_b
+{
+    diffusemap textures/taspir/newdoor1_b
+}
+
+textures/yavin/dugdirt
+{
+    diffusemap textures/yavin/dugdirt
+}
+

@@ -1,0 +1,9 @@
+textures/impdetention/lightnew
+{
+	diffusemap textures/impdetention/lightnew
+	{
+        map textures/impdetention/lightnewglow
+        blend GL_ONE, GL_ONE
+        //rgbGen wave triangle 1 0.025 1 25
+	}
+}

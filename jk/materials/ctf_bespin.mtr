@@ -1,0 +1,220 @@
+textures/bespin/mp_b_carb02
+{
+    diffusemap textures/bespin/mp_b_carb02
+}
+
+textures/bespin/mp_b_casing04
+{
+    diffusemap textures/bespin/mp_b_casing04
+}
+
+textures/bespin/mp_b_light02a
+{
+    diffusemap textures/bespin/mp_b_light02a
+}
+
+textures/bespin/mp_b_light04
+{
+    diffusemap textures/bespin/mp_b_light04
+}
+
+textures/bespin/mp_b_pipe06
+{
+    diffusemap textures/bespin/mp_b_pipe06
+}
+
+textures/bespin/mp_b_pipe09
+{
+    diffusemap textures/bespin/mp_b_pipe09
+}
+
+textures/bespin/mp_b_wall04
+{
+    diffusemap textures/bespin/mp_b_wall04
+}
+
+textures/bespin/mp_b_wall04a
+{
+    diffusemap textures/bespin/mp_b_wall04a
+}
+
+textures/bespin/mp_r_carb02
+{
+    diffusemap textures/bespin/mp_r_carb02
+}
+
+textures/bespin/mp_r_casing04
+{
+    diffusemap textures/bespin/mp_r_casing04
+}
+
+textures/bespin/mp_r_light02a
+{
+    diffusemap textures/bespin/mp_r_light02a
+}
+
+textures/bespin/mp_r_light04
+{
+    diffusemap textures/bespin/mp_r_light04
+}
+
+textures/bespin/mp_r_pipe06
+{
+    diffusemap textures/bespin/mp_r_pipe06
+}
+
+textures/bespin/mp_r_pipe09
+{
+    diffusemap textures/bespin/mp_r_pipe09
+}
+
+textures/bespin/mp_r_wall04
+{
+    diffusemap textures/bespin/mp_r_wall04
+}
+
+textures/bespin/mp_r_wall04a
+{
+    diffusemap textures/bespin/mp_r_wall04a
+}
+
+textures/bespin/u_beam01
+{
+    diffusemap textures/bespin/u_beam01
+}
+
+textures/bespin/u_carb01
+{
+    diffusemap textures/bespin/u_carb01
+}
+
+textures/bespin/u_carb02
+{
+    diffusemap textures/bespin/u_carb02
+}
+
+textures/bespin/u_carb06
+{
+    diffusemap textures/bespin/u_carb06
+}
+
+textures/bespin/u_ceiling02
+{
+    diffusemap textures/bespin/u_ceiling02
+}
+
+textures/bespin/u_floor01
+{
+    diffusemap textures/bespin/u_floor01
+}
+
+textures/bespin/u_floor03
+{
+    diffusemap textures/bespin/u_floor03
+}
+
+textures/bespin/u_floor04
+{
+    diffusemap textures/bespin/u_floor04
+}
+
+textures/bespin/u_light02
+{
+    diffusemap textures/bespin/u_light02
+}
+
+textures/bespin/u_light02a
+{
+    diffusemap textures/bespin/u_light02a
+}
+
+textures/bespin/u_light03
+{
+    diffusemap textures/bespin/u_light03
+}
+
+textures/bespin/u_light04
+{
+    diffusemap textures/bespin/u_light04
+}
+
+textures/bespin/u_metalgreen
+{
+    diffusemap textures/bespin/u_metalgreen
+}
+
+textures/bespin/u_metalgreenrib
+{
+    diffusemap textures/bespin/u_metalgreenrib
+}
+
+textures/bespin/u_outpipe
+{
+    diffusemap textures/bespin/u_outpipe
+}
+
+textures/bespin/u_pipe03
+{
+    diffusemap textures/bespin/u_pipe03
+}
+
+textures/bespin/u_pipe06
+{
+    diffusemap textures/bespin/u_pipe06
+}
+
+textures/bespin/u_pipe07
+{
+    diffusemap textures/bespin/u_pipe07
+}
+
+textures/bespin/u_pipe09
+{
+    diffusemap textures/bespin/u_pipe09
+}
+
+textures/bespin/u_shaftstreak
+{
+    diffusemap textures/bespin/u_shaftstreak
+}
+
+textures/bespin/u_shaftwall
+{
+    diffusemap textures/bespin/u_shaftwall
+}
+
+textures/bespin/u_tunpipe
+{
+    diffusemap textures/bespin/u_tunpipe
+}
+
+textures/bespin/u_wall01
+{
+    diffusemap textures/bespin/u_wall01
+}
+
+textures/bespin/u_wall03
+{
+    diffusemap textures/bespin/u_wall03
+}
+
+textures/bespin/u_wall04
+{
+    diffusemap textures/bespin/u_wall04
+}
+
+textures/bespin/u_wall04a
+{
+    diffusemap textures/bespin/u_wall04a
+}
+
+textures/bespin/u_wall05
+{
+    diffusemap textures/bespin/u_wall05
+}
+
+textures/bespin/u_wall08
+{
+    diffusemap textures/bespin/u_wall08
+}
+

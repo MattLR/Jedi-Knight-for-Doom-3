@@ -1,0 +1,76 @@
+textures/skies/narkreeta
+{
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	textures/skies/korb //FIXME top or sides need rotating round 
+		texgen			skybox
+	}
+}
+
+textures/skies/kejim
+{
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	textures/skies/desert2 //FIXME top or sides need rotating round 
+		texgen			skybox
+	}
+}
+textures/skies/ships
+{
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	textures/skies/nebula2 //FIXME top or sides need rotating round 
+		texgen			skybox
+	}
+}
+
+textures/skies/yavin
+{
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	textures/skies/yavin //FIXME top or sides need rotating round 
+		texgen			skybox
+	}
+}
+
+textures/mp/s_fatalsky
+{
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	textures/skies/fatal //FIXME top or sides need rotating round 
+		texgen			skybox
+	}
+}
+
+textures/siege/hoth_sky
+{
+	noFragment
+	noshadows
+	noimpact
+	forceOpaque		
+	{
+		blend			add	
+		cameraCubeMap	textures/skies/hevil //FIXME top or sides need rotating round 
+		texgen			skybox
+	}
+}

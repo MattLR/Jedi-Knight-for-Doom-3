@@ -1,0 +1,26 @@
+textures/common/env_glass
+{
+	qer_editorimage	textures/common/etest4
+	//qer_trans	0.6
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	glass
+	forceoverlays
+	
+	{	
+	maskcolor
+	map	makealpha(textures/common/etest4)
+	}	
+	{
+	blend gl_dst_alpha, gl_one
+	maskalpha
+       	cubeMap		env/gen2
+	red		Parm0
+	green   Parm1
+	blue	Parm2
+	texgen		reflect
+
+	}
+}

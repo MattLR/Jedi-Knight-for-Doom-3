@@ -1,0 +1,124 @@
+gfx/misc/spark
+{
+	noSelfShadow
+	noshadows
+	//twosided
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	deform sprite
+
+	qer_editorimage		gfx/misc/spark
+
+	{
+	   	blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    gfx/misc/spark
+	}
+	
+}
+gfx/effects/greenshot
+{
+	noSelfShadow
+	noshadows
+	//twosided
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	deform sprite
+
+	qer_editorimage		gfx/effects/greenshot
+
+	{
+	   	blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    gfx/effects/green_shot
+		rotate time
+		clamp
+	}
+	{
+	   	blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    gfx/effects/green_shot2
+		rotate time
+		clamp
+	}
+
+	
+}
+gfx/effects/greenshot2
+{
+	noSelfShadow
+	noshadows
+	//twosided
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	deform sprite
+
+	qer_editorimage		gfx/effects/green_shot
+	{
+	   	blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    gfx/effects/green_shot2
+		clamp
+	}
+	
+}
+gfx/misc/lightningFlash
+{
+	noSelfShadow
+	noshadows
+	//twosided
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	deform sprite
+
+	qer_editorimage		gfx/misc/lightningFlash
+	{
+	   	blend  add   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+		map    gfx/misc/lightningFlash
+		rotate parm5
+		clamp
+	}
+}
+gfx/effects/flare1 
+{
+	noSelfShadow
+	noshadows
+	//twosided
+	translucent
+	discrete
+	nonsolid
+	noimpact
+	deform sprite
+
+	qer_editorimage		gfx/effects/flare1
+	{
+	   	blend  add
+		map    gfx/effects/flare1
+		clamp
+	}
+}
+gfx/misc/flaretailup
+{
+	
+	noSelfShadow
+	translucent
+	noShadows
+	twosided
+	deform tube
+
+	{
+		blend add
+		map gfx/misc/flaretailside_c
+		red		.683
+		green		.1686
+		blue		1.0
+		// centerscale	1 -.2*sinTable[time * 1 ], 1
+		zeroclamp
+	}
+
+
+}

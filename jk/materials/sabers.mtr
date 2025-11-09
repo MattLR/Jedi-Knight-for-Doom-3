@@ -1,0 +1,24 @@
+gfx/effects/sabers/red_glow
+{
+	twosided
+    {
+        map gfx/effects/sabers/red_glow2
+        blendFunc GL_ONE GL_ONE
+        glow
+        //rgbGen vertex
+    }
+}
+
+gfx/effects/sabers/red_line
+{
+	twosided
+	//noSelfShadow
+	translucent
+	deform tube
+    {
+        map gfx/effects/sabers/red_line
+        blend GL_ONE, GL_ONE
+        //rgbGen vertex
+    }
+}
+//

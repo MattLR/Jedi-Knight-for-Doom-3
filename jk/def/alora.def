@@ -1,0 +1,922 @@
+model npc_jk_base {
+	mesh							models/players/alora2/alora2.md5mesh
+
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+	
+	anim af_pose					models/players/humanoid/npc/ROOT.md5anim
+	anim ik_pose					models/players/humanoid/npc/ROOT.md5anim
+	//anim pain						models/players/alora2/BOTH_STAND1IDLE1.md5anim
+	anim stand						models/players/humanoid/npc/BOTH_STAND1IDLE1.md5anim
+	anim stand4						models/players/humanoid/npc/BOTH_STAND4.md5anim
+//	anim talk_excuseme				models/players/alora2/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_trigger				models/players/alora2/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_primary				models/players/alora2/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_secondary1			models/players/alora2/BOTH_STAND1IDLE1.md5anim 
+	anim idle						models/players/humanoid/npc/BOTH_STAND1IDLE1.md5anim
+//	anim cower						models/players/alora2/BOTH_STAND1IDLE1.md5anim
+	anim walk						models/players/humanoid/npc/BOTH_WALK1.md5anim
+	//anim run1						models/players/alora2/BOTH_STAND1IDLE1.md5anim //models/md5/chars/medrun1.md5anim
+	anim turn_right					models/players/humanoid/npc/BOTH_TURNSTAND1.md5anim
+	anim turn_left 					models/players/humanoid/npc/BOTH_TURNSTAND1.md5anim
+}
+
+
+model npc_jk_alora {
+	inherit							npc_jk_base
+	mesh							models/players/alora/alora.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_alora2 {
+	inherit 						npc_jk_base
+	mesh							models/players/alora2/alora2.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_atst {
+//	inherit 						npc_jk_base
+	mesh							models/players/atst/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_bobafett {
+	inherit							npc_jk_base
+	mesh							models/players/boba_fett/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+model npc_jk_chewbacca {
+	inherit							npc_jk_base
+	mesh							models/players/chewbacca/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_chiss {
+	inherit							npc_jk_base
+	mesh							models/players/chiss/chiss.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_cultist {
+	inherit							npc_jk_base
+	mesh							models/players/cultist/cultist.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_desann {
+	inherit							npc_jk_base
+	mesh							models/players/desann/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_galak {
+	inherit							npc_jk_base
+	mesh							models/players/galak/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_galak_mech {
+	//inherit							npc_jk_base
+	mesh							models/players/galak_mech/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_glider {
+	inherit							npc_jk_base
+	mesh							models/players/glider/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_gonk {
+	//inherit							npc_jk_base
+	mesh							models/players/gonk/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+
+	anim run						models/players/gonk/anim/BOTH_RUN1.md5anim
+	anim walk						models/players/gonk/anim/BOTH_WALK1.md5anim
+	anim stand						models/players/gonk/anim/BOTH_STAND1.md5anim
+	anim idle						models/players/gonk/anim/BOTH_STAND1.md5anim
+}
+
+model npc_jk_gran {
+	inherit							npc_jk_base
+	mesh							models/players/gran/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+
+model npc_jk_hazardtrooper {
+	//inherit							npc_jk_base
+	mesh							models/players/hazardtrooper/hazardtrooper.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_howler {
+//	inherit							npc_jk_base
+	mesh							models/players/howler/howler.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_human_merc {
+	inherit							npc_jk_base
+	mesh							models/players/human_merc/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_imperial {
+	inherit							npc_jk_base
+	mesh							models/players/imperial/imperial.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_imperial_worker {
+	inherit							npc_jk_base
+	mesh							models/players/imperial_worker/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_interrogator {
+	//inherit							npc_jk_base
+	mesh							models/players/interrogator/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_jan {
+	inherit							npc_jk_base
+	mesh							models/players/jan/jan.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_jawa {
+	inherit							npc_jk_base
+	mesh							models/players/jawa/jawa.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_jedi {
+	inherit							npc_jk_base
+	mesh 							models/players/jedi/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_jedi_tf {
+	inherit							npc_jk_base
+	mesh 							models/players/jedi_tf/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_kyle {
+	inherit							npc_jk_base
+	mesh							models/players/kyle/kyle.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+
+model npc_jk_lando {
+	inherit							npc_jk_base
+	mesh							models/players/lando/lando.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+model npc_jk_luke {
+	inherit							npc_jk_base
+	mesh							models/players/luke/luke.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_rax_joris {
+	inherit							npc_jk_base
+	mesh							models/players/rax_joris/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_rebel {
+	inherit							npc_jk_base
+	mesh							models/players/rebel/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_rebel_pilot {
+	inherit							npc_jk_base
+	mesh							models/players/rebel_pilot/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_reborn {
+	inherit							npc_jk_base
+	mesh							models/players/reborn/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_reborn_new {
+	inherit							npc_jk_base
+	mesh							models/players/reborn_new/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_reborn_twin {
+	inherit							npc_jk_base
+	mesh							models/players/reborn_twin/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_protocol {
+//	inherit							npc_jk_base
+	mesh							models/players/protocol/protocol.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+
+	//anim af_pose					models/players/protocol/anim/
+	anim pain						models/players/protocol/anim/BOTH_PAIN1.md5anim
+	anim stand						models/players/protocol/anim/BOTH_STAND1.md5anim
+	anim talk_excuseme				models/players/protocol/anim/BOTH_TALK1.md5anim 
+	anim talk_trigger				models/players/protocol/anim/BOTH_TALK1.md5anim 
+	anim talk_primary				models/players/protocol/anim/BOTH_TALK1.md5anim 
+	anim talk_secondary1			models/players/protocol/anim/BOTH_TALK1.md5anim 
+	anim idle						models/players/protocol/anim/BOTH_STAND1.md5anim
+//	anim cower						models/players/protocol/anim/BOTH_STAND1IDLE1.md5anim
+	anim walk						models/players/protocol/anim/BOTH_WALK1.md5anim
+	anim run1						models/players/protocol/anim/BOTH_RUN1.md5anim 
+	//anim turn_right					models/players/protocol/anim/BOTH_TURN_RIGHT1.md5anim
+	//anim turn_left 					models/players/protocol/anim/BOTH_TURN_LEFT1.md5anim
+}
+model npc_jk_r2d2 {
+//	inherit							npc_jk_base
+	mesh							models/players/r2d2/r2d2.md5mesh
+	//channel torso					(*pelvis)
+	channel legs					(*origin )
+
+	//anim af_pose					models/players/r2d2/anim/
+	anim pain						models/players/r2d2/anim/BOTH_PAIN1.md5anim
+	anim stand						models/players/r2d2/anim/BOTH_STAND1.md5anim
+//	anim talk_excuseme				models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_trigger				models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_primary				models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_secondary1			models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+	anim idle						models/players/r2d2/anim/BOTH_STAND1.md5anim
+//	anim cower						models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim
+	anim walk						models/players/r2d2/anim/BOTH_WALK1.md5anim
+	anim run1						models/players/r2d2/anim/BOTH_RUN1.md5anim //models/md5/chars/medrun1.md5anim
+	anim turn_right					models/players/r2d2/anim/BOTH_TURN_RIGHT1.md5anim
+	anim turn_left 					models/players/r2d2/anim/BOTH_TURN_LEFT1.md5anim
+}
+
+model npc_jk_r5d2 {
+//	inherit							npc_jk_base
+	mesh							models/players/r5d2/model.md5mesh
+	channel torso					()
+	channel legs					(*origin )
+
+	//anim af_pose					models/players/r2d2/anim/
+	anim pain						models/players/r2d2/anim/BOTH_PAIN1.md5anim
+	anim stand						models/players/r2d2/anim/BOTH_STAND1.md5anim
+//	anim talk_excuseme				models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_trigger				models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_primary				models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+//	anim talk_secondary1			models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim 
+	anim idle						models/players/r2d2/anim/BOTH_STAND1.md5anim
+//	anim cower						models/players/r2d2/anim/BOTH_STAND1IDLE1.md5anim
+	anim walk						models/players/r2d2/anim/BOTH_WALK1.md5anim
+	anim run1						models/players/r2d2/anim/BOTH_RUN1.md5anim //models/md5/chars/medrun1.md5anim
+	anim turn_right					models/players/r2d2/anim/BOTH_TURN_RIGHT1.md5anim
+	anim turn_left 					models/players/r2d2/anim/BOTH_TURN_LEFT1.md5anim
+}
+
+model npc_jk_rancor {
+	//inherit							npc_jk_base
+	mesh							models/players/rancor/rancor.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_reelo {
+	inherit							npc_jk_base
+	mesh							models/players/reelo/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_rockettrooper {
+	//inherit							npc_jk_base
+	mesh							models/players/rockettrooper/rockettrooper.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_rodian {
+	inherit							npc_jk_base
+	mesh							models/players/rodian/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_rosh_penin {
+	inherit							npc_jk_base
+	mesh							models/players/rosh_penin/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_saboteur {
+	inherit							npc_jk_base
+	mesh							models/players/saboteur/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_shadowtrooper {
+	inherit							npc_jk_base
+	mesh							models/players/shadowtrooper/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_snowtrooper {
+	inherit							npc_jk_base
+	mesh							models/players/snowtrooper/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_stormpilot {
+	inherit							npc_jk_base
+	mesh							models/players/stormpilot/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+
+model npc_jk_stormtrooper {
+	inherit							npc_jk_base
+	mesh							models/players/stormtrooper/stormtrooper.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+
+	anim range_attack 				models/players/humanoid/BOTH_ATTACK3.md5anim {
+		frame 2							launch_missile rhang_tag_bone
+	}
+	anim melee_attack				models/players/humanoid/BOTH_MELEE1.md5anim {
+		frame 2						melee melee_impLeftClaw
+	}
+}
+
+model npc_jk_swamptrooper {
+	inherit							npc_jk_base
+	mesh							models/players/swamptrooper/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_tavion {
+	inherit							npc_jk_base
+	mesh							models/players/tavion/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_tavion_new {
+	inherit							npc_jk_base
+	mesh							models/players/tavion_new/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_trandoshan {
+	inherit							npc_jk_base
+	mesh							models/players/trandoshan/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_tusken {
+	inherit							npc_jk_base
+	mesh							models/players/tusken/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_ugnaught {
+	inherit							npc_jk_base
+	mesh							models/players/ugnaught/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model npc_jk_weequay {
+	inherit							npc_jk_base
+	mesh							models/players/weequay/model.md5mesh
+	channel torso					(*pelvis)
+	channel legs					(*origin -*pelvis)
+}
+
+model vehicle_jk_lambdashuttle {
+	//inherit							npc_jk_base
+	mesh							models/players/lambdashuttle/lambdashuttle.md5mesh
+	//channel torso					(*pelvis)
+	//channel legs					(*origin -*pelvis)
+	anim all						models/players/lambdashuttle/lambdashuttle.md5anim
+}
+
+model jk_player {
+	mesh							models/players/alora2/alora2.md5mesh
+	channel torso					(*lower_lumbar)
+	channel legs					(origin Motion lfemurx lfemuryz rfemurx rfemuryz ltibia rtibia ltalus rtalus ltail rtail pelvis lknee rknee) //( origin Motion lfemurx lfemuryz rfemurx rfemuryz ltibia rtibia ltalus rtalus ltail rtail pelvis lknee rknee)
+	
+	anim af_pose					models/players/humanoid/root.md5anim
+	anim ik_pose					models/players/humanoid/root.md5anim
+	//anim pain						models/players/humanoid/BOTH_STAND1IDLE1.md5anim
+	anim stand						models/players/humanoid/BOTH_STAND1IDLE1.md5anim
+	//anim talk_excuseme				models/players/humanoid/BOTH_STAND1IDLE1.md5anim 
+	//	anim talk_trigger				models/players/humanoid/BOTH_STAND1IDLE1.md5anim 
+	//anim talk_primary				models/players/humanoid/BOTH_STAND1IDLE1.md5anim 
+	//anim talk_secondary1			models/players/humanoid/BOTH_STAND1IDLE1.md5anim 
+ 	anim idle						models/players/humanoid/BOTH_STAND1IDLE1.md5anim
+	anim cower						models/players/humanoid/BOTH_MEDITATE.md5anim
+
+	anim crouch_down					models/players/humanoid/BOTH_CROUCH1.md5anim 
+	anim crouch							models/players/humanoid/BOTH_CROUCH1IDLE.md5anim
+	anim crouch_up						models/players/humanoid/BOTH_UNCROUCH1.md5anim
+	anim crouch_walk					models/players/humanoid/BOTH_CROUCH1WALK.md5anim 
+	anim crouch_walk_backwards			models/players/humanoid/BOTH_CROUCH1WALKBACK.md5anim
+
+	anim walk						models/players/humanoid/BOTH_WALK1.md5anim {
+		frame 6							rightfoot
+		frame 20						leftfoot
+	}
+	anim walk_backwards					models/players/humanoid/BOTH_WALKBACK1.md5anim {
+		frame 2							leftfoot
+		frame 11						rightfoot
+	}
+	anim run_forward					models/players/humanoid/BOTH_RUN1.md5anim {
+		frame 8							rightfoot
+		frame 20						leftfoot
+	}
+	anim run_backwards					models/players/humanoid/BOTH_RUNBACK1.md5anim {
+		prevent_idle_override
+	//	frame 7							rightfoot
+	//	frame 14						leftfoot
+	//	frame 21						rightfoot
+	//	frame 27						leftfoot
+	}
+	anim run_strafe_left				models/players/humanoid/BOTH_RUN1.md5anim {
+	//	prevent_idle_override
+	//	frame 4							rightfoot
+	//	frame 7							leftfoot
+	//	frame 18						rightfoot
+	//	frame 21						leftfoot
+	}
+	anim run_strafe_right				models/players/humanoid/BOTH_RUNSTRAFE_RIGHT1.md5anim {
+		prevent_idle_override
+	//	frame 5							leftfoot
+	//	frame 8							rightfoot
+	//	frame 18						leftfoot
+	//	frame 20						rightfoot
+	}
+	anim jump							models/players/humanoid/BOTH_JUMP1.md5anim {
+		prevent_idle_override
+		frame 1							sound_body player_sounds_jump_small
+	}
+	anim run_jump						models/players/humanoid/BOTH_JUMP1.md5anim {
+		prevent_idle_override
+		frame 1							sound_body player_sounds_jump
+	}
+	anim walk_strafe_left			models/players/humanoid/BOTH_STRAFE_LEFT1.md5anim {
+		frame 5							rightfoot
+		frame 10						leftfoot
+	}
+
+	anim walk_strafe_right				models/players/humanoid/BOTH_STRAFE_RIGHT1.md5anim {
+		frame 5							leftfoot
+		frame 10						rightfoot
+	}
+
+	anim fists_raise					models/players/humanoid/TORSO_RAISEWEAP1.md5anim
+	anim fists_idle						models/players/humanoid/BOTH_STAND6.md5anim
+	//anim fists_aim						models/md5/characters/npcs/playermoves/fists_aim_down.md5anim, models/md5/characters/npcs/playermoves/fists_aim.md5anim, models/md5/characters/npcs/playermoves/fists_aim_up.md5anim
+	anim fists_punch_right				models/players/humanoid/BOTH_MELEE1.md5anim
+	anim fists_punch_left				models/players/humanoid/BOTH_MELEE2.md5anim
+	//anim fists_lower					models/md5/characters/npcs/playermoves/lowerwep.md5anim
+
+	anim blaster_raise		models/players/humanoid/TORSO_RAISEWEAP1.md5anim
+	anim blaster_idle		models/players/humanoid/TORSO_WEAPONIDLE2.md5anim
+	anim blaster_fire1		models/players/humanoid/BOTH_ATTACK2.md5anim
+
+	anim blaster_rifle_raise	models/players/humanoid/TORSO_RAISEWEAP4.md5anim
+	anim blaster_rifle_idle		models/players/humanoid/TORSO_WEAPONIDLE3DOWN.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3UP.md5anim
+	anim blaster_rifle_aim		models/players/humanoid/TORSO_WEAPONREADY3DOWN.md5anim, models/players/humanoid/TORSO_WEAPONREADY3.md5anim, models/players/humanoid/TORSO_WEAPONREADY3.md5anim
+	anim blaster_rifle_fire1		models/players/humanoid/BOTH_ATTACK3.md5anim
+
+	anim disruptor_raise		models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim
+	anim disruptor_idle			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim disruptor_aim			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim disruptor_fire1		models/players/humanoid/BOTH_ATTACK4.md5anim
+	//anim disruptor_lower
+
+	anim bowcaster_raise		models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim
+	anim bowcaster_idle			models/players/humanoid/TORSO_WEAPONIDLE3DOWN.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim bowcaster_aim			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim bowcaster_fire1		models/players/humanoid/BOTH_ATTACK4.md5anim
+	//anim bowcaster_lower
+
+	anim repeater_raise		models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim
+	anim repeater_idle			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim repeater_aim			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim repeater_fire1		models/players/humanoid/BOTH_ATTACK4.md5anim
+	//anim repeater_lower
+
+	//anim demp2_raise		models/players/humanoid/TORSO_RAISEWEAP3.md5anim
+	anim demp2_idle			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	//anim demp2_aim
+	anim demp2_fire1		models/players/humanoid/BOTH_ATTACK3.md5anim
+	//anim demp2_lower
+
+	anim flechette_raise		models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim
+	anim flechette_idle			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim flechette_aim			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim flechette_fire1		models/players/humanoid/BOTH_ATTACK4.md5anim
+	//anim flechette_lower
+
+	anim concussion_raise		models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim
+	anim concussion_idle			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim concussion_aim			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim concussion_fire1		models/players/humanoid/BOTH_ATTACK4.md5anim
+	//anim concussion_lower
+
+	anim merrsonn_raise		models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim, models/players/humanoid/TORSO_RAISEWEAP4.md5anim
+	anim merrsonn_idle			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim merrsonn_aim			models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim, models/players/humanoid/TORSO_WEAPONIDLE3.md5anim
+	anim merrsonn_fire1		models/players/humanoid/BOTH_ATTACK4.md5anim
+	//anim merrsonn_lower
+
+	anim saber_raise				models/players/humanoid/BOTH_STAND1TO2.md5anim 
+
+	anim saber_idle 				models/players/humanoid/BOTH_STAND2.md5anim 
+	anim saber_lower 				models/players/humanoid/BOTH_STAND2TO1.md5anim
+	anim saber_fire 				models/players/humanoid/BOTH_A1__R__L.md5anim
+
+	//Just the frames from the transition to the end of the attack
+	anim BOTH_A1__L__R				models/players/humanoid/BOTH_A1__L__R.md5anim
+	anim BOTH_A1__R__L				models/players/humanoid/BOTH_A1__R__L.md5anim
+	anim BOTH_A1_TL_BR				models/players/humanoid/BOTH_A1_TL_BR.md5anim
+	anim BOTH_A1_BR_TL				models/players/humanoid/BOTH_A1_BR_TL.md5anim
+	anim BOTH_A1_T__B_ 				models/players/humanoid/BOTH_A1_T__B_.md5anim
+	anim BOTH_A1_TR_BL				models/players/humanoid/BOTH_A1_TR_BL.md5anim
+	//Start transitions - from holding weapon to the start of an attack
+	anim BOTH_S1_S1_T_				models/players/humanoid/BOTH_S1_S1_T_.md5anim	//# Fast plain transition from stance1 to top-to-bottom Fast weak attack
+	anim BOTH_S1_S1__L				models/players/humanoid/BOTH_S1_S1__L.md5anim	//# Fast plain transition from stance1 to left-to-right Fast weak attack
+	anim BOTH_S1_S1__R				models/players/humanoid/BOTH_S1_S1__R.md5anim	//# Fast plain transition from stance1 to right-to-left Fast weak attack
+	anim BOTH_S1_S1_TL				models/players/humanoid/BOTH_S1_S1_TL.md5anim	//# Fast plain transition from stance1 to top-left-to-bottom-right Fast weak attack
+	anim BOTH_S1_S1_BR				models/players/humanoid/BOTH_S1_S1_BR.md5anim	//# Fast plain transition from stance1 to bottom-right-to-top-left Fast weak attack
+	anim BOTH_S1_S1_BL				models/players/humanoid/BOTH_S1_S1_BL.md5anim	//# Fast plain transition from stance1 to bottom-left-to-top-right Fast weak attack
+	anim BOTH_S1_S1_TR				models/players/humanoid/BOTH_S1_S1_TR.md5anim	//# Fast plain transition from stance1 to top-right-to-bottom-left Fast weak attack
+
+	//Return transitions - I don't know what these are actually for, it goes from the raised animation to the standard holding animation
+	anim BOTH_R1_TL_S1				models/players/humanoid/BOTH_R1_TL_S1.md5anim //TLtoBR attack to normal transition
+
+	anim thermal_raise			models/players/humanoid/TORSO_RAISEWEAP1.md5anim
+	anim thermal_idle				models/players/humanoid/TORSO_WEAPONIDLE10.md5anim
+	anim thermal_aim				models/players/humanoid/BOTH_THERMAL_READY.md5anim
+	anim thermal_throw_quick		models/players/humanoid/BOTH_THERMAL_THROW.md5anim
+	anim thermal_throw_start		models/players/humanoid/BOTH_THERMAL_READY.md5anim
+	anim thermal_throw				models/players/humanoid/BOTH_ATTACK10.md5anim
+
+	anim thermal_startfire			models/players/humanoid/BOTH_THERMAL_READY.md5anim
+	anim thermal_fire				models/players/humanoid/BOTH_ATTACK10.md5anim
+	//anim thermal_lower				models/md5/characters/npcs/playermoves/lowerwep.md5anim
+
+}
+
+entityDef npc_jk_base {
+	"inherit"						"character_default"
+	"scriptobject"					"character"
+	//"model"							"npc_jk_base"
+	//"ragdoll"						"char_alora"
+	"size"							"32 32 74"
+	"use_aas"						"aas48"
+	"team"							"0"
+	"rank"							"0"
+
+	//"gib"							"1"
+	//"model_gib" 					"models/md5/chars/skeleton.md5mesh"
+	//"snd_gibbed"					"sound_giblets"
+
+	//"def_dropGibItem1"				"moveable_item_head_pork"
+	//"dropGibItem1Joint"				"headcontrol"
+
+	//"def_dropGibItem2"				"moveable_item_torso_pork"
+	//"dropGibItem2Joint"				"Chest"
+
+	//"def_dropGibItem3"				"moveable_item_rup_arm_pork"
+	//"dropGibItem3Joint"				"Ruparm"
+
+	//"def_dropGibItem4"				"moveable_item_left_waist_pork"
+	//"dropGibItem4Joint"				"Waist"
+
+	//"def_dropGibItem5"				"moveable_item_lup_leg_pork"
+	//"dropGibItem5Joint"				"Lupleg"
+
+	//"def_dropGibItem6"				"moveable_item_rup_leg_pork"
+	//"dropGibItem6Joint"				"Rupleg"
+
+	//"def_dropGibItem7"				"moveable_item_rup2_leg_pork"
+	//"dropGibItem7Joint"				"Rloleg"
+
+	//"def_dropGibItem8"				"moveable_item_pelvis_pork"
+	//"dropGibItem8Joint"				"Hips"
+
+	"ik_numLegs"					"2"
+	"ik_footSize"					"4"
+	"ik_waist"						"pelvis"
+	"ik_hip1"						"lfemurYZ"
+	"ik_hip2"						"rfemurYZ"
+	"ik_knee1"						"ltibia"
+	"ik_knee2"						"rtibia"
+	"ik_ankle1"						"ltalus"
+	"ik_ankle2"						"rtalus"
+	"ik_dir1"						"LKnee"
+	"ik_dir2"						"RKnee"
+	"ik_foot1"						"ltalus"
+	"ik_foot2"						"rtalus"
+
+	//"bone_focus"					"cranium"
+	//"bone_orientation"				"pelvis"
+	//"bone_leftEye"				"leye"
+	//"bone_rightEye"				"reye"
+	
+//	"look_min"						"-90 -125 0"
+	//"look_max"						"25 125 0"
+	//"look_joint upper_lumbar"		"0.1333 0.1333 0"
+	//"look_joint thoracic"			"0.1333 0.1333 0"
+	//"look_joint cervical"			"0.1333 0.1333 0"
+	//"look_joint face"				"0.6 0.6 0"
+	//"look_joint rclavical"			"-0.4 0 0"
+	//"look_joint lclavical"			"-0.4 0 0"	
+	
+	//"copy_joint neckcontrol"		"neckcontrol"
+	//"copy_joint headcontrol"		"headcontrol"
+	//"copy_joint_world eyecontrol"	"eyecontrol"
+	
+	//"eye_turn_min"					"-20 -30 0"
+	//"eye_turn_max"					"20 30 0"
+	//"eye_verticle_offset"			"5"
+	//"eye_horizontal_offset"		"-8"
+	//"eye_focus_rate"				"0.5"
+	//"head_focus_rate"				"0.1"
+
+	//"damage_zone head"				"*loneckcontrol"
+	//"damage_zone chest"				"*pelvis"
+	//"damage_zone left_arm"			"*Luparm"
+	//"damage_zone right_arm"			"*Ruparm"
+	//"damage_zone legs"				"origin Body2"
+
+	//"snd_death"						"generic_npc_death"
+	//"snd_footstep"					"player_sounds_footstep"
+	//"snd_talk_primary"				"default_primary"
+	//"snd_talk_secondary"				"default_secondary"
+	//"snd_talk_trigger"				"default_trigger"
+}
+
+entityDef char_alora {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_alora"
+	"start_anim"					"idle"
+	"health"						"1"
+	"ragdoll"						"char_alora"
+	//"eye_verticle_offset"			"0"
+	//"eye_horizontal_offset"		"0"
+	"npc_name"						"Alora"
+
+	//"def_head"					"head_campbell"
+	"head_joint"					"thoracic"
+
+	"snd_death"						"alora_death1"
+}
+entityDef char_alora2 {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_alora2"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+	//"eye_verticle_offset"			"0"
+	//"eye_horizontal_offset"		"0"
+
+	//"def_head"					"head_campbell"
+	"head_joint"					"cervical"
+
+	"snd_death"						"alora_death1"
+}
+
+entityDef char_atst {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_atst"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+
+entityDef char_bobafett {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_bobafett"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+
+entityDef char_chewbacca {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_chewbacca"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+
+entityDef char_jan {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_jan"
+	"start_anim"					"idle"
+	"health"						"20"
+	"ragdoll"						"char_alora"
+	//"eye_verticle_offset"			"0"
+	//"eye_horizontal_offset"		"0"
+
+	//"def_head"					"head_campbell"
+	//"head_joint"					"thoracic"
+}
+
+entityDef char_kyle {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_kyle"
+	"start_anim"					"idle"
+	"health"						"1"
+	"ragdoll"						"char_alora"
+
+	//"eye_verticle_offset"			"0"
+	//"eye_horizontal_offset"		"0"
+
+	//"def_head"					"head_campbell"
+	//"head_joint"					"thoracic"
+
+	"snd_death"						"alora_death1"
+}
+
+entityDef char_stormtrooper {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_stormtrooper"
+	"start_anim"					"idle"
+	"health"						"1"
+	"ragdoll"						"char_alora"
+	//"eye_verticle_offset"			"0"
+	//"eye_horizontal_offset"			"0"
+
+
+	//"def_head"					"head_campbell"
+	//"head_joint"					"thoracic"
+
+}
+entityDef char_chiss {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_chiss"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+entityDef char_cultist {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_cultist"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+entityDef char_hazardtrooper {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_hazardtrooper"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+entityDef char_gonk {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_gonk"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+entityDef char_howler {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_howler"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+entityDef char_imperial {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_imperial"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+entityDef char_jawa {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_jawa"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+
+entityDef char_jedi {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_jedi"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+entityDef char_lando {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_lando"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+entityDef char_luke {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_luke"
+	"start_anim"					"idle"
+	"health"						"10"
+	"ragdoll"						"char_alora"
+}
+entityDef char_protocol {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_protocol"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+entityDef char_r2d2 {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_r2d2"
+	"start_anim"					"idle"
+	"health"						"10"
+	"mass" 							"50"
+}
+
+entityDef char_r5d2 {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_r5d2"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+
+entityDef char_rancor {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_rancor"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+entityDef char_rockettrooper {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_rockettrooper"
+	"start_anim"					"idle"
+	"health"						"10"
+}
+
+entityDef char_jedi_tf {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_jedi_tf"
+	"start_anim"					"idle"
+	"health"						"10"
+
+	"skin" 							"skins/ja/jedi_tf_test"
+}
+
+model head_alora {
+	mesh							models/players/alora/head_alora.md5mesh
+}
+
+model vehicle_swoop {
+	mesh models/vehicles/swoop/swoop.md5mesh
+}

@@ -1,0 +1,987 @@
+textures/bespin/u_grate
+{
+    diffusemap textures/bespin/u_grate
+}
+
+textures/cairn/basic_onoff
+{
+    diffusemap textures/cairn/basic_onoff
+}
+
+textures/cairn/beam1
+{
+    diffusemap textures/cairn/beam1
+}
+
+textures/cairn/c_crate
+{
+    diffusemap textures/cairn/c_crate
+}
+
+textures/cairn/c_crate2
+{
+    diffusemap textures/cairn/c_crate2
+}
+
+textures/cairn/large_c_crate
+{
+    diffusemap textures/cairn/large_c_crate
+}
+
+textures/cairn/pod_door
+{
+    diffusemap textures/cairn/pod_door
+}
+
+textures/cairn/pod_door_dam
+{
+    diffusemap textures/cairn/pod_door_dam
+}
+
+textures/colors/black
+{
+    diffusemap textures/colors/black
+}
+
+textures/doomgiver/basic
+{
+    diffusemap textures/doomgiver/basic
+}
+
+textures/doomgiver/basic2
+{
+    diffusemap textures/doomgiver/basic2
+}
+
+textures/doomgiver/caution
+{
+    diffusemap textures/doomgiver/caution
+}
+
+textures/doomgiver/caution_red
+{
+    diffusemap textures/doomgiver/caution_red
+}
+
+textures/doomgiver/doom_screen1
+{
+    diffusemap textures/doomgiver/doom_screen1
+}
+
+textures/doomgiver/mapd
+{
+    diffusemap textures/doomgiver/mapd
+}
+
+textures/imp_mine/arch_inside
+{
+    diffusemap textures/imp_mine/arch_inside
+}
+
+textures/imp_mine/control5
+{
+    diffusemap textures/imp_mine/control5
+}
+
+textures/imp_mine/kplatek
+{
+    diffusemap textures/imp_mine/kplatek
+}
+
+textures/imp_mine/light
+{
+    diffusemap textures/imp_mine/light
+}
+
+textures/imp_mine/lightmap2
+{
+    diffusemap textures/imp_mine/lightmap2
+}
+
+textures/imp_mine/lightmap5
+{
+    diffusemap textures/imp_mine/lightmap5
+}
+
+textures/imp_mine/lights1
+{
+    diffusemap textures/imp_mine/lights1
+}
+
+textures/imp_mine/panelling2
+{
+    diffusemap textures/imp_mine/panelling2
+}
+
+textures/imp_mine/siding2
+{
+    diffusemap textures/imp_mine/siding2
+}
+
+textures/imp_mine/supsection
+{
+    diffusemap textures/imp_mine/supsection
+}
+
+textures/imp_mine/tower
+{
+    diffusemap textures/imp_mine/tower
+}
+
+textures/imp_mine/tower2
+{
+    diffusemap textures/imp_mine/tower2
+}
+
+textures/imp_mine/towertop
+{
+    diffusemap textures/imp_mine/towertop
+}
+
+textures/imp_mine/wall2c
+{
+    diffusemap textures/imp_mine/wall2c
+}
+
+textures/impdetention/512_128
+{
+    diffusemap textures/impdetention/512_128
+}
+
+textures/impdetention/512_512lights
+{
+    diffusemap textures/impdetention/512_512lights
+}
+
+textures/impdetention/black_panel
+{
+    diffusemap textures/impdetention/black_panel
+}
+
+textures/impdetention/control4
+{
+    diffusemap textures/impdetention/control4
+}
+
+textures/impdetention/control4_back
+{
+    diffusemap textures/impdetention/control4_back
+}
+
+textures/impdetention/control5
+{
+    diffusemap textures/impdetention/control5
+}
+
+textures/impdetention/crate7
+{
+    diffusemap textures/impdetention/crate7
+}
+
+textures/impdetention/deathcon1
+{
+    diffusemap textures/impdetention/deathcon1
+}
+
+textures/impdetention/deathcon1a
+{
+    diffusemap textures/impdetention/deathcon1a
+}
+
+textures/impdetention/deathcon2
+{
+    diffusemap textures/impdetention/deathcon2
+}
+
+textures/impdetention/deathcon2a
+{
+    diffusemap textures/impdetention/deathcon2a
+}
+
+textures/impdetention/deathconlight
+{
+    diffusemap textures/impdetention/deathconlight
+}
+
+textures/impdetention/door1
+{
+    diffusemap textures/impdetention/door1
+}
+
+textures/impdetention/doordirt2
+{
+    diffusemap textures/impdetention/doordirt2
+}
+
+textures/impdetention/edge1
+{
+    diffusemap textures/impdetention/edge1
+}
+
+textures/impdetention/floor
+{
+    diffusemap textures/impdetention/floor
+}
+
+textures/impdetention/floor2
+{
+    diffusemap textures/impdetention/floor2
+}
+
+textures/impdetention/floorgrate
+{
+    diffusemap textures/impdetention/floorgrate
+}
+
+textures/impdetention/light_red
+{
+    diffusemap textures/impdetention/light_red
+}
+
+textures/impdetention/light_white
+{
+    diffusemap textures/impdetention/light_white
+}
+
+textures/impdetention/light_white_off
+{
+    diffusemap textures/impdetention/light_white_off
+}
+
+textures/impdetention/metal
+{
+    diffusemap textures/impdetention/metal
+}
+
+textures/impdetention/metalpanel1c
+{
+    diffusemap textures/impdetention/metalpanel1c
+}
+
+textures/impdetention/metalpanel1f1dark
+{
+    diffusemap textures/impdetention/metalpanel1f1dark
+}
+
+textures/impdetention/metalpanel1g1
+{
+    diffusemap textures/impdetention/metalpanel1g1
+}
+
+textures/impdetention/metalpanel1new
+{
+    diffusemap textures/impdetention/metalpanel1new
+}
+
+textures/impdetention/metalpanel4
+{
+    diffusemap textures/impdetention/metalpanel4
+}
+
+textures/impdetention/metalpanel7
+{
+    diffusemap textures/impdetention/metalpanel7
+}
+
+textures/impdetention/ribs
+{
+    diffusemap textures/impdetention/ribs
+}
+
+textures/impdetention/vslot
+{
+    diffusemap textures/impdetention/vslot
+}
+
+textures/impdetention/vslot2
+{
+    diffusemap textures/impdetention/vslot2
+}
+
+textures/impdetention/vslot2a
+{
+    diffusemap textures/impdetention/vslot2a
+}
+
+textures/impgarrison/blastdoor_01
+{
+    diffusemap textures/impgarrison/blastdoor_01
+}
+
+textures/impgarrison/metal_lg_dk
+{
+    diffusemap textures/impgarrison/metal_lg_dk
+}
+
+textures/kejim/barrel
+{
+    diffusemap textures/kejim/barrel
+}
+
+textures/kejim/basepanel01
+{
+    diffusemap textures/kejim/basepanel01
+}
+
+textures/kejim/basepanel01a
+{
+    diffusemap textures/kejim/basepanel01a
+}
+
+textures/kejim/basepanel02
+{
+    diffusemap textures/kejim/basepanel02
+}
+
+textures/kejim/basepanel03
+{
+    diffusemap textures/kejim/basepanel03
+}
+
+textures/kejim/basepanel04
+{
+    diffusemap textures/kejim/basepanel04
+}
+
+textures/kejim/bigwall02
+{
+    diffusemap textures/kejim/bigwall02
+}
+
+textures/kejim/blastdoor_onoff
+{
+    diffusemap textures/kejim/blastdoor_onoff
+}
+
+textures/kejim/blue_puzzle01
+{
+    diffusemap textures/kejim/blue_puzzle01
+}
+
+textures/kejim/blue_puzzle02
+{
+    diffusemap textures/kejim/blue_puzzle02
+}
+
+textures/kejim/blue_puzzle03
+{
+    diffusemap textures/kejim/blue_puzzle03
+}
+
+textures/kejim/bluelights
+{
+    diffusemap textures/kejim/bluelights
+}
+
+textures/kejim/cameraswitch
+{
+    diffusemap textures/kejim/cameraswitch
+}
+
+textures/kejim/compwall
+{
+    diffusemap textures/kejim/compwall
+}
+
+textures/kejim/compwall01
+{
+    diffusemap textures/kejim/compwall01
+}
+
+textures/kejim/crateswitch
+{
+    diffusemap textures/kejim/crateswitch
+}
+
+textures/kejim/dish_final
+{
+    diffusemap textures/kejim/dish_final
+}
+
+textures/kejim/door_symbol_blue
+{
+    diffusemap textures/kejim/door_symbol_blue
+}
+
+textures/kejim/door_symbol_green
+{
+    diffusemap textures/kejim/door_symbol_green
+}
+
+textures/kejim/door_symbol_red
+{
+    diffusemap textures/kejim/door_symbol_red
+}
+
+textures/kejim/drawer1
+{
+    diffusemap textures/kejim/drawer1
+}
+
+textures/kejim/droiddoor
+{
+    diffusemap textures/kejim/droiddoor
+}
+
+textures/kejim/droidport
+{
+    diffusemap textures/kejim/droidport
+}
+
+textures/kejim/elevatortext1
+{
+    diffusemap textures/kejim/elevatortext1
+}
+
+textures/kejim/elevatortext2
+{
+    diffusemap textures/kejim/elevatortext2
+}
+
+textures/kejim/flashscreen_base
+{
+    diffusemap textures/kejim/flashscreen_base
+}
+
+textures/kejim/flatwhite
+{
+    diffusemap textures/kejim/flatwhite
+}
+
+textures/kejim/flatwhite_half
+{
+    diffusemap textures/kejim/flatwhite_half
+}
+
+textures/kejim/floor02
+{
+    diffusemap textures/kejim/floor02
+}
+
+textures/kejim/floor_green
+{
+    diffusemap textures/kejim/floor_green
+}
+
+textures/kejim/floorsquare2
+{
+    diffusemap textures/kejim/floorsquare2
+}
+
+textures/kejim/frame1
+{
+    diffusemap textures/kejim/frame1
+}
+
+textures/kejim/frame1_gold
+{
+    diffusemap textures/kejim/frame1_gold
+}
+
+textures/kejim/frame1_off
+{
+    diffusemap textures/kejim/frame1_off
+}
+
+textures/kejim/frame2
+{
+    diffusemap textures/kejim/frame2
+}
+
+textures/kejim/frame2_gold
+{
+    diffusemap textures/kejim/frame2_gold
+}
+
+textures/kejim/gen_door_text
+{
+    diffusemap textures/kejim/gen_door_text
+}
+
+textures/kejim/gen_glow
+{
+    diffusemap textures/kejim/gen_glow
+}
+
+textures/kejim/grate01
+{
+    diffusemap textures/kejim/grate01
+}
+
+textures/kejim/grate01b
+{
+    diffusemap textures/kejim/grate01b
+}
+
+textures/kejim/grate02
+{
+    diffusemap textures/kejim/grate02
+}
+
+textures/kejim/grate02_broke
+{
+    diffusemap textures/kejim/grate02_broke
+}
+
+textures/kejim/green_puzzle01
+{
+    diffusemap textures/kejim/green_puzzle01
+}
+
+textures/kejim/green_puzzle02
+{
+    diffusemap textures/kejim/green_puzzle02
+}
+
+textures/kejim/green_puzzle03
+{
+    diffusemap textures/kejim/green_puzzle03
+}
+
+textures/kejim/greenlights
+{
+    diffusemap textures/kejim/greenlights
+}
+
+textures/kejim/kej_blastdoor
+{
+    diffusemap textures/kejim/kej_blastdoor
+}
+
+textures/kejim/kej_control
+{
+    diffusemap textures/kejim/kej_control
+}
+
+textures/kejim/kej_control2
+{
+    diffusemap textures/kejim/kej_control2
+}
+
+textures/kejim/kej_control3
+{
+    diffusemap textures/kejim/kej_control3
+}
+
+textures/kejim/kej_lights
+{
+    diffusemap textures/kejim/kej_lights
+}
+
+textures/kejim/kej_pipe
+{
+    diffusemap textures/kejim/kej_pipe
+}
+
+textures/kejim/kej_wall
+{
+    diffusemap textures/kejim/kej_wall
+}
+
+textures/kejim/kej_wall_03
+{
+    diffusemap textures/kejim/kej_wall_03
+}
+
+textures/kejim/kej_wall_gun
+{
+    diffusemap textures/kejim/kej_wall_gun
+}
+
+textures/kejim/kejim_runner
+{
+    diffusemap textures/kejim/kejim_runner
+}
+
+textures/kejim/kejim_spike
+{
+    diffusemap textures/kejim/kejim_spike
+}
+
+textures/kejim/keyport2
+{
+    diffusemap textures/kejim/keyport2
+}
+
+textures/kejim/kgeneratorpanel
+{
+    diffusemap textures/kejim/kgeneratorpanel
+}
+
+textures/kejim/kgeneratorpanel2
+{
+    diffusemap textures/kejim/kgeneratorpanel2
+}
+
+textures/kejim/kgunpanel
+{
+    diffusemap textures/kejim/kgunpanel
+}
+
+textures/kejim/kgunpanelon
+{
+    diffusemap textures/kejim/kgunpanelon
+}
+
+textures/kejim/labwell2
+{
+    diffusemap textures/kejim/labwell2
+}
+
+textures/kejim/labwell_common
+{
+    diffusemap textures/kejim/labwell_common
+}
+
+textures/kejim/labwell_square
+{
+    diffusemap textures/kejim/labwell_square
+}
+
+textures/kejim/lift_off
+{
+    diffusemap textures/kejim/lift_off
+}
+
+textures/kejim/lift_on
+{
+    diffusemap textures/kejim/lift_on
+}
+
+textures/kejim/lightpanel
+{
+    diffusemap textures/kejim/lightpanel
+}
+
+textures/kejim/lightpanel02
+{
+    diffusemap textures/kejim/lightpanel02
+}
+
+textures/kejim/map_display1
+{
+    diffusemap textures/kejim/map_display1
+}
+
+textures/kejim/map_display2
+{
+    diffusemap textures/kejim/map_display2
+}
+
+textures/kejim/map_display3
+{
+    diffusemap textures/kejim/map_display3
+}
+
+textures/kejim/map_display4
+{
+    diffusemap textures/kejim/map_display4
+}
+
+textures/kejim/metal
+{
+    diffusemap textures/kejim/metal
+}
+
+textures/kejim/metal1
+{
+    diffusemap textures/kejim/metal1
+}
+
+textures/kejim/metal2
+{
+    diffusemap textures/kejim/metal2
+}
+
+textures/kejim/metalpanel1c
+{
+    diffusemap textures/kejim/metalpanel1c
+}
+
+textures/kejim/newfloor_kej
+{
+    diffusemap textures/kejim/newfloor_kej
+}
+
+textures/kejim/newsquare
+{
+    diffusemap textures/kejim/newsquare
+}
+
+textures/kejim/path_blue
+{
+    diffusemap textures/kejim/path_blue
+}
+
+textures/kejim/path_green
+{
+    diffusemap textures/kejim/path_green
+}
+
+textures/kejim/path_red
+{
+    diffusemap textures/kejim/path_red
+}
+
+textures/kejim/pipe
+{
+    diffusemap textures/kejim/pipe
+}
+
+textures/kejim/pipe01
+{
+    diffusemap textures/kejim/pipe01
+}
+
+textures/kejim/pipe02
+{
+    diffusemap textures/kejim/pipe02
+}
+
+textures/kejim/pipe3
+{
+    diffusemap textures/kejim/pipe3
+}
+
+textures/kejim/pipe_inside
+{
+    diffusemap textures/kejim/pipe_inside
+}
+
+textures/kejim/pipewall
+{
+    diffusemap textures/kejim/pipewall
+}
+
+textures/kejim/prison_plating
+{
+    diffusemap textures/kejim/prison_plating
+}
+
+textures/kejim/red_puzzle01
+{
+    diffusemap textures/kejim/red_puzzle01
+}
+
+textures/kejim/red_puzzle02
+{
+    diffusemap textures/kejim/red_puzzle02
+}
+
+textures/kejim/red_puzzle03
+{
+    diffusemap textures/kejim/red_puzzle03
+}
+
+textures/kejim/redfield1
+{
+    diffusemap textures/kejim/redfield1
+}
+
+textures/kejim/redlights
+{
+    diffusemap textures/kejim/redlights
+}
+
+textures/kejim/refcolumn
+{
+    diffusemap textures/kejim/refcolumn
+}
+
+textures/kejim/refpanel
+{
+    diffusemap textures/kejim/refpanel
+}
+
+textures/kejim/screen
+{
+    diffusemap textures/kejim/screen
+}
+
+textures/kejim/sentrytrim01
+{
+    diffusemap textures/kejim/sentrytrim01
+}
+
+textures/kejim/sentrytrim02
+{
+    diffusemap textures/kejim/sentrytrim02
+}
+
+textures/kejim/sentrytrim03
+{
+    diffusemap textures/kejim/sentrytrim03
+}
+
+textures/kejim/stars_scroll
+{
+    diffusemap textures/kejim/stars_scroll
+}
+
+textures/kejim/strutbase
+{
+    diffusemap textures/kejim/strutbase
+}
+
+textures/kejim/strutlight
+{
+    diffusemap textures/kejim/strutlight
+}
+
+textures/kejim/strutmid
+{
+    diffusemap textures/kejim/strutmid
+}
+
+textures/kejim/switch
+{
+    diffusemap textures/kejim/switch
+}
+
+textures/kejim/switch_broken
+{
+    diffusemap textures/kejim/switch_broken
+}
+
+textures/kejim/switch_on
+{
+    diffusemap textures/kejim/switch_on
+}
+
+textures/kejim/switchblue
+{
+    diffusemap textures/kejim/switchblue
+}
+
+textures/kejim/switchblue_on
+{
+    diffusemap textures/kejim/switchblue_on
+}
+
+textures/kejim/switchgreen
+{
+    diffusemap textures/kejim/switchgreen
+}
+
+textures/kejim/switchgreen_on
+{
+    diffusemap textures/kejim/switchgreen_on
+}
+
+textures/kejim/switchred
+{
+    diffusemap textures/kejim/switchred
+}
+
+textures/kejim/switchred_on
+{
+    diffusemap textures/kejim/switchred_on
+}
+
+textures/kejim/tanks
+{
+    diffusemap textures/kejim/tanks
+}
+
+textures/kejim/trim01
+{
+    diffusemap textures/kejim/trim01
+}
+
+textures/kejim/trim02
+{
+    diffusemap textures/kejim/trim02
+}
+
+textures/kejim/trim03
+{
+    diffusemap textures/kejim/trim03
+}
+
+textures/kejim/trim05
+{
+    diffusemap textures/kejim/trim05
+}
+
+textures/kejim/trim06
+{
+    diffusemap textures/kejim/trim06
+}
+
+textures/kejim/wallpanel01
+{
+    diffusemap textures/kejim/wallpanel01
+}
+
+textures/kejim/wallpanel02
+{
+    diffusemap textures/kejim/wallpanel02
+}
+
+textures/kejim/wallpanel03
+{
+    diffusemap textures/kejim/wallpanel03
+}
+
+textures/kejim/wallpanel04
+{
+    diffusemap textures/kejim/wallpanel04
+}
+
+textures/kejim/wallpanel06
+{
+    diffusemap textures/kejim/wallpanel06
+}
+
+textures/kejim/wallpanel08
+{
+    diffusemap textures/kejim/wallpanel08
+}
+
+textures/kejim/wallpanel09
+{
+    diffusemap textures/kejim/wallpanel09
+}
+
+textures/kejim/wallpanel10
+{
+    diffusemap textures/kejim/wallpanel10
+}
+
+textures/kejim/wallpanel11
+{
+    diffusemap textures/kejim/wallpanel11
+}
+
+
+
+textures/tests/interference2
+{
+    diffusemap textures/tests/interference2
+}
+
+textures/tests/rock_color
+{
+    diffusemap textures/tests/rock_color
+}
+
+textures/video/mon_mothma
+{
+    diffusemap textures/video/mon_mothma
+}
+
+textures/video/mon_mothma_back
+{
+    diffusemap textures/video/mon_mothma_back
+}
+
+textures/video/mon_mothma_idle
+{
+    diffusemap textures/video/mon_mothma_idle
+}
+
+textures/yavin/mrj_water
+{
+    diffusemap textures/yavin/mrj_water
+}
+

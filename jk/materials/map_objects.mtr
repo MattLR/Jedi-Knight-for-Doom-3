@@ -1,0 +1,255 @@
+models/map_objects/bounty/cache
+{
+	diffusemap models/map_objects/bounty/cache
+}
+
+models/map_objects/desert/crane
+{
+	diffusemap models/map_objects/desert/crane
+}
+
+models/map_objects/factory/barrel
+{
+	diffusemap models/map_objects/factory/barrel
+}
+
+models/map_objects/factory/sb_pipe3
+{
+	diffusemap models/map_objects/factory/sb_pipe3
+}
+
+models/map_objects/imp_mine/xwbody
+{
+	diffusemap models/map_objects/imp_mine/xwbody
+}
+models/map_objects/imp_mine/xwings
+{
+	diffusemap models/map_objects/imp_mine/xwings
+}
+models/map_objects/imp_mine/xwglass_shd
+{
+	diffusemap models/map_objects/imp_mine/xwglass_shd
+}
+
+models/map_objects/imp_mine/tank
+{
+	diffusemap models/map_objects/imp_mine/tank
+}
+models/map_objects/imp_mine/console_02
+{
+	diffusemap models/map_objects/imp_mine/console_02
+}
+models/map_objects/imp_mine/consoleface_04
+{
+	diffusemap models/map_objects/imp_mine/consoleface_04
+}
+models/map_objects/imp_mine/consoleface_03
+{
+	diffusemap models/map_objects/imp_mine/consoleface_03
+}
+
+models/map_objects/cairn/barrels
+{
+    diffusemap models/map_objects/cairn/barrels
+}
+
+models/map_objects/cairn/cargo_big
+{
+    diffusemap models/map_objects/cairn/cargo_big
+}
+
+models/map_objects/cairn/cargo_sm
+{
+    diffusemap models/map_objects/cairn/cargo_sm
+}
+
+models/map_objects/imp_mine/crate
+{
+    diffusemap models/map_objects/imp_mine/crate
+}
+
+models/map_objects/imp_mine/shuttle_wing01
+{
+    diffusemap models/map_objects/imp_mine/shuttle_wing01
+}
+
+models/map_objects/imp_mine/shuttle_wing02
+{
+    diffusemap models/map_objects/imp_mine/shuttle_wing02
+}
+
+models/map_objects/imp_mine/shuttle_body
+{
+    diffusemap models/map_objects/imp_mine/shuttle_body
+}
+
+models/map_objects/imp_mine/shuttle_nose
+{
+    diffusemap models/map_objects/imp_mine/shuttle_nose
+}
+
+models/map_objects/kejim/crate_01
+{
+    diffusemap models/map_objects/kejim/crate_01
+}
+
+models/map_objects/kejim/crate_02
+{
+    diffusemap models/map_objects/kejim/crate_02
+}
+
+models/map_objects/kejim/crystals
+{
+    diffusemap models/map_objects/kejim/crystals
+}
+
+models/map_objects/kejim/dish
+{
+    diffusemap models/map_objects/kejim/dish
+}
+
+models/map_objects/quicktrip/root
+{
+    diffusemap models/map_objects/quicktrip/root
+}
+
+models/map_objects/bounty/cache2_longbox
+{
+    diffusemap models/map_objects/bounty/cache2_longbox
+}
+
+models/map_objects/bounty/energy_cell
+{
+    diffusemap models/map_objects/bounty/energy_cell
+}
+
+models/map_objects/bounty/power_cell
+{
+    diffusemap models/map_objects/bounty/power_cell
+}
+
+models/map_objects/bounty/metallic_bolts
+{
+    diffusemap models/map_objects/bounty/metallic_bolts
+}
+
+models/map_objects/bounty/rockets
+{
+    diffusemap models/map_objects/bounty/rockets
+}
+models/map_objects/korriban/brazier
+{
+    diffusemap models/map_objects/korriban/brazier
+}
+models/map_objects/korriban/beam_statue
+{
+    diffusemap models/map_objects/korriban/beam_statue
+}
+models/map_objects/korriban/coffin_slab
+{
+    diffusemap models/map_objects/korriban/coffin_slab
+}
+models/map_objects/korriban/beam_statue_top
+{
+    diffusemap models/map_objects/korriban/beam_statue_top
+}
+models/map_objects/korriban/statue_guard01
+{
+    diffusemap models/map_objects/korriban/statue_guard01
+}
+models/map_objects/korriban/statue_guard02
+{
+    diffusemap models/map_objects/korriban/statue_guard02
+}
+models/map_objects/korriban/torch_hang
+{
+    diffusemap models/map_objects/korriban/torch_hang
+}
+models/map_objects/nar_shaddar/beerglass
+{
+    diffusemap models/map_objects/nar_shaddar/beerglass
+}
+models/map_objects/nar_shaddar/cup
+{
+    diffusemap models/map_objects/nar_shaddar/cup
+}
+models/map_objects/nar_shaddar/table
+{
+    diffusemap models/map_objects/nar_shaddar/table
+}
+models/map_objects/nar_shaddar/wine
+{
+    diffusemap models/map_objects/nar_shaddar/wine
+}
+models/map_objects/nar_shaddar/book
+{
+    diffusemap models/map_objects/nar_shaddar/book
+}
+models/map_objects/ships/z95_body
+{
+    diffusemap models/map_objects/ships/z95_body
+}
+models/map_objects/ships/z95_cockpit
+{
+    diffusemap models/map_objects/ships/z95_cockpit
+}
+models/map_objects/ships/z95_wing
+{
+    diffusemap models/map_objects/ships/z95_wing
+}
+models/map_objects/rocky_ruins/floorlight
+{
+    diffusemap models/map_objects/rocky_ruins/floorlight
+}
+models/map_objects/rocky_ruins/cellwall
+{
+    diffusemap models/map_objects/rocky_ruins/cellwall
+}
+models/map_objects/rocky_ruins/monitor
+{
+    diffusemap models/map_objects/rocky_ruins/monitor
+}
+models/map_objects/rocky_ruins/switch
+{
+    diffusemap models/map_objects/rocky_ruins/switch
+}
+models/map_objects/rocky_ruins/wall_plate
+{
+    diffusemap models/map_objects/rocky_ruins/wall_plate
+}
+models/map_objects/rocky_ruins/water_pump
+{
+    diffusemap models/map_objects/rocky_ruins/water_pump
+}
+models/map_objects/taspir/airpure
+{
+    diffusemap models/map_objects/taspir/airpure
+}
+models/map_objects/taspir/control_station
+{
+    diffusemap models/map_objects/taspir/control_station
+}
+models/map_objects/taspir/lamp
+{
+    diffusemap models/map_objects/taspir/lamp
+}
+models/map_objects/taspir/lamp2
+{
+    diffusemap models/map_objects/taspir/lamp2
+}
+models/map_objects/taspir/lamp2_bulb
+{
+    diffusemap models/map_objects/taspir/lamp2_bulb
+}
+models/map_objects/taspir/lava_ring
+{
+    diffusemap models/map_objects/taspir/lava_ring
+}
+models/map_objects/taspir/strut
+{
+    diffusemap models/map_objects/taspir/strut
+}
+models/map_objects/taspir/wall_pipe
+{
+    diffusemap models/map_objects/taspir/wall_pipe
+}

@@ -1,0 +1,18 @@
+model prop_md3 {
+	mesh	models/map_objects/mp/sphere.md3
+ 
+}
+
+model prop_desertrock {
+	mesh	models/map_objects/desert/rock.ase
+ 
+}
+
+entityDef prop_md3 {
+	"inherit"						"cin_base"
+	"model"							"prop_md3"
+	"joint"							"RHANDCONNECTOR"
+	"origin"						"0 0 0"
+	"angles"						"0 0 0"
+	"remove"						"1"
+}

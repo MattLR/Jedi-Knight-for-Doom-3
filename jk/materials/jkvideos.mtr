@@ -1,0 +1,6 @@
+video/jk03 {
+	translucent {
+		videomap "video/jk03.roq"
+		linear
+	}
+}

@@ -1,0 +1,179 @@
+/***********************************************************************
+
+	weapon_repeater.def
+
+
+***********************************************************************/
+
+
+entityDef weapon_repeater {
+	"editor_color"				".3 .3 1"
+	"editor_mins"				"-16 -16 0"
+	"editor_maxs"				"16 16 32"
+	"editor_usage"				"Heavy Repeater"
+	"editor_rotatable"		"1"
+
+	"spawnclass"				"idItem"
+	"size"						"32 32 32"
+	"model"						"models/weapons2/heavy_repeater/heavy_repeater_w.ase"
+	"model_view" 				"viewmodel_repeater"
+	"model_world" 				"worldmodel_repeater"
+	"joint_attach"				"rhang_tag_bone"
+	"joint"						"rhang_tag_bone"
+	"def_dropItem"				"moveable_item_repeater"
+
+	"inv_name"					"Imperial Heavy Repeater"
+	"inv_weapon"				"weapon_repeater"
+	"inv_item"					"5"
+	"inv_ammo_metal_bolts"		"50"
+	"icon"						"gfx/hud/w_icon_blaster_pistol"
+
+	"weapon_scriptobject"		"weapon_repeater"
+	"def_projectile"			"projectile_repeater"
+	"ammoType"					"ammo_metal_bolts"
+	"ammoRequired"				"1"
+	"lowAmmo"					"25"
+	"mtr_flashShader"			"muzzleflash"
+	"flashColor"				"1 0.8 0.4"
+	"flashRadius"				"120"
+	"silent_fire"				"0"
+	"recoilTime"				"50"
+	"recoilAngles"				"-1 0 0"
+
+	"weaponAngleOffsetAverages" "20"
+	"weaponAngleOffsetScale" 	".4"
+	"weaponAngleOffsetMax"		"60"
+	"weaponOffsetTime"			"400"
+	"weaponOffsetScale"			"0.005"
+
+	"hide_time"					"0.3"								// time to hide weapon when talking to npcs or looking at guis
+	"hide_distance"				"-15"								// distance to offset weapon when talking to npcs or looking at guis
+
+	"smoke_muzzle"				"muzzlesmoke.prt"
+	//"def_ejectBrass"			"debris_brass"
+	//"ejectBrassDelay"			"10"
+	
+	"snd_acquire"				"sound_weapon_acquire"
+	"snd_respawn"				"sound_weapon_respawn"
+	
+	"skin_invisible"			"skins/pistol_invis"
+	
+	"spread"					"1.4"
+}
+
+entityDef moveable_item_repeater {
+	"inherit"					"weapon_repeater"
+	"spawnclass"				"idMoveableItem"
+	"density"					"0.03"
+	"friction"					"0.2"
+	"bouncyness"				"0"
+}
+
+model worldmodel_repeater {
+	mesh 						models/weapons2/heavy_repeater/heavy_repeater_w.md5mesh
+	//offset						(3 3 3) 
+	/*
+	anim idle 					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim idle_empty				models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim aim					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim fire1 					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim putaway				models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim raise					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim reload					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim noammo					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	*/
+}
+
+model viewmodel_repeater {
+	offset 						(6.0 -5.5 -10.0)
+	mesh						models/weapons2/heavy_repeater/heavy_repeater_test.md5mesh
+	
+	anim raise 					models/weapons2/heavy_repeater/heavy_repeater.md5anim
+	
+	anim idle					models/weapons2/heavy_repeater/heavy_repeater.md5anim
+	anim idle_empty				models/weapons2/heavy_repeater/heavy_repeater.md5anim
+	
+	anim fire1					models/weapons2/heavy_repeater/heavy_repeater.md5anim {
+		frame 1					sound_weapon player_repeater_fire
+	}
+	
+	
+		
+	anim reload 				models/weapons2/heavy_repeater/heavy_repeater.md5anim {
+		frame 1					sound_weapon player_pistol_reload
+	}
+	
+	anim noammo 				models/weapons2/heavy_repeater/heavy_repeater.md5anim {
+		frame 1					sound_body player_pistol_empty
+	}
+
+	anim putaway 				models/weapons2/heavy_repeater/heavy_repeater.md5anim
+	
+}
+entityDef	damage_repeater {
+	"damage"					"8"
+	"smoke_wound_flesh"			"bloodwound.prt"
+	"gib"						"1"
+	
+}
+
+entityDef projectile_repeater {
+	"spawnclass"				"idProjectile"
+	"mins"						"-6 -6 -4"
+	"maxs"						"6 6 4"
+	"cone"						"3"
+	"scale"						"16"
+	"model" 					"models/particles/repeater_bolt.lwo"
+	
+
+	"def_damage"				"damage_repeater"
+
+	"launchFromBarrel"			"1"
+	"health"					"0"					// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"					"1600 0 0"			// how fast the projectile leaves the gun (or distance if fuse is 0)
+	"random_shader_spin"		"1"					// sets shader parm 5 which if appropriate the projectile shader will use this as an alternating spin
+	"angular_velocity"			"0 0 0"				// how the projectile is rotating when it leaves the gun
+	"thrust"					"0"					// the rate of acceleration (always in the direction of the projectiles model)
+	"thrust_start"				"0"					// when to start accelerating
+	"thrust_end"				"0"					// when to stop accelerating
+	"linear_friction"			"0"					// "air" friction
+	"angular_friction"			"0"
+	"contact_friction"			"0"
+	"bounce"					"0.6"				// how much speed a projectile retains when it bounces off of objects (coefficient of restitution).  0 means no bounce.
+	"mass"						"50"
+	"push"						"4000"				// additional impulse when projectile collides
+	"gravity"					"0"					// how much gravity affects the trajectory.  gravity direction is same as the entity that fired it.
+	"fuse"						"10"				// how long before the projectile is removed or self-detonates.  Use 0 for beam weapons (velocity == distance).
+
+	"detonate_on_fuse"			"0"					// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"			"1"					// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"			"1"					// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"			"1"					// whether projectile should detonate when it hits a character in the game
+
+	"impact_damage_effect"		"1"					// whether projectile causes blood splats from characters that bleed
+	"impact_gib"				"1"					// whether projectile can gib a character or not (for example: bullets don't gib, but rockets do)
+
+	"mtr_detonate"				"textures/decals/bulleth02"
+	"decal_size"				"10" 
+
+	"smoke_fly"					""					// particle effect while in the air
+	"smoke_detonate"			""					// particle effect when detonates
+	"smoke_residue"				""					// particle effect while in the air
+	"smoke_bounce"				""					// particle effect when bounces
+	"smoke_fuse"				""					// particle effect when removed from fuse expiring
+
+	"model_detonate"			"plasmaimpact.prt"
+
+//	"mtr_light_shader"			""
+//	"light_color"				"0 0 0.8"
+//	"light_radius"				"160"
+//	"light_offset"				"-8 0 0"
+
+//	"mtr_explode_light_shader"	"muzzleflash"
+//	"explode_light_color"		"0 0 1"
+//	"explode_light_radius"		"160"
+//	"explode_light_fadetime"	"0.25"
+
+	"snd_fly"					""					// sound effect while in the air
+	"snd_explode"				"blaster_impact"
+}

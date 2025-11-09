@@ -1,0 +1,183 @@
+entityDef func_glass {
+	"editor_color"						"0 .5 .8"
+	"editor_mins"						"?"
+	"editor_maxs"						"?"
+	"spawnclass"						"idBrittleFracture"
+
+	"editor_usage"						"b-rep brittle fracture"
+
+	"editor_var maxShardArea"			"maximum surface area of each shard"
+	"editor_var maxShatterRadius"		"maximum distance from impact where the surface is shattered"
+	"editor_var minShatterRadius"		"minimum distance from impact where the surface is shattered"
+	"editor_var linearVelocityScale"	"linear velocity scale"
+	"editor_var angularVelocityScale"	"angular velocity scale"
+	"editor_var health"					"the surface breaks when the health drops down to or below zero"
+	"editor_var fx"						"special effect to be used when surface breaks"
+	"editor_var decalSize"				"size of projected decal"
+	"editor_var mtr_decal"				"material to be used for decals"
+	"editor_var snd_bullethole"			"sound to play for bullet holes"
+	"editor_var snd_shatter"			"sound to play when the surface breaks"
+	"editor_var disableFracture"		""
+
+	"mtr_decal"							"textures/decals/shot_glass"
+	"snd_bullethole"					"glass_bullethole"
+	"snd_shatter"						"glass_shatter"
+}
+
+entityDef misc_model {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"?"
+	"editor_maxs"				"?"
+
+	"editor_usage"				"A brush model that just sits there, doing nothing.  Can be used for conditional walls and models."
+	"editor_usage1"				"When triggered, toggles between visible and hidden (see hide).  Entity is non-solid when hidden."
+
+	"editor_bool solid"			"whether the object should be solid or not."
+	"editor_bool hide"			"whether the object should be visible when spawned. you need to set a value for triggering on/off to work"
+	"editor_gui gui"			"gui attached to this static, gui2 and gui3 also work"
+	"editor_gui gui_demonic"	"demonic gui attached to this statit, gui_demonic2 and gui_demonic3 also work"
+	"editor_bool gui_noninteractive" "any gui attached will not be interactive"
+	"editor_bool noclipmodel"	"0 by default. Sets whether or not to generate a collision model for an ASE/LWO func_static at level load. (Set to 1 for stuff the player can't interact with. This will save memory.)"
+	"editor_bool inline"		"If true, turn the model into map geometry at dmap time"
+
+	"spawnclass"				"idStaticEntity"
+	
+	"solid"						"0"
+	"noclipmodel"				"0"
+}
+
+entityDef misc_model_breakable {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"?"
+	"editor_maxs"				"?"
+
+	"editor_usage"				"Breakable object.  Fires targets and changes shader parms and model when damaged."
+	"editor_usage1"				"When damaged, shader parm 3 is set to the current time, and shader parm 7 is set"
+	"editor_usage2"				"to either a random number from 1 to 'numstates', or to the value in 'forcestate' if"
+	"editor_usage3"				"it is non-zero. If you want an invisible texture, use common/collision. Make sure"
+	"editor_usage4"				"you func_remove it after it is shot if it's blocking an entrance."
+							
+	"editor_model broken"		"if set, switch to this model when the entity is broken."
+	"editor_var health"			"amount of damage to recieve before becoming damaged."
+	"editor_var target"			"targets to trigger when damaged."
+	"editor_var count"			"number of times to allow to be triggered, (-1 means infinite)."
+	"editor_bool cycle"			"if set to 1, entity will cycle through each shader state when damaged, reseting to 0 when it exceeds numstates."
+	"editor_var numstates"		"the number of different shader states.  Shader parm 7 will be set to a value between 1 and this value."
+	"editor_var forcestate"		"if non-zero, the state to force the shader into when damaged."
+	"editor_var wait"			"Seconds between triggerings."
+
+	"spawnclass"				"idDamagable"
+
+	"health"					"5"
+	"count"						"1"
+	"cycle"						"0"
+	"numstates"					"1"
+	"forcestate"				"0"
+	"wait"						"0.1"
+}
+
+entityDef func_breakable {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"?"
+	"editor_maxs"				"?"
+
+	"editor_usage"				"Breakable object.  Fires targets and changes shader parms and model when damaged."
+	"editor_usage1"				"When damaged, shader parm 3 is set to the current time, and shader parm 7 is set"
+	"editor_usage2"				"to either a random number from 1 to 'numstates', or to the value in 'forcestate' if"
+	"editor_usage3"				"it is non-zero. If you want an invisible texture, use common/collision. Make sure"
+	"editor_usage4"				"you func_remove it after it is shot if it's blocking an entrance."
+							
+	"editor_model broken"		"if set, switch to this model when the entity is broken."
+	"editor_var health"			"amount of damage to recieve before becoming damaged."
+	"editor_var target"			"targets to trigger when damaged."
+	"editor_var count"			"number of times to allow to be triggered, (-1 means infinite)."
+	"editor_bool cycle"			"if set to 1, entity will cycle through each shader state when damaged, reseting to 0 when it exceeds numstates."
+	"editor_var numstates"		"the number of different shader states.  Shader parm 7 will be set to a value between 1 and this value."
+	"editor_var forcestate"		"if non-zero, the state to force the shader into when damaged."
+	"editor_var wait"			"Seconds between triggerings."
+
+	"spawnclass"				"idDamagable"
+
+	"health"					"5"
+	"count"						"1"
+	"cycle"						"0"
+	"numstates"					"1"
+	"forcestate"				"0"
+	"wait"						"0.1"
+}
+
+entityDef misc_model_static {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"?"
+	"editor_maxs"				"?"
+
+	"editor_usage"				"A brush model that just sits there, doing nothing.  Can be used for conditional walls and models."
+	"editor_usage1"				"When triggered, toggles between visible and hidden (see hide).  Entity is non-solid when hidden."
+
+	"editor_bool solid"			"whether the object should be solid or not."
+	"editor_bool hide"			"whether the object should be visible when spawned. you need to set a value for triggering on/off to work"
+	"editor_gui gui"			"gui attached to this static, gui2 and gui3 also work"
+	"editor_gui gui_demonic"	"demonic gui attached to this statit, gui_demonic2 and gui_demonic3 also work"
+	"editor_bool gui_noninteractive" "any gui attached will not be interactive"
+	"editor_bool noclipmodel"	"0 by default. Sets whether or not to generate a collision model for an ASE/LWO func_static at level load. (Set to 1 for stuff the player can't interact with. This will save memory.)"
+	"editor_bool inline"		"If true, turn the model into map geometry at dmap time"
+
+	"spawnclass"				"idStaticEntity"
+	
+	"solid"						"0"
+	"noclipmodel"				"0"
+}
+
+entityDef trigger_multiple_jk {
+	"editor_color"				".5 .5 .5"
+	"editor_mins"				"?"
+	"editor_maxs"				"?"
+	"editor_material"			"textures/common/trigmulti"
+
+	"editor_usage"				"Variable sized repeatable trigger.  Must be targeted at one or more entities.  " \
+								"The basic time between firing is a random time between (wait - random) and (wait + random)."
+
+	"editor_var wait"			"seconds between triggerings.  Use '-1' to indicate one time only."
+	"editor_var random"			"wait variance.  trigger waits wait + or - random after firing targets before triggering again."
+	"editor_var delay"			"seconds to wait before firing after triggered."
+	"editor_var random_delay"	"delay variance.  trigger waits delay + or - random_delay before firing targets."
+	"editor_var call"			"script function to call when triggered."
+	"editor_var requires"		"item required in players inventory to fire."
+	"editor_var removeItem"		"if above item is removed from inventory when used."
+	"editor_var anyTouch"		"anything can touch it, players, mobs."		// What the hell are mobs?
+	"editor_var noTouch"		"cannot be touched, must be triggered."
+	"editor_var triggerFirst"	"don't activate until triggered."
+	"editor_var noClient"		"can't be touched by players, but can be touched by other entities (func_activators, for instance)."
+
+	"spawnclass"				"idTrigger_Multi_JK"
+
+	"wait"						"0.5"
+	"random"					"0"
+	"delay"						"0"
+	"random_delay"				"0"
+	"anyTouch"					"0"
+	"noTouch"					"0"
+	"noClient"					"0"
+}
+
+entityDef func_usable {
+	"editor_color"				"0 .5 .8"
+	"editor_mins"				"?"
+	"editor_maxs"				"?"
+
+	"editor_usage"				"A brush model that just sits there, doing nothing.  Can be used for conditional walls and models."
+	"editor_usage1"				"When triggered, toggles between visible and hidden (see hide).  Entity is non-solid when hidden."
+
+	"editor_bool solid"			"whether the object should be solid or not."
+	"editor_bool hide"			"whether the object should be visible when spawned. you need to set a value for triggering on/off to work"
+	"editor_gui gui"			"gui attached to this static, gui2 and gui3 also work"
+	"editor_gui gui_demonic"	"demonic gui attached to this statit, gui_demonic2 and gui_demonic3 also work"
+	"editor_bool gui_noninteractive" "any gui attached will not be interactive"
+	"editor_bool noclipmodel"	"0 by default. Sets whether or not to generate a collision model for an ASE/LWO func_static at level load. (Set to 1 for stuff the player can't interact with. This will save memory.)"
+	"editor_bool inline"		"If true, turn the model into map geometry at dmap time"
+
+	"spawnclass"				"idStaticEntity"
+	
+	"solid"						"1"
+	"noclipmodel"				"0"
+}

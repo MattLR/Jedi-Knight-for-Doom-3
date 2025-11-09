@@ -1,0 +1,52 @@
+textures/tests/glass1
+{
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	glass
+	forceoverlays
+	
+	{	
+	maskcolor
+	map	makealpha(textures/tests/glass2)
+	}	
+	{
+	blend gl_dst_alpha, gl_one
+	maskalpha
+       	cubeMap		env/gen2
+	red		Parm0
+	green   Parm1
+	blue	Parm2
+	texgen		reflect
+
+	}
+}
+
+textures/tests/glass_security_border
+{
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	glass
+	forceoverlays
+
+	{
+	maskcolor
+	map	makealpha(textures/tests/glass2)
+	}
+	{
+	blend gl_dst_alpha, gl_one
+	maskalpha
+	cubeMap	env/gen2
+	red		Parm0
+	green   Parm1
+	blue	Parm2
+	texgen	reflect
+	}
+	{
+	map textures/kejim/security_glass_border
+	blend GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+    }
+}

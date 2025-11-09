@@ -1,0 +1,155 @@
+models/map_objects/kejim/tram
+{
+    diffusemap models/map_objects/kejim/tram
+}
+
+models/map_objects/kejim/tram_clamps
+{
+    diffusemap models/map_objects/kejim/tram_clamps
+}
+
+models/map_objects/kejim/tram_panel01
+{
+    diffusemap models/map_objects/kejim/tram_panel01
+}
+
+models/map_objects/kejim/tram_panel02
+{
+    diffusemap models/map_objects/kejim/tram_panel02
+}
+
+models/map_objects/kejim/tram_supports
+{
+    diffusemap models/map_objects/kejim/tram_supports
+}
+
+models/map_objects/imp_mine/control_panel
+{
+    diffusemap models/map_objects/imp_mine/control_panel
+}
+
+models/map_objects/imp_mine/control_panel_shd
+{
+    diffusemap models/map_objects/imp_mine/control_panel_shd
+}
+
+models/map_objects/imp_mine/minelamp
+{
+    diffusemap models/map_objects/imp_mine/minelamp
+}
+
+models/map_objects/imp_mine/minelamp_on
+{
+	translucent
+	twosided
+    {
+        map models/map_objects/imp_mine/minelamp_on
+        blend GL_ONE, GL_ONE
+       //FIXME rgb wave sin 0.5 0.05 0 50
+    }
+}
+
+models/map_objects/imp_mine/tank
+{
+    diffusemap models/map_objects/imp_mine/tank
+}
+
+models/map_objects/yavin/fern3
+{
+	translucent
+	twosided
+	
+	{
+	blend diffusemap
+	map models/map_objects/yavin/fern3
+	alphatest 0.5
+	}
+}
+
+models/map_objects/yavin/light
+{
+	noshadows
+
+    diffusemap models/map_objects/yavin/light
+}
+
+models/map_objects/yavin/lightbase
+{
+    diffusemap models/map_objects/yavin/lightbase
+}
+
+models/map_objects/yavin/tree2
+{
+	translucent
+	twosided
+	{
+		blend diffusemap
+		map models/map_objects/yavin/tree2
+		alphatest 0.5		
+	}
+}
+
+models/map_objects/yavin/tree2b
+{
+    diffusemap models/map_objects/yavin/tree2b
+}
+
+models/map_objects/yavin/tree05
+{
+    diffusemap models/map_objects/yavin/tree05
+}
+
+models/map_objects/yavin/tree05_vines
+{
+	{
+		blend diffusemap
+		map models/map_objects/yavin/tree05_vines
+		alphatest 0.5		
+	}
+}
+
+models/map_objects/yavin/tree09
+{
+    diffusemap models/map_objects/yavin/tree09
+}
+
+models/map_objects/yavin/tree09a
+{
+	twosided
+	{
+		blend diffusemap
+		map models/map_objects/yavin/tree09a
+		alphatest 0.5
+	}
+}
+
+models/map_objects/yavin/tree09b
+{
+	twosided
+	{
+		blend diffusemap
+		map models/map_objects/yavin/tree09b
+		alphatest 0.5		
+	}
+}
+
+models/map_objects/yavin/tree09d
+{
+	twosided
+	{
+		blend diffusemap
+		map models/map_objects/yavin/tree09d
+		alphatest 0.5		
+	}
+}
+
+models/map_objects/yavin/tree09_vines
+{
+	twosided
+    diffusemap models/map_objects/yavin/tree09_vines
+}
+
+
+
+
+

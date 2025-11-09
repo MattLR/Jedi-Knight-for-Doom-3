@@ -1,0 +1,156 @@
+/***********************************************************************
+
+	weapon_saber.def
+
+
+***********************************************************************/
+
+
+entityDef weapon_saber {
+	"editor_color"				".3 .3 1"
+	"editor_mins"				"-16 -16 0"
+	"editor_maxs"				"16 16 32"
+	"editor_usage"				"Saber"
+	"editor_rotatable"			"1"
+
+	"spawnclass"				"idItem"
+	"size"						"32 32 32"
+	"model"						"models/weapons2/saber/saber_w.ase"
+	"model_view" 				"viewmodel_saber"
+	"model_world" 				"worldmodel_saber"
+	"joint_attach"				"rhand"
+	"joint"						"rhand"
+	"def_dropItem"				"moveable_item_saber"
+
+	"inv_name"					"Saber"
+	"inv_weapon"				"weapon_saber"
+	"inv_item"					"5"
+	"icon"						"gfx/hud/w_icon_blaster_pistol"
+
+	"weapon_scriptobject"		"weapon_saber"
+	"def_melee"					"damage_saber"
+	"melee_distance"			"38"
+	"melee_tracerWidth"         "8"
+
+	"ammoType"					""
+	"ammoRequired"				"0"
+	"clipSize"					"0"
+	"mtr_flashShader"			"muzzleflash"
+	"flashColor"				"1 0.8 0.4"
+	"flashRadius"				"120"
+	"silent_fire"				"0"
+	"recoilTime"				"0"
+	"recoilAngles"				"0 0 0"
+
+	"weaponAngleOffsetAverages" "15"
+	"weaponAngleOffsetScale" 	".5"
+	"weaponAngleOffsetMax"		"50"
+	"weaponOffsetTime"			"500"
+	"weaponOffsetScale"			"0.005"
+
+	"impact_damage_effect"		"1"
+
+	"snd_acquire"				"sound_weapon_acquire"
+	"snd_respawn"				"sound_weapon_respawn"
+	"snd_hum"					"saber_hum1"
+
+	"hide_time"					"0.3"								// time to hide weapon when talking to npcs or looking at guis
+	"hide_distance"				"-15"								// distance to offset weapon when talking to npcs or looking at guis
+
+	"smoke_muzzle"				""
+	"continuousSmoke"			"0"
+
+	"smoke_strike"				""
+	"mtr_strike"				"textures/decals/chainsawh02"
+	
+	"snd_startattack"			"player_chainsaw_startAttack"
+	"snd_attack"				"saber_hup1"
+	"snd_stopattack"			"player_chainsaw_stopAttack"
+	"snd_cspull"				"monster_zombie_chainsaw_pull"
+	"snd_csrelease"				"monster_zombie_chainsaw_release"
+	"snd_csattack"				"monster_zombie_chainsaw_attack1"
+	"snd_csidle"				"monster_zombie_chainsaw_idle"
+	"snd_putaway"				"saber_off"
+	
+	"skin_invisible"			"skins/pistol_invis"
+}
+
+entityDef moveable_item_saber {
+	"inherit"					"weapon_saber"
+	"spawnclass"				"idMoveableItem"
+	"density"					"0.03"
+	"friction"					"0.2"
+	"bouncyness"				"0"
+}
+
+model worldmodel_saber {
+	mesh 						models/weapons2/saber/saber_w_test.md5mesh
+	offset						(4 -2.5 0.2)
+	//angle						0 90 0
+
+	//anim idle 					models/weapons2/saber/chainsaw_idle.md5anim
+	//anim raise					models/weapons2/saber/chainsaw_idle.md5anim
+}
+
+model viewmodel_saber {
+	mesh 						models/weapons2/saber/saber_w_test.md5mesh
+	offset						( -4 3 2 )
+/*
+	anim idle 					models/md5/weapons/chainsaw_view/idle2.md5anim 
+
+	anim melee_start 			models/md5/weapons/chainsaw_view/melee_start.md5anim
+	
+	anim melee_loop 			models/md5/weapons/chainsaw_view/melee_loop.md5anim
+	
+	anim melee_end 				models/md5/weapons/chainsaw_view/melee_end.md5anim 
+	
+	anim wallkick				models/md5/weapons/chainsaw_view/wallkick.md5anim
+
+	
+
+	anim putaway				models/md5/weapons/chainsaw_view/lower.md5anim {
+		frame 1						sound_weapon saber_off_quick
+	}
+	anim raise1					models/md5/weapons/chainsaw_view/newraise.md5anim {
+		frame 3						sound_weapon saber_on
+		//frame 13					sound_weapon player_chainsaw_pull 
+		//frame 22					sound_body2 player_chainsaw_release
+	}
+	*/
+
+}
+entityDef	damage_saber {
+	"damage"			"50"
+	"kickDir"			"1 0 0"
+
+	"mtr_blob"			"genericDamage"
+	"blob_time"			"300"
+	"blob_size"			"400"
+	"blob_offset_x"		"400"
+
+	"knockback"			"40"
+	"push"				"2000"
+
+	"gib"				"1"
+	"smoke_wound_flesh"	"chainsawwound.prt"
+	"mtr_wound_flesh"	"textures/decals/hurt02"
+	"mtr_splat_flesh"	"textures/decals/dsplat2"
+	"mtr_splat_flesh2"	"textures/decals/dsplat5"
+	"mtr_wound_metal"	"textures/decals/chainsawh02"
+	"mtr_wound_glass"	"textures/decals/chainsawh02"
+
+	"kick_time"			"400"
+	"kick_amplitude"	"1"
+
+	"dv_time"			"100"
+	
+	"snd_hit"			"player_chainsaw_hit_flesh"		// TEMP
+	"snd_metal"			"saber_hitwall1"
+	"snd_flesh"			"player_chainsaw_hit_flesh"
+	"snd_stone"			"aber_hitwall1"
+	"snd_wood"			"aber_hitwall1"
+	"snd_cardboard"		"aber_hitwall1"
+	"snd_glass"			"aber_hitwall1"
+	"snd_liquid"		"aber_hitwall1"
+	"snd_plastic"		"aber_hitwall1"
+}

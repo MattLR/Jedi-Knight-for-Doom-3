@@ -1,0 +1,945 @@
+models/players/boba_fett/boba_body
+{
+	diffusemap models/players/boba_fett/boba_body
+	specularmap models/players/boba_fett/boba_body_spec
+}
+models/players/boba_fett/boba_head_revised
+{
+	diffusemap models/players/boba_fett/boba_head_revised
+	specularmap models/players/boba_fett/boba_head_revised_spec
+}
+models/players/boba_fett/boba_jetpack
+{
+	diffusemap models/players/boba_fett/boba_jetpack
+	specularmap models/players/boba_fett/boba_jetpack_spec
+}
+models/players/boba_fett/boba_hands
+{
+	diffusemap models/players/boba_fett/boba_hands
+}
+models/players/boba_fett/boba_alpha
+{
+	translucent
+	nonsolid
+	{
+	map textures/common/nodraw
+	}
+}
+models/players/boba_fett/boba_larmalpha
+{
+	translucent
+	nonsolid
+	{
+	map textures/common/nodraw
+	}
+}
+models/players/chewbacca/chewbacca_body
+{
+	diffusemap models/players/chewbacca/chewbacca_body
+}
+models/players/chewbacca/chewbacca_2sided
+{
+	twosided
+	translucent
+	diffusemap models/players/chewbacca/chewbacca_2sided
+}
+models/players/chewbacca/chewbacca_1sided
+{
+	translucent
+	diffusemap models/players/chewbacca/chewbacca_1sided
+}
+models/players/chewbacca/chewbacca_sprites
+{
+	diffusemap models/players/chewbacca/chewbacca_sprites
+}
+models/players/chewbacca/chewbacca_head
+{
+	diffusemap models/players/chewbacca/chewbacca_head
+}
+models/players/chiss/boots_hips
+{
+	diffusemap models/players/chiss/boots_hips
+}
+models/players/chiss/chiss_legs
+{
+	diffusemap models/players/chiss/chiss_legs
+}
+models/players/chiss/chiss_torso
+{
+	diffusemap models/players/chiss/chiss_torso
+}
+models/players/chiss/basic_hand
+{
+	diffusemap models/players/chiss/basic_hand
+}
+models/players/chiss/collar
+{
+	diffusemap models/players/chiss/collar
+}
+models/players/chiss/base_test_head
+{
+	diffusemap models/players/chiss/base_test_head
+}
+models/players/chiss/base_test
+{
+	diffusemap models/players/chiss/base_test
+}
+models/players/chiss/mouth_eyes
+{
+	diffusemap models/players/chiss/mouth_eyes
+}
+models/players/cultist/legs
+{
+	diffusemap models/players/cultist/legs
+}
+models/players/cultist/torso
+{
+	diffusemap models/players/cultist/torso
+}
+models/players/cultist/arms
+{
+	diffusemap models/players/cultist/arms
+}
+models/players/cultist/hands
+{
+	diffusemap models/players/cultist/hands
+}
+models/players/cultist/head
+{
+	diffusemap models/players/cultist/head
+}
+models/players/cultist/face
+{
+	diffusemap models/players/cultist/face
+}
+models/players/desann/legs
+{
+	diffusemap models/players/desann/legs
+}
+models/players/desann/tunic
+{
+	diffusemap models/players/desann/tunic
+}
+models/players/desann/torso
+{
+	diffusemap models/players/desann/torso
+}
+models/players/desann/hand_right
+{
+	diffusemap models/players/desann/hand_right
+}
+models/players/desann/neck_mouth
+{
+	diffusemap models/players/desann/neck_mouth
+}
+models/players/desann/face
+{
+	diffusemap models/players/desann/face
+}
+models/players/galak/boots_hips
+{
+	diffusemap models/players/galak/boots_hips
+}
+models/players/galak/galak_legs
+{
+	diffusemap models/players/galak/galak_legs
+}
+models/players/galak/galak_torso
+{
+	diffusemap models/players/galak/galak_torso
+}
+models/players/galak/basic_hand
+{
+	diffusemap models/players/galak/basic_hand
+}
+models/players/galak/collar
+{
+	diffusemap models/players/galak/collar
+}
+models/players/galak/head
+{
+	diffusemap models/players/galak/head
+}
+models/players/galak/mouth_eyes
+{
+	diffusemap models/players/galak/mouth_eyes
+}
+models/players/galak/face
+{
+	diffusemap models/players/galak/face
+}
+models/players/gran/gran_legs
+{
+	diffusemap models/players/gran/gran_legs
+}
+models/players/gran/accessories
+{
+	diffusemap models/players/gran/accessories
+}
+models/players/gran/torso
+{
+	diffusemap models/players/gran/torso
+}
+models/players/gran/head
+{
+	diffusemap models/players/gran/head
+}
+models/players/gran/l_arm
+{
+	diffusemap models/players/gran/l_arm
+}
+models/players/gran/basic_hand
+{
+	diffusemap models/players/gran/basic_hand
+}
+models/players/gran/r_arm
+{
+	diffusemap models/players/gran/r_arm
+}
+models/players/human_merc/human_merc_legs
+{
+	diffusemap models/players/human_merc/human_merc_legs
+}
+models/players/human_merc/human_merc_torso_lower
+{
+	diffusemap models/players/human_merc/human_merc_torso_lower
+}
+models/players/human_merc/human_merc_torso
+{
+	diffusemap models/players/human_merc/human_merc_torso
+}
+models/players/human_merc/human_merc_arms
+{
+	diffusemap models/players/human_merc/human_merc_arms
+}
+models/players/human_merc/human_merc_hands
+{
+	diffusemap models/players/human_merc/human_merc_hands
+}
+models/players/human_merc/human_merc_head
+{
+	diffusemap models/players/human_merc/human_merc_head
+}
+models/players/human_merc/human_merc_face
+{
+	diffusemap models/players/human_merc/human_merc_face
+}
+models/players/imperial_worker/leg
+{
+	diffusemap models/players/imperial_worker/leg
+}
+models/players/imperial_worker/torso
+{
+	diffusemap models/players/imperial_worker/torso
+}
+models/players/imperial_worker/basic_hand
+{
+	diffusemap models/players/imperial_worker/basic_hand
+}
+models/players/imperial_worker/head
+{
+	diffusemap models/players/imperial_worker/head
+}
+models/players/imperial_worker/helmet_beltpac
+{
+	diffusemap models/players/imperial_worker/helmet_beltpac
+}
+models/players/imperial_worker/boots_hips
+{
+	diffusemap models/players/imperial_worker/boots_hips
+}
+models/players/jedi/legs
+{
+	diffusemap models/players/jedi/legs
+}
+
+models/players/jedi/torso
+{
+	diffusemap models/players/jedi/legs
+}
+
+models/players/jedi/boots_hips
+{
+	diffusemap models/players/jedi/boots_hips
+}
+
+models/players/jedi/basic_hand
+{
+	diffusemap models/players/jedi/basic_hand
+}
+
+models/players/jedi/head_01
+{
+	diffusemap models/players/jedi/head_01
+}
+
+models/players/jedi/face_01
+{
+	diffusemap models/players/jedi/face_01
+}
+
+models/players/jedi/mouth_eyes
+{
+	diffusemap models/players/jedi/mouth_eyes
+}
+
+models/players/r2d2/body_r2d2
+{
+	diffusemap models/players/r2d2/body_r2d2
+	specularmap models/players/r2d2/body_r2d2_spec
+}
+models/players/r2d2/legs_r2d2
+{
+	diffusemap models/players/r2d2/legs_r2d2
+	specularmap models/players/r2d2/legs_r2d2_spec
+}
+models/players/protocol/c3po_arm_torso
+{
+	diffusemap models/players/protocol/c3po_arm_torso
+	specularmap models/players/protocol/c3po_arm_torso_s
+}
+models/players/protocol/c3po_leg
+{
+	diffusemap models/players/protocol/c3po_leg
+	specularmap models/players/protocol/c3po_leg_s
+}
+textures/kejim/switch_brokena
+{
+	diffusemap textures/kejim/switch_brokena
+}
+models/players/protocol/c3po_face
+{
+	diffusemap models/players/protocol/c3po_face
+	specularmap models/players/protocol/c3po_face_s
+	// There's a glowmap too, I think you can probably do that as an add stage
+}
+models/players/protocol/c3po_hand
+{
+	diffusemap models/players/protocol/c3po_hand
+	specularmap models/players/protocol/c3po_hand_s
+}
+models/players/r5d2/body_r5d2
+{
+	diffusemap models/players/r5d2/body_r5d2
+	specularmap models/players/r5d2/body_r5d2_spec
+}
+models/players/r5d2/legs_r5d2
+{
+	diffusemap models/players/r5d2/legs_r5d2
+	specularmap models/players/r5d2/legs_r5d2_spec
+}
+models/players/luke/luke_head_new
+{
+	diffusemap models/players/luke/luke_head_new
+}
+models/players/luke/luke_face_new
+{
+	diffusemap models/players/luke/luke_face_new
+}
+models/players/luke/mouth_eyes
+{
+	diffusemap models/players/luke/mouth_eyes
+}
+models/players/luke/collar
+{
+	diffusemap models/players/luke/collar
+}
+models/players/luke/torso
+{
+	diffusemap models/players/luke/torso
+}
+models/players/luke/basic_hand
+{
+	diffusemap models/players/luke/basic_hand
+}
+
+models/players/luke/legs
+{
+	diffusemap models/players/luke/legs
+}
+
+models/players/luke/boots_hips
+{
+	diffusemap models/players/luke/boots_hips
+}
+models/players/gonk/gonk
+{
+	diffusemap models/players/gonk/gonk
+}
+
+models/players/rancor/rancor_body
+{
+	diffusemap models/players/rancor/rancor_body
+	specularmap models/players/rancor/rancor_body_spec
+}
+models/players/rancor/rancor_head
+{
+	diffusemap models/players/rancor/rancor_head
+	specularmap models/players/rancor/rancor_head_spec
+}
+
+models/players/rax_joris/legs
+{
+	diffusemap models/players/rax_joris/legs
+}
+models/players/rax_joris/torso
+{
+	diffusemap models/players/rax_joris/torso
+}
+models/players/rax_joris/robe
+{
+	diffusemap models/players/rax_joris/robe
+}
+models/players/rax_joris/arms
+{
+	diffusemap models/players/rax_joris/arms
+}
+models/players/rax_joris/hands
+{
+	diffusemap models/players/rax_joris/hands
+}
+models/players/rax_joris/head
+{
+	diffusemap models/players/rax_joris/head
+}
+models/players/rax_joris/face
+{
+	diffusemap models/players/rax_joris/face
+}
+
+models/players/rebel/rebel_legs
+{
+	diffusemap models/players/rebel/rebel_legs
+}
+models/players/rebel/rebel_torso
+{
+	diffusemap models/players/rebel/rebel_torso
+}
+models/players/rebel/head_01
+{
+	diffusemap models/players/rebel/head_01
+}
+models/players/rebel/face_01
+{
+	diffusemap models/players/rebel/face_01
+}
+models/players/rebel/mouth_eyes
+{
+	diffusemap models/players/rebel/mouth_eyes
+}
+models/players/rebel/accessories
+{
+	diffusemap models/players/rebel/accessories
+}
+models/players/rebel/rebel_boots
+{
+	diffusemap models/players/rebel/rebel_boots
+}
+models/players/rebel_pilot/rebel_pilot_legs
+{
+	diffusemap models/players/rebel_pilot/rebel_pilot_legs
+}
+models/players/rebel_pilot/rebel_pilot_torso
+{
+	diffusemap models/players/rebel_pilot/rebel_pilot_torso
+}
+models/players/rebel_pilot/rebel_pilot_head
+{
+	diffusemap models/players/rebel_pilot/rebel_pilot_head
+}
+models/players/rebel_pilot/teeth
+{
+	diffusemap models/players/rebel_pilot/teeth
+}
+models/players/rebel_pilot/face
+{
+	diffusemap models/players/rebel_pilot/face
+}
+models/players/rebel_pilot/helmet_chinstrap
+{
+	diffusemap models/players/rebel_pilot/helmet_chinstrap
+}
+models/players/rebel_pilot/googles
+{
+	diffusemap models/players/rebel_pilot/googles
+}
+models/players/rebel_pilot/rebel_pilot_hand
+{
+	diffusemap models/players/rebel_pilot/rebel_pilot_hand
+}
+models/players/rebel_pilot/rebel_pilot_boots
+{
+	diffusemap models/players/rebel_pilot/rebel_pilot_boots
+}
+models/players/rebel_pilot/rebel_pilot_legguard
+{
+	diffusemap models/players/rebel_pilot/rebel_pilot_legguard
+}
+models/players/rebel_pilot/rebel_pilot_boot_right
+{
+	diffusemap models/players/rebel_pilot/rebel_pilot_boot_right
+}
+
+models/players/reborn/forc_legs
+{
+	diffusemap models/players/reborn/forc_legs
+}
+models/players/reborn/forc_torso
+{
+	diffusemap models/players/reborn/forc_torso
+}
+models/players/reborn/forc_hand
+{
+	diffusemap models/players/reborn/forc_hand
+}
+models/players/reborn/forc_hood
+{
+	diffusemap models/players/reborn/forc_hood
+}
+models/players/reborn/forc_face
+{
+	diffusemap models/players/reborn/forc_face
+}
+models/players/reborn/forc_boots_hips
+{
+	diffusemap models/players/reborn/forc_boots_hips
+}
+models/players/reborn/forc_flap
+{
+	diffusemap models/players/reborn/forc_flap
+}
+models/players/reborn_new/legs
+{
+	diffusemap models/players/reborn_new/legs
+}
+models/players/reborn_new/torso
+{
+	diffusemap models/players/reborn_new/torso
+}
+models/players/reborn_new/arms
+{
+	diffusemap models/players/reborn_new/arms
+}
+models/players/reborn_new/hands
+{
+	diffusemap models/players/reborn_new/hands
+}
+models/players/reborn_new/head
+{
+	diffusemap models/players/reborn_new/head
+}
+models/players/reborn_new/head_face
+{
+	diffusemap models/players/reborn_new/head_face
+}
+models/players/reborn_new/head_hat
+{
+	diffusemap models/players/reborn_new/head_hat
+}
+
+models/players/reborn_twin/torso
+{
+	diffusemap models/players/reborn_twin/torso
+}
+models/players/reborn_twin/legs
+{
+	diffusemap models/players/reborn_twin/legs
+}
+models/players/reborn_twin/head
+{
+	diffusemap models/players/reborn_twin/head
+}
+models/players/reborn_twin/arms
+{
+	diffusemap models/players/reborn_twin/arms
+}
+models/players/reborn_twin/hands
+{
+	diffusemap models/players/reborn_twin/hands
+}
+
+models/players/reelo/legs
+{
+	diffusemap models/players/reelo/legs
+}
+models/players/reelo/torso
+{
+	diffusemap models/players/reelo/torso
+}
+models/players/reelo/pouches
+{
+	diffusemap models/players/reelo/pouches
+}
+
+models/players/rockettrooper/rockettrooper_torso
+{
+	diffusemap models/players/rockettrooper/rockettrooper_torso
+	specularmap models/players/rockettrooper/rockettrooper_torso_spec
+}
+models/players/rockettrooper/rockettrooper_legs
+{
+	diffusemap models/players/rockettrooper/rockettrooper_legs
+	specularmap models/players/rockettrooper/rockettrooper_legs_spec
+}
+models/players/rockettrooper/rockettrooper_arms
+{
+	diffusemap models/players/rockettrooper/rockettrooper_arms
+	specularmap models/players/rockettrooper/rockettrooper_arms_spec
+}
+models/players/rockettrooper/rockettrooper_rocket
+{
+	diffusemap models/players/rockettrooper/rockettrooper_rocket
+	specularmap models/players/rockettrooper/rockettrooper_rocket_spec
+}
+
+models/players/rodian/l_leg
+{
+	diffusemap models/players/rodian/l_leg
+}
+models/players/rodian/torso
+{
+	diffusemap models/players/rodian/l_leg
+}
+models/players/rodian/boots_belt_vest
+{
+	diffusemap models/players/rodian/boots_belt_vest
+}
+models/players/rodian/l_boot
+{
+	diffusemap models/players/rodian/l_boot
+}
+models/players/rodian/head
+{
+	diffusemap models/players/rodian/head
+}
+models/players/rodian/fins
+{
+	diffusemap models/players/rodian/fins
+}
+models/players/rodian/basic_hand
+{
+	diffusemap models/players/rodian/basic_hand
+}
+
+models/players/rosh_penin/legs
+{
+	diffusemap models/players/rosh_penin/legs
+}
+models/players/rosh_penin/torso
+{
+	diffusemap models/players/rosh_penin/torso
+}
+models/players/rosh_penin/arms
+{
+	diffusemap models/players/rosh_penin/arms
+}
+models/players/rosh_penin/hands
+{
+	diffusemap models/players/rosh_penin/hands
+}
+models/players/rosh_penin/flaps
+{
+	diffusemap models/players/rosh_penin/flaps
+}
+models/players/rosh_penin/head
+{
+	diffusemap models/players/rosh_penin/head
+}
+models/players/rosh_penin/face
+{
+	diffusemap models/players/rosh_penin/face
+}
+
+models/players/saboteur/saboteur_legs
+{
+	diffusemap models/players/saboteur/saboteur_legs
+}
+models/players/saboteur/saboteur_torso
+{
+	diffusemap models/players/saboteur/saboteur_torso
+}
+models/players/saboteur/saboteur_torso_lower
+{
+	diffusemap models/players/saboteur/saboteur_torso_lower
+}
+models/players/saboteur/saboteur_head
+{
+	diffusemap models/players/saboteur/saboteur_head
+}
+models/players/saboteur/saboteur_face_plate
+{
+	diffusemap models/players/saboteur/saboteur_face_plate
+}
+models/players/saboteur/saboteur_face
+{
+	diffusemap models/players/saboteur/saboteur_face
+}
+models/players/saboteur/saboteur_arms
+{
+	diffusemap models/players/saboteur/saboteur_arms
+}
+models/players/saboteur/saboteur_hands
+{
+	diffusemap models/players/saboteur/saboteur_hands
+}
+
+models/players/shadowtrooper/legs
+{
+	diffusemap models/players/shadowtrooper/legs
+}
+models/players/shadowtrooper/torso_arms
+{
+	diffusemap models/players/shadowtrooper/torso_arms
+}
+models/players/shadowtrooper/basic_hand
+{
+	diffusemap models/players/shadowtrooper/basic_hand
+}
+models/players/shadowtrooper/accessories
+{
+	diffusemap models/players/shadowtrooper/accessories
+}
+models/players/shadowtrooper/head
+{
+	diffusemap models/players/shadowtrooper/head
+}
+
+models/players/snowtrooper/snowtrooper_legs
+{
+	diffusemap models/players/snowtrooper/snowtrooper_legs
+	specularmap models/players/snowtrooper/snowtrooper_legs_spec
+}
+models/players/snowtrooper/snowtrooper_armor
+{
+	diffusemap models/players/snowtrooper/snowtrooper_armor
+	specularmap models/players/snowtrooper/snowtrooper_armor_spec
+}
+models/players/snowtrooper/snowtrooper_cape
+{
+	diffusemap models/players/snowtrooper/snowtrooper_cape
+}
+models/players/snowtrooper/snowtrooper_torso
+{
+	diffusemap models/players/snowtrooper/snowtrooper_torso
+	specularmap models/players/snowtrooper/snowtrooper_torso_spec
+}
+models/players/snowtrooper/snowtrooper_hands
+{
+	diffusemap models/players/snowtrooper/snowtrooper_hands
+}
+
+models/players/stormpilot/pilot_leg
+{
+	diffusemap models/players/stormpilot/pilot_leg
+}
+models/players/stormpilot/pilot_torso
+{
+	diffusemap models/players/stormpilot/pilot_torso
+}
+models/players/stormpilot/hand
+{
+	diffusemap models/players/stormpilot/hand
+}
+models/players/stormpilot/lifesupport
+{
+	diffusemap models/players/stormpilot/lifesupport
+}
+models/players/stormpilot/helmet
+{
+	diffusemap models/players/stormpilot/helmet
+	specularmap models/players/stormpilot/helmet_s
+}
+models/players/stormpilot/boots_hips
+{
+	diffusemap models/players/stormpilot/boots_hips
+}
+
+models/players/swamptrooper/arms_legs
+{
+	diffusemap models/players/swamptrooper/arms_legs
+}
+models/players/swamptrooper/torso
+{
+	diffusemap models/players/swamptrooper/torso
+}
+models/players/swamptrooper/body
+{
+	diffusemap models/players/swamptrooper/body
+}
+models/players/swamptrooper/helmet
+{
+	diffusemap models/players/swamptrooper/helmet
+}
+models/players/swamptrooper/hands
+{
+	diffusemap models/players/swamptrooper/hands
+}
+
+models/players/tavion/tavion_legs
+{
+	diffusemap models/players/tavion/tavion_legs
+}
+
+models/players/tavion/tavion_torso
+{
+	diffusemap models/players/tavion/tavion_torso
+}
+
+models/players/tavion/tavion_head
+{
+	diffusemap models/players/tavion/tavion_head
+}
+
+models/players/tavion/feathers
+{
+	diffusemap models/players/tavion/feathers
+}
+
+models/players/tavion/tavion_face
+{
+	diffusemap models/players/tavion/tavion_face
+}
+
+models/players/tavion/l_hand
+{
+	diffusemap models/players/tavion/l_hand
+}
+
+models/players/tavion_new/legs
+{
+	diffusemap models/players/tavion_new/legs
+}
+models/players/tavion_new/torso
+{
+	diffusemap models/players/tavion_new/torso
+}
+models/players/tavion_new/head
+{
+	diffusemap models/players/tavion_new/head
+}
+models/players/tavion_new/face
+{
+	diffusemap models/players/tavion_new/face
+}
+models/players/tavion_new/feathers
+{
+	diffusemap models/players/tavion_new/feathers
+}
+models/players/tavion_new/arm
+{
+	diffusemap models/players/tavion_new/arm
+}
+models/players/tavion_new/hands
+{
+	diffusemap models/players/tavion_new/hands
+}
+
+models/players/trandoshan/trandoshan_legs
+{
+	diffusemap models/players/trandoshan/trandoshan_legs
+}
+models/players/trandoshan/trandoshan_torso
+{
+	diffusemap models/players/trandoshan/trandoshan_torso
+}
+models/players/trandoshan/head
+{
+	diffusemap models/players/trandoshan/head
+}
+models/players/trandoshan/hand
+{
+	diffusemap models/players/trandoshan/hand
+}
+models/players/trandoshan/foot
+{
+	diffusemap models/players/trandoshan/foot
+}
+
+models/players/tusken/body
+{
+	diffusemap models/players/tusken/body
+}
+models/players/tusken/head
+{
+	diffusemap models/players/tusken/head
+}
+models/players/tusken/face
+{
+	diffusemap models/players/tusken/face
+}
+models/players/tusken/hands
+{
+	diffusemap models/players/tusken/hands
+}
+
+models/players/tusken/pockets
+{
+	diffusemap models/players/tusken/pockets
+}
+
+models/players/ugnaught/torso
+{
+	diffusemap models/players/ugnaught/torso
+}
+
+models/players/ugnaught/basic_hand
+{
+	diffusemap models/players/ugnaught/basic_hand
+}
+
+models/players/ugnaught/accesories
+{
+	diffusemap models/players/ugnaught/accesories
+}
+
+models/players/ugnaught/head
+
+{
+	diffusemap models/players/ugnaught/head
+}
+models/players/ugnaught/hair
+
+{
+	diffusemap models/players/ugnaught/hair
+}
+models/players/ugnaught/legs
+{
+	diffusemap models/players/ugnaught/legs
+}
+
+models/players/weequay/l_leg
+{
+	diffusemap models/players/weequay/l_leg
+}
+
+models/players/weequay/torso
+{
+	diffusemap models/players/weequay/torso
+}
+
+models/players/weequay/accessories
+{
+	diffusemap models/players/weequay/accessories
+}
+
+models/players/weequay/chest_armor
+{
+	diffusemap models/players/weequay/chest_armor
+}
+
+models/players/weequay/head
+{
+	diffusemap models/players/weequay/head
+}
+models/players/weequay/mouth_eyes
+{
+	diffusemap models/players/weequay/mouth_eyes
+}
+models/players/weequay/hair
+{
+	diffusemap models/players/weequay/hair
+}
+models/players/weequay/l_hand
+{
+	diffusemap models/players/weequay/l_hand
+}

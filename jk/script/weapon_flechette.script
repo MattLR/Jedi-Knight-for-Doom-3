@@ -1,0 +1,137 @@
+/***********************************************************************
+
+weapon_flechette.script
+
+***********************************************************************/
+
+#define FLECHETTE_FIRERATE			0.4
+#define FLECHETTE_LOWAMMO			4
+#define FLECHETTE_NUMPROJECTILES	6
+
+// blend times
+#define FLECHETTE_IDLE_TO_LOWER	2
+#define FLECHETTE_IDLE_TO_FIRE		1
+#define	FLECHETTE_IDLE_TO_RELOAD	3
+#define FLECHETTE_RAISE_TO_IDLE	3
+#define FLECHETTE_FIRE_TO_IDLE		4
+#define FLECHETTE_RELOAD_TO_IDLE	4
+
+object weapon_flechette : weapon_base {
+	float		next_attack;
+	float		spread;
+	
+	void		init();
+	
+	void		Lower();
+	void		Raise();
+	void		Idle();
+	void		Fire();
+	void		Reload();
+	void		ExitCinematic();
+};
+
+void weapon_flechette::init() {
+	next_attack = 0;
+	spread		= getFloatKey( "spread" );
+	weaponState( "Raise", 0 );
+}
+
+void weapon_flechette::Raise() {
+	weaponRising();
+	playAnim( ANIMCHANNEL_ALL, "raise" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, FLECHETTE_RAISE_TO_IDLE ) );
+	weaponState( "Idle", FLECHETTE_RAISE_TO_IDLE );
+}
+
+void weapon_flechette::Lower() {
+	weaponLowering();
+	playAnim( ANIMCHANNEL_ALL, "putaway" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, 0 ) );
+	weaponHolstered();
+	waitUntil( WEAPON_RAISEWEAPON );
+	weaponState( "Raise", 0 );
+}
+
+void weapon_flechette::Idle() {
+	float currentTime;
+	float ammoClip;
+	float avail;
+	float clip_size;
+	
+	clip_size = clipSize();	
+	weaponReady();
+	playCycle( ANIMCHANNEL_ALL, "idle" );
+
+	while( 1 ) {
+		if ( WEAPON_LOWERWEAPON ) {
+			weaponState( "Lower", FLECHETTE_IDLE_TO_LOWER );
+		}
+		currentTime = sys.getTime();
+		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
+			weaponState( "Fire", FLECHETTE_IDLE_TO_FIRE );
+		}
+		waitFrame();
+	}
+	/*
+	weaponReady();
+	if ( !ammoInClip() ) {
+		playCycle( ANIMCHANNEL_ALL, "idle_empty" );
+	} else {
+		playCycle( ANIMCHANNEL_ALL, "idle" );
+	}
+	while( 1 ) {
+		if ( WEAPON_LOWERWEAPON ) {
+			weaponState( "Lower", FLECHETTE_IDLE_TO_LOWER );
+		}
+		currentTime = sys.getTime();
+		ammoClip = ammoInClip();
+		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
+			if ( ammoClip > 0 ) {
+				weaponState( "Fire", FLECHETTE_IDLE_TO_FIRE );
+			} else if ( ammoAvailable() > 0 ) {
+				if ( autoReload() ) {
+					netReload();
+					weaponState( "Reload", FLECHETTE_IDLE_TO_RELOAD );
+				}
+			}
+		}
+		if ( WEAPON_RELOAD && ( ammoAvailable() > ammoClip ) && ( ammoClip < clip_size ) ) {
+			netReload();
+			weaponState( "Reload", FLECHETTE_IDLE_TO_RELOAD );
+		}
+		if ( WEAPON_NETRELOAD ) {
+			WEAPON_NETRELOAD = false;
+			weaponState( "Reload", FLECHETTE_IDLE_TO_RELOAD );		
+		}
+		waitFrame();
+	}*/
+}
+
+void weapon_flechette::Fire() {
+	float ammoClip;
+
+	next_attack = sys.getTime() + FLECHETTE_FIRERATE;
+	
+	ammoClip = ammoInClip();
+	if ( ammoClip == FLECHETTE_LOWAMMO ) {
+		startSound( "snd_lowammo", SND_CHANNEL_ITEM, true );
+	}
+
+	launchProjectiles( FLECHETTE_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
+	playAnim( ANIMCHANNEL_ALL, "fire" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, FLECHETTE_FIRE_TO_IDLE ) );
+	weaponState( "Idle", FLECHETTE_FIRE_TO_IDLE );
+}
+
+void weapon_flechette::Reload() {
+	weaponReloading();
+	playAnim( ANIMCHANNEL_ALL, "reload" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, FLECHETTE_RELOAD_TO_IDLE ) );
+	addToClip( clipSize() );
+	weaponState( "Idle", FLECHETTE_RELOAD_TO_IDLE );
+}
+
+void weapon_flechette::ExitCinematic() {
+	next_attack = 0;
+	weaponState( "Idle", 0 );
+}

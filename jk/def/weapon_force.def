@@ -1,0 +1,118 @@
+/***********************************************************************
+
+	weapon_force.def
+
+***********************************************************************/
+
+entityDef weapon_force {
+	"editor_color"				".3 .3 1"
+	"editor_mins"				"-16 -16 0"
+	"editor_maxs"				"16 16 32"
+	"editor_usage"				"Temp force powers"
+	"editor_rotatable"			"1"
+
+	"spawnclass"				"idItem"
+	"size"						"32 32 32"
+	"model" 					"models/items/weapon_gg.ase"
+	"model_view"				"viewmodel_force"
+	"model_world" 				"worldmodel_force"
+	"joint_attach"				"pgATTACHER"
+	"def_dropItem"				"moveable_item_force"
+
+	"inv_name"					"Force Powers"
+	"inv_weapon"				"weapon_force"
+	"inv_ammo_cells"			"15"
+	"inv_item"					"5"
+	"icon"						"guis/assets/hud/wpn_15"
+
+	"weapon_scriptobject"			"weapon_force"
+	"muzzle_launch"					"1"
+	"ammoType"					"ammo_cells" 
+	"ammoRequired"				"1" 
+	"clipSize"					"50" 
+	"lowAmmo"					"10" 
+	"mtr_flashShader"			"muzzleflash"
+	"flashColor"				"0.18 0.70 0.82"
+	"flashRadius"				"120"
+	"silent_fire"				"0"
+	"smoke_muzzle"				"plasmamuzzlesmoke.prt"
+	"gib"						"1"
+
+	"weaponAngleOffsetAverages" 		"15"
+	"weaponAngleOffsetScale" 		".40"
+	"weaponAngleOffsetMax"			"20"
+	"weaponOffsetTime"				"500"
+	"weaponOffsetScale"				"0.005"
+
+	"hide_time"					"0.3"								// time to hide weapon when talking to npcs or looking at guis
+	"hide_distance"				"-15"								// distance to offset weapon when talking to npcs or looking at guis
+
+	"nozzleFx"					"1"
+	"nozzleFxFade"				"100"
+	"nozzleGlowColor"			"0.18 0.70 0.82"
+	"nozzleGlowOffset"			"-6 2 1"
+	"nozzleGlowRadius"			"64"
+	"mtr_nozzleGlowShader"		"lights/plasmaglow"
+	
+	"snd_acquire"				"sound_weapon_acquire"
+	"snd_respawn"				"sound_weapon_respawn"
+	"snd_lowammo" 				""
+	"snd_fire"					""
+	"skin_invisible"			"skins/plasma_invis"
+	
+	"spread"				"0"
+}
+
+entityDef moveable_item_force {
+	"inherit"				"weapon_force"
+	"spawnclass"				"idMoveableItem"
+	"mins"					"-1 -1 4"
+	"maxs"					"1 1 4"
+	"density"				"0.05"
+	"friction"				"0.2"
+	"bouncyness"				"0"
+}
+
+model worldmodel_force {
+	mesh					models/md5/weapons/gg_view/gg_world.md5mesh
+	offset					( 1 2 1 )
+
+	anim raise				models/md5/weapons/gg_view/gg_world_idle.md5anim	
+	anim lower				models/md5/weapons/gg_view/gg_world_idle.md5anim
+	anim idle 				models/md5/weapons/gg_view/gg_world_idle.md5anim
+	anim aim				models/md5/weapons/gg_view/gg_world_idle.md5anim
+	anim fire1 				models/md5/weapons/gg_view/gg_world_idle.md5anim
+	anim reload				models/md5/weapons/gg_view/gg_world_idle.md5anim
+	anim noammo				models/md5/weapons/gg_view/gg_world_idle.md5anim
+	anim putaway				models/md5/weapons/gg_view/gg_world_idle.md5anim
+}
+
+model viewmodel_force 
+{
+	mesh					models/md5/weapons/gg_view/view_gravity.md5mesh 
+
+	offset					( -1 -2 -2 )
+
+	anim raise				models/md5/weapons/gg_view/gg_raise.md5anim {
+		frame 1				sound_weapon flashlight_raise
+	}
+	anim reload 				models/md5/weapons/gg_view/gg_reload.md5anim {
+		frame 1				sound_weapon gravity_reload
+	}
+
+	anim idle 				models/md5/weapons/gg_view/gg_idle.md5anim
+	anim looky				models/md5/weapons/gg_view/gg_idle1.md5anim
+
+	anim putaway 				models/md5/weapons/gg_view/gg_lower.md5anim
+	anim fire				models/md5/weapons/gg_view/gg_fire.md5anim
+}
+
+entityDef damage_forcepush {
+	"damage"				"0"
+	"radius"				"32"
+	"knockback"				"4000"
+	"push"					"15000"
+	"attackerDamageScale"			"0"
+	"attackerPushScale"			"0"
+	"gib"					"0"
+}

@@ -1,0 +1,34 @@
+The _clean is just the converted Q3 map with no changes, including lights, _nl is the same as the clean version but with lights deleted.
+
+The current process I use to get Q3 maps into Doom 3 intact is as follows:
+
+1. Open the Q3 map in Dark Radiant, then export the map to the Doom 3 format
+2. Open the map in the dhewm3 editor, select the entire map, move it, then (optionally?) undo the move - if there are too many entities filter either entities or world before this step, then repeat for the other filter - alternatively, delete all the lights as that's normally the main problem - the moving workaround may also work in Dark Radiant or NR/NRC but I haven't checked yet
+
+Notes
+-------------
+The Dark Radiant step is to preserve texture information, the dhewm3 step is to assign a correct origin to brush based entities (dhewm3 currently cannot properly convert the textures, and if you don't do the moving workaround some entities will go AWOL after save or when compiled - I will at some point try and fix the origin issue or at least let the dhewm3 maintainers know about the issue)
+
+I'm sure that there is a better and faster way to convert maps, but I haven't been able to find it yet.
+
+Currently most maps need to be compiled with -noflood due to leaks, I think this is probably because I'm just treating groups as func_statics in the entity definition, but it needs looking into more. Further, area portals probably need to be redone due to differences in the Doom 3/JK treatment, but they do work to a point if you can get the map to compile properly (my Yavin Temple version compiles properly and they do turn on and off).
+
+You can just delete hint brushes if they exist, though that's more a Q3 thing I think.
+
+Fog volumes work differently in Doom 3 (light based rather than brush based), and fog in Doom 3 doesn't seem to work well anyway.
+
+I haven't been able to get the siege_destroyer to compile.
+
+The dhewm3 dmap will run out of memory on some maps (siege maps and campaign maps generally), you need to use the RBDoom3BFG dmap tool to compile these, make sure you copy the material definitions over before you do this. There may be a 64 bit version of the dhewm3 dmap but I'm not sure, you can probably also just copy the other version of dmap into the dhewm3 folder, but again I haven't checked that yet.
+
+I haven't made water/liquids work yet but I will in future.
+
+I've only just started on implementing entity behaviour properly so lots of stuff won't function the same and it'll all probably be the SP behaviour.
+
+NPCs are under char_ entities in the editor, physically enabled props are under phys_
+
+MD3s can be used in dhewm3 (won't cast shadows in the current release but will in future), they don't show up in menus so you need to fill the model spawnkey in manually - collision needs to be done manually in the editor, they can be made to animate via a script (in scripts folder) but won't do so otherwise.
+
+I have model scaling enabled currently, but Doom 3 wasn't really made to support it and it breaks lights when you're inside the shadow volume cast by the scaled model, will probably turn it off in future and work something out (TDM generates scaled versions so copying their implementation might be best)
+
+

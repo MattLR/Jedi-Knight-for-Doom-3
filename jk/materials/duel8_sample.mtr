@@ -1,0 +1,140 @@
+textures/bounty/base
+{
+	diffusemap textures/bounty/base
+}
+textures/bounty/basic1
+{
+	diffusemap textures/bounty/basic1
+}
+textures/bounty/basic1_dark
+{
+	diffusemap textures/bounty/basic1_dark
+}
+textures/bounty/basic1_dark_b
+{
+	diffusemap textures/bounty/basic1_dark_b
+}
+
+textures/bounty/door
+{
+	diffusemap textures/bounty/door
+}
+textures/bounty/flag2_b
+{
+	qer_editorimage	textures/bounty/flag2
+	noimpact
+	nonsolid
+	translucent
+	//q3map_nolightmap
+	//q3map_alphashadow
+	twosided
+    {
+        map textures/bounty/flag2
+        alphatest 0.5
+        //FIXME rgbGen vertex
+    }
+}
+textures/bounty/floor1
+{
+	diffusemap textures/bounty/floor1
+}
+textures/bounty/floor2
+{
+	diffusemap textures/bounty/floor2
+}
+textures/bounty/sand_b
+{
+	diffusemap textures/bounty/sand_b
+}
+textures/bounty/trim1
+{
+	diffusemap textures/bounty/trim1
+}
+textures/bounty/walkway
+{
+	diffusemap textures/bounty/walkway
+}
+textures/bounty/walkway_rebel
+{
+	diffusemap textures/bounty/walkway_rebel
+}
+textures/bounty/wall1
+{
+	diffusemap textures/bounty/wall1
+}
+textures/bounty/wall1b
+{
+	diffusemap textures/bounty/wall1b
+} 
+textures/bounty/wall2
+{
+	diffusemap textures/bounty/wall2
+}
+textures/bounty/wall3
+{
+	diffusemap textures/bounty/wall3
+}
+textures/bounty/wall4
+{
+	diffusemap textures/bounty/wall4
+}
+textures/common/dark_dust
+{
+	qer_editorimage	textures/common/gradient
+	//qer_trans	0.5
+	noimpact
+	nonsolid
+	translucent
+	twosided
+	{
+        	map textures/common/gradient
+        	blend GL_ONE, GL_ONE
+       		//rgbGen const ( 0.141176 0.141176 0.141176 )
+		rgb 0.141176
+	}
+}
+textures/quicktrip/qt_basestone_phong
+{
+	//q3map_shadeangle	190
+	qer_editorimage	textures/quicktrip/qt_basestone
+	//q3map_nolightmap
+	//q3map_nonplanar
+	//q3map_splotchfix
+	//q3map_onlyvertexlighting
+    {
+        map textures/quicktrip/qt_basestone
+	blend diffusemap
+       //rgbGen vertex
+    }
+}
+textures/quicktrip/new_qt_wall2_entrance
+{
+	diffusemap textures/quicktrip/new_qt_wall2_entrance
+}
+textures/quicktrip/qt_domebase
+{
+	diffusemap textures/quicktrip/qt_domebase
+}
+/*
+textures/h_evil/floor_metal
+{
+	diffusemap
+}
+textures/h_evil/light3
+{
+	diffusemap
+}
+textures/mp/s_flatwhite
+{
+	diffusemap
+}
+textures/rocky_ruins/grate_light
+{
+	diffusemap
+}
+
+textures/yavin/met_floor01
+{
+	diffusemap
+}
+*/

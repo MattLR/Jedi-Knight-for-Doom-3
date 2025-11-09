@@ -1,0 +1,521 @@
+textures/bespin/mp_b_carb02
+{
+    diffusemap textures/bespin/mp_b_carb02
+}
+
+textures/bespin/mp_b_light04
+{
+    diffusemap textures/bespin/mp_b_light04
+}
+
+textures/bespin/mp_r_carb02
+{
+    diffusemap textures/bespin/mp_r_carb02
+}
+
+textures/bespin/mp_r_light04
+{
+    diffusemap textures/bespin/mp_r_light04
+}
+
+textures/bespin/n_floor01
+{
+    diffusemap textures/bespin/n_floor01
+}
+
+textures/byss/byss_basic2
+{
+    diffusemap textures/byss/byss_basic2
+}
+
+textures/byss/trim2
+{
+    diffusemap textures/byss/trim2
+}
+
+textures/colors/black_nomarks
+{
+    diffusemap textures/colors/black_nomarks
+}
+
+textures/common/mp_blue
+{
+    diffusemap textures/common/mp_blue
+}
+
+textures/common/mp_red
+{
+    diffusemap textures/common/mp_red
+}
+
+textures/common/neon_blue
+{
+    diffusemap textures/common/neon_blue
+}
+
+textures/common/neon_green
+{
+    diffusemap textures/common/neon_green
+}
+
+textures/common/neon_red
+{
+    diffusemap textures/common/neon_red
+}
+
+//textures/decals/mp_imperial_symbol
+{
+	DECAL_MACRO
+ 	noShadows
+	//polygonOffset
+	nonsolid
+	noimpact
+	qer_editorimage textures/decals/mp_imperial_symbol
+
+	{       
+	blend	add
+	map	textures/decals/mp_imperial_symbol
+	alphaTest 0.5
+	}
+}
+
+textures/decals/mp_rebel_symbol
+{
+    diffusemap textures/decals/mp_rebel_symbol
+}
+
+textures/factory/pipe
+{
+    diffusemap textures/factory/pipe
+}
+
+textures/impdetention/greybase
+{
+    diffusemap textures/impdetention/greybase
+}
+
+textures/impdetention/vslot2
+{
+    diffusemap textures/impdetention/vslot2
+}
+
+textures/imperial/basic
+{
+    diffusemap textures/imperial/basic
+}
+
+textures/imperial/trim_4
+{
+    diffusemap textures/imperial/trim_4
+}
+
+textures/imperial/wall_6
+{
+    diffusemap textures/imperial/wall_6
+}
+
+textures/mp/h_black_100
+{
+    diffusemap textures/mp/h_black_100
+}
+
+textures/mp/s_blue_flare
+{
+    diffusemap textures/mp/s_blue_flare
+}
+
+textures/mp/s_bluestrip
+{
+    diffusemap textures/mp/s_bluestrip
+}
+
+textures/mp/s_building_ext2test_r
+{
+    diffusemap textures/mp/s_building_ext2test_r
+}
+
+textures/mp/s_deathconlight
+{
+    diffusemap textures/mp/s_deathconlight
+}
+
+textures/mp/s_flare_blue
+{
+    diffusemap textures/mp/s_flare_blue
+}
+
+textures/mp/s_flare_red
+{
+    diffusemap textures/mp/s_flare_red
+}
+
+textures/mp/s_flatwhite
+{
+    diffusemap textures/mp/s_flatwhite
+}
+
+textures/mp/s_lightpanel1
+{
+    diffusemap textures/mp/s_lightpanel1
+}
+
+textures/mp/s_metal_vlight
+{
+    diffusemap textures/mp/s_metal_vlight
+}
+
+textures/mp/s_metalc_dark
+{
+    diffusemap textures/mp/s_metalc_dark
+}
+
+textures/mp/s_red_flare
+{
+    diffusemap textures/mp/s_red_flare
+}
+
+textures/mp/s_redstrip
+{
+    diffusemap textures/mp/s_redstrip
+}
+
+textures/mp/s_roundy
+{
+    diffusemap textures/mp/s_roundy
+}
+
+textures/mp/s_squarelight
+{
+    diffusemap textures/mp/s_squarelight
+}
+
+textures/mp/s_squareslight
+{
+    diffusemap textures/mp/s_squareslight
+}
+
+textures/mp/s_thinlight
+{
+    diffusemap textures/mp/s_thinlight
+}
+
+textures/mp/s_thinlight_r
+{
+    diffusemap textures/mp/s_thinlight_r
+}
+
+textures/mp/s_tracklight3
+{
+    diffusemap textures/mp/s_tracklight3
+}
+
+textures/mp/s_tracklight5
+{
+    diffusemap textures/mp/s_tracklight5
+}
+
+textures/mp/s_vjun_light_vjun
+{
+    diffusemap textures/mp/s_vjun_light_vjun
+}
+
+textures/mp/s_ylight_blue
+{
+    diffusemap textures/mp/s_ylight_blue
+}
+
+textures/mp/s_ylight_red
+{
+    diffusemap textures/mp/s_ylight_red
+}
+
+textures/nar_streets/baselight1
+{
+    diffusemap textures/nar_streets/baselight1
+}
+
+textures/nar_streets/baselight2
+{
+    diffusemap textures/nar_streets/baselight2
+}
+
+textures/nar_streets/bwall_4
+{
+    diffusemap textures/nar_streets/bwall_4
+}
+
+textures/nar_streets/support3
+{
+    diffusemap textures/nar_streets/support3
+}
+
+textures/nar_streets/wall09
+{
+    diffusemap textures/nar_streets/wall09
+}
+
+textures/narshaddaa/ceiling_large
+{
+    diffusemap textures/narshaddaa/ceiling_large
+}
+
+textures/narshaddaa/pipe_blue
+{
+    diffusemap textures/narshaddaa/pipe_blue
+}
+
+textures/narshaddaa/pipe_red
+{
+    diffusemap textures/narshaddaa/pipe_red
+}
+
+textures/rail/compartments
+{
+    diffusemap textures/rail/compartments
+}
+
+textures/rail/compartments_b
+{
+    diffusemap textures/rail/compartments_b
+}
+
+textures/rail/grail
+{
+    diffusemap textures/rail/grail
+}
+
+textures/rail/large_vent
+{
+    diffusemap textures/rail/large_vent
+}
+
+textures/rail/rail_pipe
+{
+    diffusemap textures/rail/rail_pipe
+}
+
+textures/rail/rail_walkway
+{
+    diffusemap textures/rail/rail_walkway
+}
+
+textures/rail/railbase1
+{
+    diffusemap textures/rail/railbase1
+}
+
+textures/rail/railtrim1
+{
+    diffusemap textures/rail/railtrim1
+}
+
+textures/rail/roundplate4
+{
+    diffusemap textures/rail/roundplate4
+}
+
+textures/rail/runner2
+{
+    diffusemap textures/rail/runner2
+}
+
+textures/rail/trainfloor
+{
+    diffusemap textures/rail/trainfloor
+}
+
+textures/rail/tunnel_lights
+{
+    diffusemap textures/rail/tunnel_lights
+}
+
+textures/rooftop/baseground
+{
+    diffusemap textures/rooftop/baseground
+}
+
+textures/rooftop/building_ext1
+{
+    diffusemap textures/rooftop/building_ext1
+}
+
+textures/rooftop/building_ext2test
+{
+    diffusemap textures/rooftop/building_ext2test
+}
+
+textures/rooftop/building_ext3
+{
+    diffusemap textures/rooftop/building_ext3
+}
+
+textures/rooftop/building_ext4
+{
+    diffusemap textures/rooftop/building_ext4
+}
+
+textures/rooftop/building_ext5
+{
+    diffusemap textures/rooftop/building_ext5
+}
+
+textures/rooftop/building_ext6
+{
+    diffusemap textures/rooftop/building_ext6
+}
+
+textures/rooftop/garage_door
+{
+    diffusemap textures/rooftop/garage_door
+}
+
+textures/rooftop/grey_rusty_wall1
+{
+    diffusemap textures/rooftop/grey_rusty_wall1
+}
+
+textures/rooftop/groundlight
+{
+    diffusemap textures/rooftop/groundlight
+}
+
+textures/rooftop/landing_pad
+{
+    diffusemap textures/rooftop/landing_pad
+}
+
+textures/rooftop/light
+{
+    diffusemap textures/rooftop/light
+}
+
+textures/rooftop/light2
+{
+    diffusemap textures/rooftop/light2
+}
+
+textures/rooftop/light_trim
+{
+    diffusemap textures/rooftop/light_trim
+}
+
+textures/rooftop/light_trim2
+{
+    diffusemap textures/rooftop/light_trim2
+}
+
+textures/rooftop/main_building_ext_trim
+{
+    diffusemap textures/rooftop/main_building_ext_trim
+}
+
+textures/rooftop/neon_circle
+{
+    diffusemap textures/rooftop/neon_circle
+}
+
+textures/rooftop/neon_large1
+{
+    diffusemap textures/rooftop/neon_large1
+}
+
+textures/rooftop/neon_tall
+{
+    diffusemap textures/rooftop/neon_tall
+}
+
+textures/rooftop/neon_tall2
+{
+    diffusemap textures/rooftop/neon_tall2
+}
+
+textures/rooftop/office_trim_exterior
+{
+    diffusemap textures/rooftop/office_trim_exterior
+}
+
+textures/rooftop/roundplate1
+{
+    diffusemap textures/rooftop/roundplate1
+}
+
+textures/rooftop/trim1
+{
+    diffusemap textures/rooftop/trim1
+}
+
+textures/rooftop/trim3
+{
+    diffusemap textures/rooftop/trim3
+}
+
+textures/rooftop/twin_tower1
+{
+    diffusemap textures/rooftop/twin_tower1
+}
+
+textures/rooftop/twin_tower_sidebrace2
+{
+    diffusemap textures/rooftop/twin_tower_sidebrace2
+}
+
+textures/rooftop/walkway_civilian
+{
+    diffusemap textures/rooftop/walkway_civilian
+}
+
+textures/rooftop/walkway_trim
+{
+    diffusemap textures/rooftop/walkway_trim
+}
+
+textures/rooftop/wall1
+{
+    diffusemap textures/rooftop/wall1
+}
+
+textures/rooftop/wall3
+{
+    diffusemap textures/rooftop/wall3
+}
+
+textures/rooftop/wall4b
+{
+    diffusemap textures/rooftop/wall4b
+}
+
+textures/rooftop/wall6
+{
+    diffusemap textures/rooftop/wall6
+}
+
+textures/rooftop/window2
+{
+    diffusemap textures/rooftop/window2
+}
+
+textures/rooftop/window_building_b
+{
+    diffusemap textures/rooftop/window_building_b
+}
+
+textures/rooftop/window_building_ground
+{
+    diffusemap textures/rooftop/window_building_ground
+}
+
+textures/rooftop/window_building_ground3
+{
+    diffusemap textures/rooftop/window_building_ground3
+}
+
+textures/rooftop/window_building_trim
+{
+    diffusemap textures/rooftop/window_building_trim
+}
+
+textures/rooftop/windowplate_b
+{
+    diffusemap textures/rooftop/windowplate_b
+}
+

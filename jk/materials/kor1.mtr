@@ -1,0 +1,300 @@
+textures/imperial/pipe_2
+{
+    diffusemap textures/imperial/pipe_2
+}
+
+textures/impgarrison/metal_lg_dk
+{
+    diffusemap textures/impgarrison/metal_lg_dk
+}
+
+textures/korriban/chain
+{
+    diffusemap textures/korriban/chain
+}
+
+textures/korriban/entrance_side
+{
+    diffusemap textures/korriban/entrance_side
+}
+
+textures/korriban/entrance_top
+{
+    diffusemap textures/korriban/entrance_top
+}
+
+textures/korriban/k_basic
+{
+    diffusemap textures/korriban/k_basic
+}
+
+textures/korriban/k_basic2
+{
+    diffusemap textures/korriban/k_basic2
+}
+
+textures/korriban/k_basic3
+{
+    diffusemap textures/korriban/k_basic3
+}
+
+textures/korriban/k_basicfloor
+{
+    diffusemap textures/korriban/k_basicfloor
+}
+
+textures/korriban/k_basicfloor2
+{
+    diffusemap textures/korriban/k_basicfloor2
+}
+
+textures/korriban/k_ceiling
+{
+    diffusemap textures/korriban/k_ceiling
+}
+
+textures/korriban/k_ceiling2
+{
+    diffusemap textures/korriban/k_ceiling2
+}
+
+textures/korriban/k_trim2
+{
+    diffusemap textures/korriban/k_trim2
+}
+
+textures/korriban/k_trim3
+{
+    diffusemap textures/korriban/k_trim3
+}
+
+textures/korriban/k_trim4
+{
+    diffusemap textures/korriban/k_trim4
+}
+
+textures/korriban/k_trim5
+{
+    diffusemap textures/korriban/k_trim5
+}
+
+textures/korriban/k_trim6
+{
+    diffusemap textures/korriban/k_trim6
+}
+
+textures/korriban/k_trim7
+{
+    diffusemap textures/korriban/k_trim7
+}
+
+textures/korriban/k_trim8
+{
+    diffusemap textures/korriban/k_trim8
+}
+
+textures/korriban/k_wall
+{
+    diffusemap textures/korriban/k_wall
+}
+
+textures/korriban/k_wall10
+{
+    diffusemap textures/korriban/k_wall10
+}
+
+textures/korriban/k_wall11
+{
+    diffusemap textures/korriban/k_wall11
+}
+
+textures/korriban/k_wall2
+{
+    diffusemap textures/korriban/k_wall2
+}
+
+textures/korriban/k_wall2plain
+{
+    diffusemap textures/korriban/k_wall2plain
+}
+
+textures/korriban/k_wall3
+{
+    diffusemap textures/korriban/k_wall3
+}
+
+textures/korriban/k_wall6
+{
+    diffusemap textures/korriban/k_wall6
+}
+
+textures/korriban/k_wall8
+{
+    diffusemap textures/korriban/k_wall8
+}
+
+textures/korriban/k_wall9
+{
+    diffusemap textures/korriban/k_wall9
+}
+
+textures/korriban/k_wall9b
+{
+    diffusemap textures/korriban/k_wall9b
+}
+
+textures/korriban/kor1_breakablechainclip
+{
+    diffusemap textures/korriban/kor1_breakablechainclip
+}
+
+textures/korriban/kor1_lava
+{
+    diffusemap textures/korriban/kor1_lava
+}
+
+textures/korriban/korriban1_phong
+{
+    diffusemap textures/korriban/korriban1_phong
+}
+
+textures/korriban/korriban1_phongdirt
+{
+    diffusemap textures/korriban/korriban1_phongdirt
+}
+
+textures/korriban/orn_grate
+{
+    diffusemap textures/korriban/orn_grate
+}
+
+textures/korriban/os_basewalk
+{
+    diffusemap textures/korriban/os_basewalk
+}
+
+textures/korriban/os_basic_pillar
+{
+    diffusemap textures/korriban/os_basic_pillar
+}
+
+textures/korriban/os_basic_pillarb
+{
+    diffusemap textures/korriban/os_basic_pillarb
+}
+
+textures/korriban/os_basic_walkway
+{
+    diffusemap textures/korriban/os_basic_walkway
+}
+
+textures/korriban/os_outsidebase
+{
+    diffusemap textures/korriban/os_outsidebase
+}
+
+textures/korriban/os_outsidebase_trim
+{
+    diffusemap textures/korriban/os_outsidebase_trim
+}
+
+textures/korriban/os_outsidebaseb
+{
+    diffusemap textures/korriban/os_outsidebaseb
+}
+
+textures/korriban/os_outsidebaseb_broken
+{
+    diffusemap textures/korriban/os_outsidebaseb_broken
+}
+
+textures/korriban/os_outsidebasec
+{
+    diffusemap textures/korriban/os_outsidebasec
+}
+
+textures/korriban/os_outsidebased
+{
+    diffusemap textures/korriban/os_outsidebased
+}
+
+textures/korriban/os_outsidebasee
+{
+    diffusemap textures/korriban/os_outsidebasee
+}
+
+textures/korriban/os_outsidebasef
+{
+    diffusemap textures/korriban/os_outsidebasef
+}
+
+textures/korriban/sarc_small
+{
+    diffusemap textures/korriban/sarc_small
+}
+
+textures/korriban/stairs
+{
+    diffusemap textures/korriban/stairs
+}
+
+textures/korriban/trim
+{
+    diffusemap textures/korriban/trim
+}
+
+textures/rift/symbol1
+{
+    diffusemap textures/rift/symbol1
+}
+
+textures/rift/symbol2
+{
+    diffusemap textures/rift/symbol2
+}
+
+textures/rift/symbol3
+{
+    diffusemap textures/rift/symbol3
+}
+
+textures/rift/symbol4
+{
+    diffusemap textures/rift/symbol4
+}
+
+textures/rift/symbol5
+{
+    diffusemap textures/rift/symbol5
+}
+
+textures/rift/symbol6
+{
+    diffusemap textures/rift/symbol6
+}
+
+textures/rift/symbol7
+{
+    diffusemap textures/rift/symbol7
+}
+
+textures/rift/symbol8
+{
+    diffusemap textures/rift/symbol8
+}
+
+textures/rift/symbol9
+{
+    diffusemap textures/rift/symbol9
+}
+
+textures/yavin/dugdirt
+{
+    diffusemap textures/yavin/dugdirt
+}
+
+textures/yavin/gardenwall3
+{
+    diffusemap textures/yavin/gardenwall3
+}
+

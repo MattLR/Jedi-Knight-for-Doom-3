@@ -1,0 +1,55 @@
+model yavin_temple_protocol {
+//	inherit							npc_jk_protocol
+	mesh							models/players/protocol/protocol.md5mesh
+	channel torso					(*lower_lumbar)
+	channel legs					(origin *pelvis-*lower_lumbar)
+
+	//anim af_pose					models/players/protocol/anim/
+	anim pain						models/players/protocol/anim/BOTH_PAIN1.md5anim
+	anim stand						models/players/protocol/anim/BOTH_STAND1.md5anim
+	anim talk_excuseme				models/players/protocol/anim/BOTH_TALK1.md5anim {
+	frame 1							sound_voice snd_talk_primary
+	}
+	anim talk_trigger				models/players/protocol/anim/BOTH_STAND1.md5anim 
+	anim talk_primary				models/players/protocol/anim/BOTH_STAND1.md5anim {
+	frame 1							sound_voice snd_talk_primary
+	}
+	anim talk_secondary1			models/players/protocol/anim/BOTH_STAND1.md5anim {
+	frame 1							sound_voice snd_talk_secondary1
+	}
+	anim talk_secondary2			models/players/protocol/anim/BOTH_TALK2.md5anim {
+	frame 1							sound_voice snd_talk_secondary2
+	}
+	anim talk_secondary3			models/players/protocol/anim/BOTH_TALK2.md5anim {
+	frame 1							sound_voice snd_talk_secondary3
+	}
+	anim talk_secondary4			models/players/protocol/anim/BOTH_TALK2.md5anim {
+	frame 1							sound_voice snd_talk_secondary4
+	}
+	anim idle						models/players/protocol/anim/BOTH_STAND1.md5anim
+//	anim cower						models/players/protocol/anim/BOTH_STAND1IDLE1.md5anim
+	anim walk						models/players/protocol/anim/BOTH_WALK1.md5anim
+	anim run1						models/players/protocol/anim/BOTH_RUN1.md5anim 
+	//anim turn_right					models/players/protocol/anim/BOTH_TURN_RIGHT1.md5anim
+	//anim turn_left 					models/players/protocol/anim/BOTH_TURN_LEFT1.md5anim
+
+    anim talk_kyle_intro				models/players/protocol/anim/BOTH_TALK1.md5anim  {
+		frame 1          				sound_voice yavin_temple_protocol_intro
+	   // frame 1  sound_voice snd_talk_secondary2
+	}
+}
+
+entityDef yavin_temple_protocol_intro {
+    "inherit"                       "char_protocol"
+	"talks" "1"
+    "model"                         "yavin_temple_protocol"
+	"talktime"						"10"
+	"talkradius"					"420"
+	"talk_no_turn"					"1"
+
+    "snd_talk_primary"				"yavin_temple_protocol_luke"
+	"snd_talk_secondary1"			"yavin_temple_protocol_droid"
+	"snd_talk_secondary2"			"yavin_temple_protocol_deactivate"
+	"snd_talk_secondary3"			"yavin_temple_protocol_r2_unit"
+	"snd_talk_secondary4"			"yavin_temple_protocol_notprogrammed"
+}

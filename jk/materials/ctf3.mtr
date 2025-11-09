@@ -1,0 +1,102 @@
+textures/desert/t_rockwall1_clip
+{
+	qer_editorimage	textures/desert/t_rockwall1
+	diffusemap textures/desert/t_rockwall1
+
+	{
+        map textures/common/detail9
+        blend GL_DST_COLOR, GL_ONE
+        scale 10, 10
+	}
+}
+
+textures/impdetention/metal
+{
+    diffusemap textures/impdetention/metal
+}
+
+textures/impdetention/mp_b_symbol
+{
+    diffusemap textures/impdetention/mp_b_symbol
+}
+
+textures/impdetention/mp_b_trimlight
+{
+    diffusemap textures/impdetention/mp_b_trimlight
+}
+
+textures/impdetention/mp_r_symbol
+{
+    diffusemap textures/impdetention/mp_r_symbol
+}
+
+textures/impdetention/mp_r_trimlight
+{
+    diffusemap textures/impdetention/mp_r_trimlight
+}
+
+textures/mp/s_black
+{
+    diffusemap textures/mp/s_black
+}
+
+textures/mp/s_blue_flare
+{
+    diffusemap textures/mp/s_blue_flare
+}
+
+textures/mp/s_deathconlight
+{
+    diffusemap textures/mp/s_deathconlight
+}
+
+textures/mp/s_ground
+{
+    diffusemap textures/yavin/ground
+}
+
+textures/mp/s_metal_hlight
+{
+    diffusemap textures/mp/s_metal_hlight
+}
+
+textures/mp/s_red_flare
+{
+    diffusemap textures/mp/s_red_flare
+}
+
+textures/mp/s_rockwall
+{
+    diffusemap textures/desert/t_rockwall1
+}
+
+textures/mp/s_squareslight
+{
+    diffusemap textures/mp/s_squareslight
+}
+
+textures/mp/s_steptrim1_b
+{
+    diffusemap textures/mp/s_steptrim1_b
+}
+
+textures/mp/s_steptrim1_r
+{
+    diffusemap textures/mp/s_steptrim1_r
+}
+
+textures/taspir/floor
+{
+    diffusemap textures/taspir/floor
+}
+
+textures/taspir/landing_pad
+{
+    diffusemap textures/taspir/landing_pad
+}
+
+textures/taspir/t_wall3
+{
+    diffusemap textures/taspir/t_wall3
+}
+

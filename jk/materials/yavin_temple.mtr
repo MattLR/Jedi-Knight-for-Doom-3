@@ -1,0 +1,654 @@
+
+
+textures/common/glass_reflective
+{
+    //diffusemap textures/common/glass_reflective
+	noSelfShadow
+	noshadows
+	twosided
+	translucent
+	glass
+	forceoverlays
+
+	qer_editorimage textures/glass/glass1
+	{
+                Program           heatHaze.vfp
+                vertexParm              0       time * 0 , time * 0 // texture scrolling
+                vertexParm              1       .4         // magnitude of the distortion
+                fragmentProgram			heatHaze.vfp
+                fragmentMap             0       _currentRender
+                fragmentMap             1       textures/sfx/vp1   // the normal map for distortion			
+             
+    }
+	{	
+		maskcolor				
+	    map	makealpha(textures/glass/glass1)
+	}	
+	{
+	    blend gl_dst_alpha, gl_one
+	    maskalpha
+       	cubeMap		env/gen2
+			red		Parm0
+	        green   Parm1
+	        blue	Parm2
+        texgen		reflect
+
+	}
+}
+
+textures/impdetention/floor1
+{
+    diffusemap textures/impdetention/floor1
+}
+
+textures/impdetention/floor2
+{
+    diffusemap textures/impdetention/floor2
+}
+
+textures/impdetention/interference2
+{
+    diffusemap textures/impdetention/interference2
+}
+
+textures/impdetention/light_blue
+{
+    diffusemap textures/impdetention/light_blue
+}
+
+textures/impdetention/light_white
+{
+    diffusemap textures/impdetention/light_white
+}
+
+textures/impdetention/metal
+{
+    diffusemap textures/impdetention/metal
+}
+
+textures/impdetention/metalpanel1c
+{
+    diffusemap textures/impdetention/metalpanel1c
+}
+
+textures/impdetention/piller
+{
+    diffusemap textures/impdetention/piller
+}
+
+textures/impdetention/screen_long
+{
+    diffusemap textures/impdetention/screen_long
+}
+
+textures/impgarrison/new5
+{
+    diffusemap textures/impgarrison/new5
+}
+
+textures/skies/yavin
+{
+    diffusemap textures/skies/yavin
+}
+
+
+
+textures/yavin/bblock3
+{
+    diffusemap textures/yavin/bblock3
+}
+
+textures/yavin/block2
+{
+    diffusemap textures/yavin/block2
+}
+
+textures/yavin/brock1
+{
+    diffusemap textures/yavin/brock1
+}
+
+textures/yavin/ceiling
+{
+    diffusemap textures/yavin/ceiling
+}
+
+textures/yavin/column01
+{
+    diffusemap textures/yavin/column01
+}
+
+textures/yavin/control01
+{
+    diffusemap textures/yavin/control01
+}
+
+textures/yavin/crackfloor
+{
+    diffusemap textures/yavin/crackfloor
+}
+
+textures/yavin/crate01
+{
+    diffusemap textures/yavin/crate01
+}
+
+textures/yavin/crate02
+{
+    diffusemap textures/yavin/crate02
+}
+
+textures/yavin/crate03
+{
+    diffusemap textures/yavin/crate03
+}
+
+textures/yavin/crate03tb
+{
+    diffusemap textures/yavin/crate03tb
+}
+
+textures/yavin/dark_floor
+{
+    diffusemap textures/yavin/dark_floor
+}
+
+textures/yavin/darkrock_gold
+{
+    diffusemap textures/yavin/darkrock_gold
+}
+
+textures/yavin/dirt1_sprite
+{
+    	qer_editorimage	textures/yavin/dirt1
+    {
+        map textures/yavin/dirt1
+	blend diffusemap
+    }
+	/*
+    {
+        map gfx/sprites/rock_sm
+            surfaceSprites oriented 2 2 64 200
+            ssFademax 400
+            ssVariance 2 1.5
+        blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+        rgbGen vertex
+    }
+	*/
+}
+
+textures/yavin/dirtgrasscorner_sprite
+{
+    	qer_editorimage	textures/yavin/dirtgrasscorner
+    {
+        map textures/yavin/dirtgrasscorner
+        blend diffusemap
+    }
+	/*
+    {
+        map gfx/sprites/rock_sm
+            surfaceSprites oriented 2 2 100 200
+            ssFademax 400
+            ssVariance 2 1.5
+        blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+        rgbGen vertex
+    }
+	*/
+}
+
+textures/yavin/dirtgrassedge_sprite
+{
+    	qer_editorimage	textures/yavin/dirtgrassedge
+    {
+        map textures/yavin/dirtgrassedge
+	blend diffusemap
+    }
+	/*
+    {
+        map gfx/sprites/rock_sm
+            surfaceSprites oriented 2 2 100 200
+            ssFademax 400
+            ssVariance 2 1.5
+        blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+        rgbGen vertex
+    }
+	*/
+}
+
+textures/yavin/door_met01
+{
+    diffusemap textures/yavin/door_met01
+}
+
+textures/yavin/door_met02
+{
+    diffusemap textures/yavin/door_met02
+}
+
+textures/yavin/doorlight_green
+{
+    diffusemap textures/yavin/doorlight_green
+}
+
+textures/yavin/doorlight_red
+{
+    diffusemap textures/yavin/doorlight_red
+}
+
+textures/yavin/dugdirt
+{
+    diffusemap textures/yavin/dugdirt
+}
+
+textures/yavin/floor
+{
+    diffusemap textures/yavin/floor
+}
+
+textures/yavin/gardenwall3
+{
+    diffusemap textures/yavin/gardenwall3
+}
+
+textures/yavin/goldblock
+{
+    diffusemap textures/yavin/goldblock
+}
+
+textures/yavin/goldblock2
+{
+    diffusemap textures/yavin/goldblock2
+}
+
+textures/yavin/goldblock3
+{
+    diffusemap textures/yavin/goldblock3
+}
+
+textures/yavin/grasspatchy_sm_sprite
+{
+    	qer_editorimage	textures/yavin/grasspatchy3
+    {
+        map textures/yavin/grasspatchy3
+	blend diffusemap 
+    }
+	/*
+    {
+        map gfx/sprites/ss_grass_grasspatchy
+            surfaceSprites vertical 8 8 40 200
+            ssFademax 600
+            ssFadescale 2
+            ssVariance 1 1
+            ssWind 0.2
+        blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+        rgbGen vertex
+    }
+	*/
+}
+
+textures/yavin/grasspatchy_sprite
+{
+    	qer_editorimage	textures/yavin/grasspatchy3
+    {
+        map textures/yavin/grasspatchy3
+	blend diffusemap 
+    }
+	/*
+    {
+        map gfx/sprites/ss_grass_grasspatchy2
+            surfaceSprites vertical 32 20 35 800
+            ssFademax 1500
+            ssFadescale 2
+            ssVariance 1 2
+            ssWind 0.8
+        alphaFunc GE192
+        blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+        depthWrite
+        rgbGen vertex
+    }
+	*/
+}
+
+textures/yavin/hangar_floor
+{
+    diffusemap textures/yavin/hangar_floor
+}
+
+textures/yavin/hangar_wall
+{
+    diffusemap textures/yavin/hangar_wall
+}
+
+textures/yavin/hangdoor
+{
+    diffusemap textures/yavin/hangdoor
+}
+
+textures/yavin/hangfloor
+{
+    diffusemap textures/yavin/hangfloor
+}
+
+textures/yavin/lift_floor
+{
+    diffusemap textures/yavin/lift_floor
+}
+
+textures/yavin/light
+{
+    diffusemap textures/yavin/light
+}
+
+textures/yavin/light_blue
+{
+    diffusemap textures/yavin/light_blue
+}
+
+textures/yavin/light_yellow
+{
+    diffusemap textures/yavin/light_yellow
+}
+
+textures/yavin/main_display01
+{
+    diffusemap textures/yavin/main_display01
+}
+
+textures/yavin/main_display02
+{
+    diffusemap textures/yavin/main_display02
+}
+
+textures/yavin/main_display03
+{
+    diffusemap textures/yavin/main_display03
+}
+
+textures/yavin/main_display04
+{
+    diffusemap textures/yavin/main_display04
+}
+
+textures/yavin/main_display05
+{
+    diffusemap textures/yavin/main_display05
+}
+
+textures/yavin/map
+{
+	translucent
+	twosided
+	diffusemap textures/yavin/map
+}
+
+textures/yavin/met_base01
+{
+    diffusemap textures/yavin/met_base01
+}
+
+textures/yavin/met_floor01
+{
+    diffusemap textures/yavin/met_floor01
+}
+
+textures/yavin/met_grate01
+{
+    diffusemap textures/yavin/met_grate01
+}
+
+textures/yavin/met_light01
+{
+    diffusemap textures/yavin/met_light01
+}
+
+textures/yavin/met_pipe01
+{
+    diffusemap textures/yavin/met_pipe01
+}
+
+textures/yavin/met_steptrim01
+{
+    diffusemap textures/yavin/met_steptrim01
+}
+
+textures/yavin/met_trim01
+{
+    diffusemap textures/yavin/met_trim01
+}
+
+textures/yavin/met_trim02
+{
+    diffusemap textures/yavin/met_trim02
+}
+
+textures/yavin/met_trim03
+{
+    diffusemap textures/yavin/met_trim03
+}
+
+textures/yavin/met_trim04
+{
+    diffusemap textures/yavin/met_trim04
+}
+
+textures/yavin/met_wall01
+{
+    diffusemap textures/yavin/met_wall01
+}
+
+textures/yavin/met_wall02
+{
+    diffusemap textures/yavin/met_wall02
+}
+
+textures/yavin/metalrandom1worn
+{
+    diffusemap textures/yavin/metalrandom1worn
+}
+
+textures/yavin/metalstockworn
+{
+    diffusemap textures/yavin/metalstockworn
+}
+
+textures/yavin/paved
+{
+    diffusemap textures/yavin/paved
+}
+
+textures/yavin/pillar_base01
+{
+    diffusemap textures/yavin/pillar_base01
+}
+
+textures/yavin/rockblock
+{
+    diffusemap textures/yavin/rockblock
+}
+
+textures/yavin/rockwall
+{
+    diffusemap textures/yavin/rockwall
+}
+
+textures/yavin/screen01
+{
+    diffusemap textures/yavin/screen01
+}
+
+textures/yavin/stair_trim01
+{
+    diffusemap textures/yavin/stair_trim01
+}
+
+textures/yavin/stone_tile
+{
+    diffusemap textures/yavin/stone_tile
+}
+
+textures/yavin/stone_tile2
+{
+    diffusemap textures/yavin/stone_tile2
+}
+
+textures/yavin/stonepanel02
+{
+    diffusemap textures/yavin/stonepanel02
+}
+
+textures/yavin/stonepanel03
+{
+    diffusemap textures/yavin/stonepanel03
+}
+
+textures/yavin/stonepanel04
+{
+    diffusemap textures/yavin/stonepanel04
+}
+
+textures/yavin/stonepanel05
+{
+    diffusemap textures/yavin/stonepanel05
+}
+
+textures/yavin/streakshale
+{
+    diffusemap textures/yavin/streakshale
+}
+
+textures/yavin/strius
+{
+    diffusemap textures/yavin/strius
+}
+
+textures/yavin/temple_basicwall3
+{
+    diffusemap textures/yavin/temple_basicwall3
+}
+
+textures/yavin/temple_basicwall4
+{
+    diffusemap textures/yavin/temple_basicwall4
+}
+
+textures/yavin/temple_basicwall5
+{
+    diffusemap textures/yavin/temple_basicwall5
+}
+
+textures/yavin/temple_interiorsmall2
+{
+    diffusemap textures/yavin/temple_interiorsmall2
+}
+
+textures/yavin/temple_interiorsmall3
+{
+    diffusemap textures/yavin/temple_interiorsmall3
+}
+
+textures/yavin/temple_stone2
+{
+    diffusemap textures/yavin/temple_stone2
+}
+
+textures/yavin/temple_stonea
+{
+    diffusemap textures/yavin/temple_stonea
+}
+
+textures/yavin/temple_vines2
+{
+    diffusemap textures/yavin/temple_vines2
+}
+
+textures/yavin/temple_vinesalpha
+{
+	translucent
+	twosided
+	{
+		blend diffusemap
+		map textures/yavin/temple_vinesalpha
+		alphatest 0.5
+	}
+}
+
+textures/yavin/templewall_1
+{
+    diffusemap textures/yavin/templewall_1
+}
+
+textures/yavin/templewallgrungyx
+{
+    diffusemap textures/yavin/templewallgrungyx
+}
+
+textures/yavin/tileblock
+{
+    diffusemap textures/yavin/tileblock
+}
+
+textures/yavin/trim_stone03
+{
+    diffusemap textures/yavin/trim_stone03
+}
+
+textures/yavin/trim_stone05
+{
+    diffusemap textures/yavin/trim_stone05
+}
+
+textures/yavin/trim_stone06
+{
+    diffusemap textures/yavin/trim_stone06
+}
+
+textures/yavin/trim_stone07
+{
+    diffusemap textures/yavin/trim_stone07
+}
+
+textures/yavin/trim_stone10
+{
+    diffusemap textures/yavin/trim_stone10
+}
+
+textures/yavin/trimblock
+{
+    diffusemap textures/yavin/trimblock
+}
+
+textures/yavin/trimblock2
+{
+    diffusemap textures/yavin/trimblock2
+}
+
+textures/yavin/triml
+{
+    diffusemap textures/yavin/triml
+}
+
+textures/yavin/trims
+{
+    diffusemap textures/yavin/trims
+}
+
+textures/yavin/warroom_floor
+{
+    diffusemap textures/yavin/warroom_floor
+}
+
+textures/yavin/wblock
+{
+    diffusemap textures/yavin/wblock
+}
+
+textures/yavin/yeleswitch
+{
+    diffusemap textures/yavin/yeleswitch
+}
+
+textures/yavin/yeleswitchon
+{
+    diffusemap textures/yavin/yeleswitchon
+}
+

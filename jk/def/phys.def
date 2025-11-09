@@ -1,0 +1,193 @@
+entitydef phys_bespin_jk2 {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/bespin/jk2logo.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+    "friction"					"0.2"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_bespin_statue {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/bespin/statue.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"caverns2_boulder"
+    "friction"					"0.2"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_bounty_bomb {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/bounty/bomb.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+    "friction"					"0.2"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_bounty_cache {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/bounty/cache.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+    "friction"					"0.2"
+   // "clipmodel"					"models/mapobjects/lab/diamondbox/diamondbox.lwo"
+}
+entitydef phys_byss_tractortop {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/byss/tractor_top.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+    "friction"					"0.2"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cairn_welder {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cairn/welder.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_crystal {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/crystal.md3"
+    "density"                    "0.02"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"stone_impact"
+    "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_crystal2 {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/crystal2.md3"
+    "density"                    "0.02"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"stone_impact"
+    "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_crystal3 {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/crystal3.md3"
+    "density"                    "0.02"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"stone_impact"
+    "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+    "damage"                    "damage_generic"
+}
+entitydef phys_cinematics_crystals {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/crystals.md3"
+    "density"                    "0.02"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"stone_impact"
+    "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_dread {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/dread.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_pod {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/pod.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_podhatch {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/pod_hatch.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_ravensclaw {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/ravensclaw.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_shuttle {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/shuttle.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+ //   "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_cinematics_table {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/cinematics/table.md3"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+   "clipmodel"					"models/mapobjects/lab/tablecart2/tablecart2.lwo"
+}
+
+entitydef phys_desert_rock {
+    "inherit"					"moveable_base_boulder"
+    "model"						"models/map_objects/desert/rock.ase"
+	"density"					"0.1"
+	"friction"					"0.2"
+	"bouncyness"				"0"
+	"snd_bounce"				"caverns2_boulder"
+    "damage"                    "damage_generic"
+}
+
+entitydef phys_crane {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/desert/crane.md3"
+	"density"					"0.1"
+	"friction"					"0.2"
+	"bouncyness"				"0"
+	"snd_bounce"				"caverns2_boulder"
+    "damage"                    "damage_generic"
+}
+
+entitydef phys_factory_barrel {
+    "inherit"					"moveable_base_barrel"
+    "model"						"models/map_objects/factory/barrel.ase"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+}
+entitydef phys_factory_pipe {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/factory/pipe.ase"
+    "density"                    "0.2"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"metal_barrel_impact"
+}
+entitydef phys_ns_book {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/nar_shaddar/book.md3"
+    "density"                    "0.002"
+    "bouncyness"                 "0.01"
+    "snd_bounce"				"book_impact"
+    "clipmodel"					"models/mapobjects/lab/tray/tray.lwo"
+}
+entitydef phys_ns_cup {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/nar_shaddar/cup.md3"
+    "density"                    "0.005"
+    "bouncyness"                 "0.3"
+    "snd_bounce"				"tray_impact"
+    "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}
+entitydef phys_ns_wine {
+    "inherit"					"moveable_base"
+    "model"						"models/map_objects/nar_shaddar/wine.md3"
+    "density"                    "0.1"
+    "bouncyness"                 "0.1"
+    "snd_bounce"				"plastic_jar_impact"
+    "clipmodel"					"models/mapobjects/filler/cola1.lwo"
+}

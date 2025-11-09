@@ -1,0 +1,429 @@
+textures/taspir/ore_lightemitting
+{
+	qer_editorimage textures/taspir/lava00
+	noimpact
+	nonsolid
+	//translucent
+	//twosided
+	{
+	map textures/imp_mine/lava2
+	//blend diffusemap
+	rgb (sinTable[time*0.1]+1.8)
+	scroll 0.04*time, 0.04*time
+	}
+	diffusemap textures/taspir/ore_lightemitting.tga
+	// bumpmap textures/taspir/ore_lightemitting_local.tga
+	// specularmap textures/taspir/ore_lightemitting_s.tga
+}
+
+textures/mp/caulk_hull
+{
+	translucent
+	
+	qer_editorimage textures/mp/caulk_hull.tga
+	diffusemap textures/mp/caulk_hull.tga
+	// bumpmap textures/mp/caulk_hull_local.tga
+	// specularmap textures/mp/caulk_hull_s.tga
+}
+
+textures/h_evil/evil_pipe2
+{
+	qer_editorimage textures/h_evil/evil_pipe2.tga
+	diffusemap textures/h_evil/evil_pipe2.tga
+	// bumpmap textures/h_evil/evil_pipe2_local.tga
+	// specularmap textures/h_evil/evil_pipe2_s.tga
+}
+
+
+
+textures/factory/T2_Wedge_floorgrate
+{
+	qer_editorimage textures/factory/T2_Wedge_floorgrate.tga
+	diffusemap textures/factory/T2_Wedge_floorgrate.tga
+	// bumpmap textures/factory/T2_Wedge_floorgrate_local.tga
+	// specularmap textures/factory/T2_Wedge_floorgrate_s.tga
+}
+
+
+
+textures/taspir/rustmetal1
+{
+	qer_editorimage textures/taspir/rustmetal1.tga
+	diffusemap textures/taspir/rustmetal1.tga
+	// bumpmap textures/taspir/rustmetal1_local.tga
+	// specularmap textures/taspir/rustmetal1_s.tga
+}
+
+textures/taspir/floor
+{
+	qer_editorimage textures/taspir/floor.tga
+	diffusemap textures/taspir/floor.tga
+	// bumpmap textures/taspir/floor_local.tga
+	// specularmap textures/taspir/floor_s.tga
+}
+
+
+textures/taspir/bigflat
+{
+	qer_editorimage textures/taspir/bigflat.tga
+	diffusemap textures/taspir/bigflat.tga
+	// bumpmap textures/taspir/bigflat_local.tga
+	// specularmap textures/taspir/bigflat_s.tga
+}
+
+textures/taspir/wallnew1
+{
+	qer_editorimage textures/taspir/wallnew1.tga
+	diffusemap textures/taspir/wallnew1.tga
+	// bumpmap textures/taspir/wallnew1_local.tga
+	// specularmap textures/taspir/wallnew1_s.tga
+}
+
+textures/taspir/trim_walk
+{
+	qer_editorimage textures/taspir/trim_walk.tga
+	diffusemap textures/taspir/trim_walk.tga
+	// bumpmap textures/taspir/trim_walk_local.tga
+	// specularmap textures/taspir/trim_walk_s.tga
+}
+
+textures/taspir/trim
+{
+	qer_editorimage textures/taspir/trim.tga
+	diffusemap textures/taspir/trim.tga
+	// bumpmap textures/taspir/trim_local.tga
+	// specularmap textures/taspir/trim_s.tga
+}
+
+textures/taspir/basefloor
+{
+	qer_editorimage textures/taspir/basefloor.tga
+	diffusemap textures/taspir/basefloor.tga
+	// bumpmap textures/taspir/basefloor_local.tga
+	// specularmap textures/taspir/basefloor_s.tga
+}
+
+textures/taspir/landing_pad
+{
+    {
+        map textures/taspir/landing_pad.tga
+        //vertexColor
+    }
+    {
+        map textures/taspir/landing_wipeh.tga
+        blend GL_ONE, GL_ONE
+        scroll time*0.25, 0
+    }
+    {
+        map textures/taspir/landing_wipev
+        blend GL_ONE, GL_ONE
+	scroll 0, time*-0.25
+    }
+    {
+        map textures/taspir/landing_pad
+        blend GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
+    }
+}
+
+textures/imperial/outside_wall_base
+{
+	qer_editorimage textures/imperial/outside_wall_base.tga
+	diffusemap textures/imperial/outside_wall_base.tga
+	// bumpmap textures/imperial/outside_wall_base_local.tga
+	// specularmap textures/imperial/outside_wall_base_s.tga
+}
+
+textures/taspir/siding2
+{
+	qer_editorimage textures/taspir/siding2.tga
+	diffusemap textures/taspir/siding2.tga
+	// bumpmap textures/taspir/siding2_local.tga
+	// specularmap textures/taspir/siding2_s.tga
+}
+
+textures/taspir/background
+{
+	qer_editorimage textures/taspir/background.tga
+	diffusemap textures/taspir/background.tga
+	// bumpmap textures/taspir/background_local.tga
+	// specularmap textures/taspir/background_s.tga
+}
+
+textures/taspir/doortrim
+{
+	qer_editorimage textures/taspir/doortrim.tga
+	diffusemap textures/taspir/doortrim.tga
+	// bumpmap textures/taspir/doortrim_local.tga
+	// specularmap textures/taspir/doortrim_s.tga
+}
+
+textures/imperial/pipes
+{
+	qer_editorimage textures/imperial/pipes.tga
+	diffusemap textures/imperial/pipes.tga
+	// bumpmap textures/imperial/pipes_local.tga
+	// specularmap textures/imperial/pipes_s.tga
+}
+
+textures/taspir/512_512rust
+{
+	qer_editorimage textures/taspir/512_512rust.tga
+	diffusemap textures/taspir/512_512rust.tga
+	// bumpmap textures/taspir/512_512rust_local.tga
+	// specularmap textures/taspir/512_512rust_s.tga
+}
+
+textures/taspir/t_pillar
+{
+	qer_editorimage textures/taspir/t_pillar.tga
+	diffusemap textures/taspir/t_pillar.tga
+	// bumpmap textures/taspir/t_pillar_local.tga
+	// specularmap textures/taspir/t_pillar_s.tga
+}
+
+textures/taspir/t_wall
+{
+	qer_editorimage textures/taspir/t_wall.tga
+	diffusemap textures/taspir/t_wall.tga
+	// bumpmap textures/taspir/t_wall_local.tga
+	// specularmap textures/taspir/t_wall_s.tga
+}
+
+textures/taspir/wallnew2
+{
+	qer_editorimage textures/taspir/wallnew2.tga
+	diffusemap textures/taspir/wallnew2.tga
+	// bumpmap textures/taspir/wallnew2_local.tga
+	// specularmap textures/taspir/wallnew2_s.tga
+}
+
+textures/taspir/control3
+{
+	qer_editorimage textures/taspir/control3.tga
+	diffusemap textures/taspir/control3.tga
+	// bumpmap textures/taspir/control3_local.tga
+	// specularmap textures/taspir/control3_s.tga
+}
+
+textures/taspir/256_128rust
+{
+	qer_editorimage textures/taspir/256_128rust.tga
+	diffusemap textures/taspir/256_128rust.tga
+	// bumpmap textures/taspir/256_128rust_local.tga
+	// specularmap textures/taspir/256_128rust_s.tga
+}
+
+textures/taspir/t_wall3
+{
+	qer_editorimage textures/taspir/t_wall3.tga
+	diffusemap textures/taspir/t_wall3.tga
+	// bumpmap textures/taspir/t_wall3_local.tga
+	// specularmap textures/taspir/t_wall3_s.tga
+}
+
+textures/desert/s_gratefloor
+{
+	qer_editorimage textures/desert/s_gratefloor.tga
+	diffusemap textures/desert/s_gratefloor.tga
+	// bumpmap textures/desert/s_gratefloor_local.tga
+	// specularmap textures/desert/s_gratefloor_s.tga
+}
+
+textures/taspir/taspir_walk
+{
+	qer_editorimage textures/taspir/taspir_walk.tga
+	diffusemap textures/taspir/taspir_walk.tga
+	// bumpmap textures/taspir/taspir_walk_local.tga
+	// specularmap textures/taspir/taspir_walk_s.tga
+}
+
+textures/taspir/door
+{
+	qer_editorimage textures/taspir/door.tga
+	diffusemap textures/taspir/door.tga
+	// bumpmap textures/taspir/door_local.tga
+	// specularmap textures/taspir/door_s.tga
+}
+
+textures/factory/crate_trim11
+{
+	qer_editorimage textures/factory/crate_trim11.tga
+	diffusemap textures/factory/crate_trim11.tga
+	// bumpmap textures/factory/crate_trim11_local.tga
+	// specularmap textures/factory/crate_trim11_s.tga
+}
+
+textures/taspir/t_wall2
+{
+	qer_editorimage textures/taspir/t_wall2.tga
+	diffusemap textures/taspir/t_wall2.tga
+	// bumpmap textures/taspir/t_wall2_local.tga
+	// specularmap textures/taspir/t_wall2_s.tga
+}
+
+textures/factory/pipe
+{
+	qer_editorimage textures/factory/pipe.tga
+	diffusemap textures/factory/pipe.tga
+	// bumpmap textures/factory/pipe_local.tga
+	// specularmap textures/factory/pipe_s.tga
+}
+
+textures/taspir/t_wall5
+{
+	qer_editorimage textures/taspir/t_wall5.tga
+	diffusemap textures/taspir/t_wall5.tga
+	// bumpmap textures/taspir/t_wall5_local.tga
+	// specularmap textures/taspir/t_wall5_s.tga
+}
+
+textures/taspir/control2
+{
+	qer_editorimage textures/taspir/control2.tga
+	diffusemap textures/taspir/control2.tga
+	// bumpmap textures/taspir/control2_local.tga
+	// specularmap textures/taspir/control2_s.tga
+}
+
+textures/taspir/t_wall4
+{
+	qer_editorimage textures/taspir/t_wall4.tga
+	diffusemap textures/taspir/t_wall4.tga
+	// bumpmap textures/taspir/t_wall4_local.tga
+	// specularmap textures/taspir/t_wall4_s.tga
+}
+
+textures/taspir/control4
+{
+	qer_editorimage textures/taspir/control4.tga
+	diffusemap textures/taspir/control4.tga
+	// bumpmap textures/taspir/control4_local.tga
+	// specularmap textures/taspir/control4_s.tga
+}
+
+textures/taspir/panelling1
+{
+	qer_editorimage textures/taspir/panelling1.tga
+	diffusemap textures/taspir/panelling1.tga
+	// bumpmap textures/taspir/panelling1_local.tga
+	// specularmap textures/taspir/panelling1_s.tga
+}
+
+textures/taspir/control1
+{
+	qer_editorimage textures/taspir/control1.tga
+	diffusemap textures/taspir/control1.tga
+	// bumpmap textures/taspir/control1_local.tga
+	// specularmap textures/taspir/control1_s.tga
+}
+
+textures/taspir/panelling2
+{
+	qer_editorimage textures/taspir/panelling2.tga
+	diffusemap textures/taspir/panelling2.tga
+	// bumpmap textures/taspir/panelling2_local.tga
+	// specularmap textures/taspir/panelling2_s.tga
+}
+
+textures/taspir/pipestank
+{
+	qer_editorimage textures/taspir/pipestank.tga
+	diffusemap textures/taspir/pipestank.tga
+	// bumpmap textures/taspir/pipestank_local.tga
+	// specularmap textures/taspir/pipestank_s.tga
+}
+
+textures/taspir/ore_lightemitting_lavapool
+{
+	qer_editorimage textures/taspir/lava00
+	noimpact
+	nonsolid
+	deform turbulent sintable 0.12 time*0.15 1
+	
+	{
+	map textures/imp_mine/lava2
+	rgb sinTable[time*0.1]+1.7
+	scroll sinTable[time*0.15], time*0.15
+	}
+}
+
+textures/taspir/256_128rustv
+{
+	qer_editorimage textures/taspir/256_128rustv.tga
+	diffusemap textures/taspir/256_128rustv.tga
+	// bumpmap textures/taspir/256_128rustv_local.tga
+	// specularmap textures/taspir/256_128rustv_s.tga
+}
+
+textures/taspir/smalltrim
+{
+	qer_editorimage textures/taspir/smalltrim.tga
+	diffusemap textures/taspir/smalltrim.tga
+	// bumpmap textures/taspir/smalltrim_local.tga
+	// specularmap textures/taspir/smalltrim_s.tga
+}
+
+textures/taspir/light_ceiling
+{
+	qer_editorimage textures/taspir/light_ceiling.tga
+	diffusemap textures/taspir/light_ceiling.tga
+	// bumpmap textures/taspir/light_ceiling_local.tga
+	// specularmap textures/taspir/light_ceiling_s.tga
+}
+
+textures/taspir/ceilingbase1
+{
+	qer_editorimage textures/taspir/ceilingbase1.tga
+	diffusemap textures/taspir/ceilingbase1.tga
+	// bumpmap textures/taspir/ceilingbase1_local.tga
+	// specularmap textures/taspir/ceilingbase1_s.tga
+}
+
+
+textures/taspir/brace
+{
+	qer_editorimage textures/taspir/brace.tga
+	diffusemap textures/taspir/brace.tga
+	// bumpmap textures/taspir/brace_local.tga
+	// specularmap textures/taspir/brace_s.tga
+}
+
+textures/flares/solid_red
+{
+	qer_editorimage textures/flares/solid_red.tga
+	noimpact
+	nonsolid
+	translucent
+	{
+	map textures/flares/solid_red
+	blend GL_ONE, GL_ONE
+	}
+}
+
+textures/flares/solid_blue
+{
+	qer_editorimage textures/flares/solid_blue.tga
+	diffusemap textures/flares/solid_blue.tga
+	// bumpmap textures/flares/solid_blue_local.tga
+	// specularmap textures/flares/solid_blue_s.tga
+}
+
+textures/taspir/taspir_phongrock
+{
+	qer_editorimage textures/taspir/taspir_rock2
+	{
+	blend diffusemap
+	map textures/taspir/taspir_rock2
+	scale 0.5, 0.5
+	}
+	// bumpmap textures/taspir/taspir_phongrock_local.tga
+	// specularmap textures/taspir/taspir_phongrock_s.tga
+}
+
+textures/imperial/elevat_floor
+{
+	qer_editorimage textures/imperial/elevat_floor.tga
+	diffusemap textures/imperial/elevat_floor.tga
+	// bumpmap textures/imperial/elevat_floor_local.tga
+	// specularmap textures/imperial/elevat_floor_s.tga
+}

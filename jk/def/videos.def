@@ -1,0 +1,9 @@
+
+
+video testy1 {
+	name		"Alpha Labs Introduction"
+	info		"Creator: UAC PR\nDate: 01/15/41\n\nAlpha Labs: Past, Present and Future"
+	video		"video/video_alphalabs_intro"
+	audio		"video_alphalabs_intro"
+	preview	"guis/assets/marscity/uac.tga"
+}

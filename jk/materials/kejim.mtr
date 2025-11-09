@@ -1,0 +1,11 @@
+textures/tests/rock_color
+{
+	qer_editorimage textures/taspir/taspir_rock2
+	{
+	blend diffusemap
+	map textures/taspir/taspir_rock2
+	scale 0.5, 0.5
+	}
+	// bumpmap textures/taspir/taspir_phongrock_local.tga
+	// specularmap textures/taspir/taspir_phongrock_s.tga
+}

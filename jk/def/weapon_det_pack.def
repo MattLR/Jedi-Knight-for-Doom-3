@@ -1,0 +1,190 @@
+/***********************************************************************
+
+	weapon_pistol.def
+
+	anim fire2					models/md5/weapons/pistol_view/fire2.md5anim {
+		frame 1					sound_weapon player_pistol_fire
+	}
+	
+	anim fire3 					models/md5/weapons/pistol_view/fire3.md5anim {
+		frame 1					sound_weapon player_pistol_fire
+	}
+	
+	anim fire4 					models/md5/weapons/pistol_view/fire4.md5anim {
+		frame 1					sound_weapon player_pistol_fire
+	}
+
+
+***********************************************************************/
+
+
+entityDef weapon_blaster {
+	"editor_color"				".3 .3 1"
+	"editor_mins"				"-16 -16 0"
+	"editor_maxs"				"16 16 32"
+	"editor_usage"				"Blaster"
+	"editor_rotatable"		"1"
+
+	"spawnclass"				"idItem"
+	"size"						"32 32 32"
+	"model"						"models/weapons2/blaster_pistol/blaster_pistol_w.ase"
+	"model_view" 				"viewmodel_blaster"
+	"model_world" 				"worldmodel_blaster"
+	"joint_attach"				"rhang_tag_bone"
+	"joint"						"rhang_tag_bone"
+	"def_dropItem"				"moveable_item_blaster"
+
+	"inv_name"					"Blaster"
+	"inv_weapon"				"weapon_blaster"
+	"inv_item"					"5"
+	"inv_ammo_bullets"			"12"
+	"icon"						"gfx/hud/w_icon_blaster_pistol"
+
+	"weapon_scriptobject"		"weapon_blaster"
+	"def_projectile"			"projectile_blaster"
+	"ammoType"					"ammo_bullets"
+	"ammoRequired"				"1"
+	//"clipSize"					"0"
+	"lowAmmo"					"10"
+	"mtr_flashShader"			"muzzleflash"
+	"flashColor"				"1 0.8 0.4"
+	"flashRadius"				"120"
+	"silent_fire"				"0"
+	"recoilTime"				"125"
+	"recoilAngles"				"-1 0 0"
+
+	"weaponAngleOffsetAverages" "20"
+	"weaponAngleOffsetScale" 	".4"
+	"weaponAngleOffsetMax"		"60"
+	"weaponOffsetTime"			"400"
+	"weaponOffsetScale"			"0.005"
+
+	"hide_time"					"0.3"								// time to hide weapon when talking to npcs or looking at guis
+	"hide_distance"				"-15"								// distance to offset weapon when talking to npcs or looking at guis
+
+	"smoke_muzzle"				"muzzlesmoke.prt"
+	//"def_ejectBrass"			"debris_brass"
+	//"ejectBrassDelay"			"10"
+	
+	"snd_acquire"				"sound_weapon_acquire"
+	"snd_respawn"				"sound_weapon_respawn"
+	
+	"skin_invisible"			"skins/pistol_invis"
+	
+	"spread"					"1"
+}
+
+entityDef moveable_item_blaster {
+	"inherit"					"weapon_blaster"
+	"spawnclass"				"idMoveableItem"
+	"density"					"0.03"
+	"friction"					"0.2"
+	"bouncyness"				"0"
+}
+
+model worldmodel_blaster {
+	mesh 						models/blaster_pistol_w.md5mesh
+	//offset						(3 3 3) 
+	/*
+	anim idle 					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim idle_empty				models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim aim					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim fire1 					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim putaway				models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim raise					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim reload					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	anim noammo					models/md5/weapons/pistol_world/pistol_idle.md5anim
+	*/
+}
+
+model viewmodel_blaster {
+	offset 						(-2.5 0.0 2.0)
+	//Angle				(1.0 1.0 1.0)
+	mesh						models/weapons2/blaster_pistol/blaster_pistol.md5mesh //models/blaster_pistol.md5mesh
+	
+	anim raise 					models/weapons2/blaster_pistol/blaster_pistol.md5anim //models/blaster_pistol.md5anim
+	
+	anim idle					models/weapons2/blaster_pistol/blaster_pistol.md5anim
+	anim idle_empty				models/weapons2/blaster_pistol/blaster_pistol.md5anim
+	
+	anim fire1					models/weapons2/blaster_pistol/blaster_pistol.md5anim {
+		frame 1					sound_weapon player_blaster_fire
+	}
+	
+	
+		
+	anim reload 				models/weapons2/blaster_pistol/blaster_pistol.md5anim {
+		frame 1					sound_weapon player_pistol_reload
+	}
+	
+	anim noammo 				models/weapons2/blaster_pistol/blaster_pistol.md5anim {
+		frame 1					sound_body player_pistol_empty
+	}
+
+	anim putaway 				models/weapons2/blaster_pistol/blaster_pistol.md5anim
+}
+entityDef	damage_blaster {
+	"damage"					"16"
+	"smoke_wound_flesh"			"bloodwound.prt"
+	"gib"						"1"
+	
+}
+
+entityDef projectile_blaster {
+	"spawnclass"				"idProjectile"
+	"mins"						"-6 -6 -4"
+	"maxs"						"6 6 4"
+	"cone"						"3"
+	"model" 					"models/particles/tracer/tracer.lwo"
+
+	"def_damage"				"damage_blaster"
+
+	"launchFromBarrel"			"1"
+	"health"					"0"					// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"					"600 0 0"			// how fast the projectile leaves the gun (or distance if fuse is 0)
+	"random_shader_spin"		"1"					// sets shader parm 5 which if appropriate the projectile shader will use this as an alternating spin
+	"angular_velocity"			"0 0 0"				// how the projectile is rotating when it leaves the gun
+	"thrust"					"0"					// the rate of acceleration (always in the direction of the projectiles model)
+	"thrust_start"				"0"					// when to start accelerating
+	"thrust_end"				"0"					// when to stop accelerating
+	"linear_friction"			"0"					// "air" friction
+	"angular_friction"			"0"
+	"contact_friction"			"0"
+	"bounce"					"0.6"				// how much speed a projectile retains when it bounces off of objects (coefficient of restitution).  0 means no bounce.
+	"mass"						"50"
+	"push"						"4000"				// additional impulse when projectile collides
+	"gravity"					"0"					// how much gravity affects the trajectory.  gravity direction is same as the entity that fired it.
+	"fuse"						"10"				// how long before the projectile is removed or self-detonates.  Use 0 for beam weapons (velocity == distance).
+
+	"detonate_on_fuse"			"0"					// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"			"1"					// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"			"0"					// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"			"1"					// whether projectile should detonate when it hits a character in the game
+
+	"impact_damage_effect"		"1"					// whether projectile causes blood splats from characters that bleed
+	"impact_gib"				"1"					// whether projectile can gib a character or not (for example: bullets don't gib, but rockets do)
+
+	"mtr_detonate"				"textures/decals/bulleth02"
+	"decal_size"				"10" 
+
+	//"smoke_fly"					"plasmatrail.prt"	// particle effect while in the air
+	"smoke_detonate"			""					// particle effect when detonates
+	"smoke_residue"				""					// particle effect while in the air
+	"smoke_bounce"				""					// particle effect when bounces
+	"smoke_fuse"				""					// particle effect when removed from fuse expiring
+
+	"model_detonate"			"sparky1.prt"
+
+//	"mtr_light_shader"			""
+//	"light_color"				"0 0 0.8"
+//	"light_radius"				"160"
+//	"light_offset"				"-8 0 0"
+
+//	"mtr_explode_light_shader"	"muzzleflash"
+//	"explode_light_color"		"0 0 1"
+//	"explode_light_radius"		"160"
+//	"explode_light_fadetime"	"0.25"
+
+	"snd_fly"					"player_blaster_fire"					// sound effect while in the air
+	"snd_explode"				"blaster_impact"
+}

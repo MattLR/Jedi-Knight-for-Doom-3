@@ -1,0 +1,631 @@
+/***********************************************************************
+
+weapon_force.script
+
+***********************************************************************/
+
+#define GG_RANGE			1150		//objects can be captured within this range
+#define GG_HOVER			125		//captured objects hover in front of player at this distance
+#define GG_AMMO_STRENGTH		10		//one ammo unit strength
+#define GG_TARGET_SPEED			1100		//captured objects move to hover position with this speed
+#define GG_LAUNCH_TIME			1		//caputred objects drop (after fire button is released) within this time, launch after
+#define GG_LAUNCH_SPEED			240		//captured objects launch away from player (after fire button is released) with this speed
+#define GG_KICKBACK_SPEED		30		//player push back after captured object launch
+#define GG_LAUNCH_AMMO			5		//ammo units used after captured object launch
+
+// blend times
+#define gravitygun_IDLE_TO_LOWER		4
+#define gravitygun_IDLE_TO_FIRE		4
+#define	gravitygun_IDLE_TO_RELOAD	4
+#define gravitygun_RAISE_TO_IDLE		4
+#define gravitygun_FIRE_TO_IDLE		4
+#define gravitygun_RELOAD_TO_IDLE	4
+
+object weapon_force : weapon_base {
+	//entity beam1;
+	entity gg_owner;
+	//entity emit;
+	entity target;
+
+	float x;
+	float y;
+	float z;
+	float e;
+	float z_angle;
+	float xy_angle;
+	float target_health;
+	float justhurt;
+	float Parmangle;
+	float ammo_clip;
+	float next_attack;
+
+	string target_class;
+	vector gg_angles;
+	vector gg_start;
+	vector gg_end;
+	vector gg_owner_size;
+	entity hand_emit;
+	entity weapon_ent;
+	entity owner;
+	float dragging;
+
+	vector target_pos;
+	vector move_dir;
+	vector push_dir;
+	float distance;
+	float frac;
+	float launch_time;
+	float current_time;
+	vector target_size;
+
+	float ftime;
+	float adjustorigin;
+	float forcePower;
+
+	void		init();
+	void		Lower();
+	void		Raise();
+	void		Idle();
+	void		Fire();
+	void		ExitCinematic();
+	void		Throw();
+
+	void		Telekinesis();
+
+	void		Absorb();
+	void		Heal();
+	void		Protect();
+	void		MindTrick();
+
+	void		Speed();
+	void		Push();
+	void		Pull();
+	void		Sense();
+
+	void 		Drain();
+	void 		Lightning();
+	void 		DarkRage();
+	void		Grip();
+
+	void		Reload();
+};
+
+void weapon_force::init() {
+	cacheSoundShader( "player_drag" );
+	cacheSoundShader( "player_stopdrag" );
+	cacheSoundShader( "player_startdrag" );
+	cacheSoundShader( "player_drag_hum" );
+	forcePower = 0;
+	waitFrame();
+
+	//startSoundShader( "player_startdrag", SND_CHANNEL_ANY );
+	weaponState( "Raise", 0 );
+}
+
+void weapon_force::Raise() {
+	if ( !ammoAvailable() ) {
+		weaponHolstered();
+		nextWeapon();
+		return;
+	}
+
+	weaponRising();
+	playAnim( ANIMCHANNEL_ALL, "raise" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, gravitygun_RAISE_TO_IDLE ) );
+	weaponState( "Idle", gravitygun_RAISE_TO_IDLE );
+}
+
+void weapon_force::Lower() {
+	weaponLowering();
+	playAnim( ANIMCHANNEL_ALL, "putaway" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, 0 ) );
+	weaponHolstered();
+	waitUntil( WEAPON_RAISEWEAPON );
+	weaponState( "Raise", 0 );
+}
+
+void weapon_force::Idle() {
+	weapon_ent.setSkin( "" );
+	float gg_trace;
+	string target_name;
+	dragging = 0;
+	vector origin2;
+	string FP;
+	float currentTime;
+
+	origin2 = getJointPos(1);
+	FP = "Absorb";
+	float count;	
+	count = 4 + sys.random( 4 );
+	weaponReady();
+	sys.drawText(FP, origin2, 0.1, '100 0 0', 1, 10);
+	while( 1 ) {
+		if ( WEAPON_LOWERWEAPON ) {
+			weaponState( "Lower", gravitygun_IDLE_TO_LOWER );
+		}
+		/*
+		if ( WEAPON_ATTACK ) {
+				//ammo_clip = ammoInClip();		
+				gg_owner = getOwner();
+				gg_start = gg_owner.getWorldOrigin();
+				gg_owner_size = gg_owner.getSize();
+				gg_start_z = gg_start_z + (gg_owner_size_z - 6);
+				gg_angles = gg_owner.getViewAngles();
+				z_angle = gg_angles_x * -1; 
+				xy_angle = gg_angles_y;
+				z = sys.sin(z_angle) * GG_RANGE;
+				e = sys.cos(z_angle) * GG_RANGE;
+				y = sys.sin(xy_angle) * e;
+				x = sys.cos(xy_angle) * e;
+				gg_end_x = x + gg_start_x;
+				gg_end_y = y + gg_start_y;		//  //CONTENTS_PROJECTILE|
+				gg_end_z = z + gg_start_z;
+				gg_trace = sys.tracePoint(gg_start, gg_end, CONTENTS_CORPSE|MASK_MONSTERSOLID|CONTENTS_RENDERMODEL, gg_owner);
+				target = sys.getTraceEntity();
+				target_class = target.getKey("spawnclass");
+				//target_health = target.getHealth();
+				target_name = target.getName();
+				//sys.print( "Class: " + target_class + "\n" );
+
+				if (target_class == "idAFEntity_Generic" || target_class == "idAFEntity_WithAttachedHead" || target_class == "idAI" || target_class == "idPlayer" || target_class == "idExplodingBarrel" || target_class == "idMoveable" || target_class == "idMoveableItem") {
+					weaponState( "Fire", gravitygun_IDLE_TO_FIRE );
+					} 
+				} 
+			*/
+			currentTime = sys.getTime();
+			if ( currentTime >= next_attack && WEAPON_ATTACK) {
+				//ammo_clip = ammoInClip();		
+				gg_owner = getOwner();
+				gg_start = gg_owner.getWorldOrigin();
+				gg_owner_size = gg_owner.getSize();
+				gg_start_z = gg_start_z + (gg_owner_size_z - 6);
+				gg_angles = gg_owner.getViewAngles();
+				z_angle = gg_angles_x * -1; 
+				xy_angle = gg_angles_y;
+				z = sys.sin(z_angle) * GG_RANGE;
+				e = sys.cos(z_angle) * GG_RANGE;
+				y = sys.sin(xy_angle) * e;
+				x = sys.cos(xy_angle) * e;
+				gg_end_x = x + gg_start_x;
+				gg_end_y = y + gg_start_y;		//  //CONTENTS_PROJECTILE|
+				gg_end_z = z + gg_start_z;
+				gg_trace = sys.tracePoint(gg_start, gg_end, CONTENTS_CORPSE|MASK_MONSTERSOLID|CONTENTS_RENDERMODEL, gg_owner);
+				target = sys.getTraceEntity();
+				target_class = target.getKey("spawnclass");
+				//target_health = target.getHealth();
+				target_name = target.getName();
+				sys.println( "Class: " + target_class + "\n" );
+
+				if (forcePower == 0) {
+					weaponState( "Absorb", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 1) {
+					weaponState( "Heal", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 2) {
+					weaponState( "Protect", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 3) {
+					weaponState( "MindTrick", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 4) {
+					weaponState( "Speed", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 5) {
+					weaponState( "Push", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 6) {
+					weaponState( "Pull", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 7) {
+					weaponState( "Sense", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 8) {
+					weaponState( "Drain", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 9) {
+					weaponState( "Lightning", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 10) {
+					weaponState( "DarkRage", PISTOL_FIRE_TO_IDLE );
+				}
+				else if (forcePower == 11) {
+					weaponState( "Grip", PISTOL_FIRE_TO_IDLE );
+				} 
+			}
+			if ( WEAPON_RELOAD ) {
+				origin2 = getJointPos(1);
+				if (forcePower == 0) {
+					forcePower = 1;
+					FP = "Heal";
+					sys.println(forcePower);
+					sys.println("wowowo");
+				}
+				else if (forcePower == 1) {
+					forcePower = 2;
+					FP = "Protect";
+				}
+				else if (forcePower == 2) {
+					forcePower = 3;
+					FP = "Mindtrick";
+				}
+				else if (forcePower == 3) {
+					forcePower = 4;
+					FP = "5";
+				}
+				else if (forcePower == 4) {
+					forcePower = 5;
+					FP = "6";
+				}
+				else if (forcePower == 5) {
+					forcePower = 6;
+					FP = "7";
+				}
+				else if (forcePower == 6) {
+					forcePower = 7;
+					FP = "8";
+				}
+				else if (forcePower == 7) {
+					forcePower = 8;
+					FP = "9";
+				}
+				else if (forcePower == 8) {
+					forcePower = 9;
+					FP = "10";
+				}
+				else if (forcePower == 9) {
+					forcePower = 10;
+					FP = "11";
+				}
+				else if (forcePower == 10) {
+					forcePower = 11;
+					FP = "12";
+				}
+				else if (forcePower == 11) {
+					forcePower = 0;
+					FP = "0";
+				} 
+				sys.println(forcePower);
+				sys.drawText(FP, origin2, 0.1, '100 0 0', 1, 10);
+			}
+			waitFrame();
+		}
+				
+		
+
+}
+
+void weapon_force::Fire() {
+	float th;
+	justhurt = 0;
+	adjustorigin = 0;
+
+	weapon_ent = gg_owner.getWeaponEntity(); 
+	
+	playAnim( ANIMCHANNEL_ALL, "fire" );
+
+	sys.setSpawnArg( "model", "hand_glow_drag.prt" );
+	sys.setSpawnArg( "origin", target.getOrigin() );
+	hand_emit = sys.spawn( "func_emitter" );
+	
+	//startSoundShader( "player_startdrag", SND_CHANNEL_ANY );
+	startSoundShader( "player_drag", SND_CHANNEL_ANY );
+
+
+	launch_time = (sys.getTime() + GG_LAUNCH_TIME);
+
+	if ( target_class == "idAI" || target_class == "idPlayer" ) {		//just hurt monsters if their not dead yet
+		if ( target.getHealth() < 0 ) {
+			justhurt = 1;
+			//emit.setOrigin( '0 0 32' );
+			//startSoundShader( "player_startdrag", SND_CHANNEL_ANY );
+			playAnim( ANIMCHANNEL_ALL, "fire" );
+
+			//target.allowMovement( false );
+			
+			useAmmo( 5 );
+			while ( WEAPON_ATTACK )	{
+				//sys.radiusDamage( target.getOrigin(), self, gg_owner, gg_owner, "damage_oneshot", 1.0 );
+				th = target.getHealth();
+
+				//SHOW THE MONSTERS HEALTH IN THE METERS
+				setShaderParm( 2, (th / 750 ));
+
+				ftime = sys.getTime() + 0.1; //pain every 0.3 seconds
+				while ( ftime > current_time ) {
+					current_time = sys.getTime();
+					hand_emit.setWorldOrigin(weapon_ent.getJointPos(weapon_ent.getJointHandle( "Barrel" )));
+					waitFrame();
+				}
+				if ( target.getHealth() > 1 ) {
+					justhurt = 0;
+					target.startRagdoll();
+					weaponState( "Dragging", 1 );
+				}
+				waitFrame();
+			}
+			stopSound( SND_CHANNEL_ANY, false );
+		//	target.stopRagdoll();
+			//target.allowMovement( true );
+		} 
+	} 
+
+	if ( justhurt != 1 ) {
+		weaponState( "Dragging", 0 );
+	}
+
+	hand_emit.remove();
+	weaponState( "Idle", gravitygun_FIRE_TO_IDLE );
+}
+
+void weapon_force::Dragging() {
+	float test;
+	ammo_clip = ammoInClip();
+	if ( ammo_clip < 1 ) {
+		hand_emit.remove();
+		weaponState( "Reload", 2 );
+	}
+
+	dragging = 1;
+	test = 0;
+	weapon_ent.setSkin( "skins/gg_active" );
+	useAmmo( 1 );
+	while ( WEAPON_ATTACK )	{	//following math continously calcs hover & captured object positions
+		//target.setMoveType(MOVETYPE_SLIDE);
+		if (test == 0) {
+			//target.disableWeapon();
+			//target.stopThinking();
+			//target.playCycle(ANIMCHANNEL_LEGS, "run");
+			//target.overrideAnim(ANIMCHANNEL_LEGS);
+			//target.stopAnim();
+			target.becomeRagdoll();
+
+			test = 1;
+		}
+		gg_start = gg_owner.getWorldOrigin();
+		gg_owner_size = gg_owner.getSize();
+		gg_start_z = gg_start_z + (gg_owner_size_z - 6);
+		gg_angles = gg_owner.getViewAngles();
+		z_angle = gg_angles_x * -1;
+		xy_angle = gg_angles_y;
+		z = sys.sin(z_angle) * GG_HOVER;
+		e = sys.cos(z_angle) * GG_HOVER;
+		y = sys.sin(xy_angle) * e;
+		x = sys.cos(xy_angle) * e;
+		gg_end_x = x + gg_start_x;
+		gg_end_y = y + gg_start_y;
+		if (  target_class == "idAFEntity_WithAttachedHead" || target_class == "idAI" || target_class == "idPlayer" ) {
+			gg_end_z = z + gg_start_z + 16;
+		} else {
+			gg_end_z = z + gg_start_z;
+		}
+
+		target_pos = target.getWorldOrigin();		
+
+		move_dir = gg_end - target_pos;					//direction from captured object towards hover postion
+		distance = sys.vecLength(move_dir);
+
+		setShaderParm( 2, 0.02 + (distance / 60) + sys.random(0.05) );
+
+		move_dir = sys.vecNormalize(move_dir);
+		frac = (distance / GG_HOVER);
+		target.setLinearVelocity(move_dir * frac * GG_TARGET_SPEED);	//move captured object towards hover position
+	//	target.playCycle(ANIMCHANNEL_LEGS, "run");
+
+
+		hand_emit.setWorldOrigin(weapon_ent.getJointPos(weapon_ent.getJointHandle( "barrel" )));
+
+		if ( WEAPON_RELOAD ) {
+			stopSound( SND_CHANNEL_ANY, false );
+			weaponState( "Throw", 0 );
+		}
+
+		waitFrame();
+	}
+	
+	current_time = sys.getTime();
+	setShaderParm( 2, 0.01 );
+
+	stopSound( SND_CHANNEL_ANY, false );
+	
+	waitFrame();
+	target.stopRagdoll();
+	target.setBlendFrames(ANIMCHANNEL_TORSO, 10);
+	target.restorePosition();
+	target.setState("state_Idle");
+
+	//target.setMoveType(MOVETYPE_ANIM);
+	//target.stopRagdoll();
+	dragging = 0;
+	hand_emit.remove();
+	weapon_ent.setSkin( "" );
+
+	weaponState( "Idle", gravitygun_FIRE_TO_IDLE );
+}
+
+void weapon_force::Reload() {
+	if ( !ammoAvailable() ) {
+		weaponHolstered();
+		nextWeapon();
+		return;
+	}
+	weapon_ent.setSkin( "" );
+	ammo_clip = ammoInClip();
+	hand_emit.remove();
+		
+	playAnim( ANIMCHANNEL_ALL, "reload" );
+	while( !animDone( ANIMCHANNEL_ALL, 0 ) ) {
+		waitFrame();
+	}
+	addToClip( clipSize() );
+
+	weaponState( "Idle", 2 );
+}
+
+void weapon_force::Throw() {
+	ammo_clip = ammoInClip();
+	if ( ammo_clip < 3 ) {
+		stopSound( SND_CHANNEL_ANY, false );
+		hand_emit.remove();
+		weaponState( "Idle", 2 );
+	}
+	useAmmo( 3 );
+
+	weapon_ent.setSkin( "" );
+	hand_emit.remove();
+	startSoundShader( "player_stopdrag", SND_CHANNEL_ANY );
+
+	push_dir = gg_start - target_pos;
+	push_dir = sys.vecNormalize(push_dir);
+	playAnim( ANIMCHANNEL_ALL, "fire" );
+	if ( target_class == "idExplodingBarrel" || target_class == "idMoveable" || target_class == "idMoveableItem") {
+		target.setLinearVelocity(push_dir * (GG_LAUNCH_SPEED/20) * -1);
+	} else {
+		target.setLinearVelocity(push_dir * (GG_LAUNCH_SPEED/1.5) * -1);	//objects such as monsters get a higher speed due to higher mass
+		
+	}
+	gg_owner.setLinearVelocity(push_dir * GG_KICKBACK_SPEED);
+
+	ftime = sys.getTime() + 1; //hold pain for 1.5 seconds
+	while ( ftime > current_time ) {
+		current_time = sys.getTime();
+		setShaderParm( 2, 0.01 + sys.random(0.02) );
+		waitFrame();
+	}
+	weaponState( "Idle", 3 );
+}
+
+
+
+void weapon_force::Telekinesis() {
+	sys.println("NOT IMPLEMENTED");
+
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+
+void weapon_force::Absorb() {
+	sys.println("NOT IMPLEMENTED");
+	target.setMoveType(MOVETYPE_SLIDE);
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+
+void weapon_force::Heal() {
+	sys.println("NOT IMPLEMENTED");
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+
+void weapon_force::Protect() {
+	sys.println("NOT IMPLEMENTED");
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+void weapon_force::MindTrick() {
+	sys.println("NOT IMPLEMENTED");
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+
+void weapon_force::Speed() {
+	sys.println("NOT IMPLEMENTED");
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+void weapon_force::Push() {
+	float test;
+	float cooldown;
+	test = 1;
+		while ( test = 0 )	{
+		gg_start = gg_owner.getWorldOrigin();
+		gg_owner_size = gg_owner.getSize();
+		gg_start_z = gg_start_z + (gg_owner_size_z - 6);
+		gg_angles = gg_owner.getViewAngles();
+		z_angle = gg_angles_x * -1;
+		xy_angle = gg_angles_y;
+		z = sys.sin(z_angle) * GG_HOVER;
+		e = sys.cos(z_angle) * GG_HOVER;
+		y = sys.sin(xy_angle) * e;
+		x = sys.cos(xy_angle) * e;
+		gg_end_x = x + gg_start_x;
+		gg_end_y = y + gg_start_y;
+		if (  target_class == "idAFEntity_WithAttachedHead" || target_class == "idAI" || target_class == "idPlayer" ) {
+			gg_end_z = z + gg_start_z + 16;
+		} else {
+			gg_end_z = z + gg_start_z;
+		}
+
+		target_pos = target.getWorldOrigin();		
+
+		move_dir = gg_end - target_pos;					//direction from captured object towards hover postion
+		distance = sys.vecLength(move_dir);
+
+		setShaderParm( 2, 0.02 + (distance / 60) + sys.random(0.05) );
+
+		move_dir = sys.vecNormalize(move_dir);
+		frac = (distance / GG_HOVER);
+		target.setLinearVelocity(move_dir * 0.1 * GG_TARGET_SPEED);	//move captured object towards hover position
+
+		waitFrame();
+		test = 2;
+		}
+	//target.setMoveType(MOVETYPE_SLIDE);
+	//target.disableGravity();
+	//push_dir = gg_start - target_pos;
+	//push_dir = sys.vecNormalize(push_dir);
+	push_dir = sys.vecNormalize($player1.getViewAngles());
+	playAnim( ANIMCHANNEL_ALL, "fire" );
+	if ( target_class == "idExplodingBarrel" || target_class == "idMoveable" || target_class == "idMoveableItem") {
+		target.setLinearVelocity(push_dir * (GG_LAUNCH_SPEED/20) * 100);
+	} else {
+		//target.setLinearVelocity(push_dir * (GG_LAUNCH_SPEED) * 10);	//objects such as monsters get a higher speed due to higher mass
+		target.setLinearVelocity('0 240 60');
+	}
+	
+	//target.setMoveType(MOVETYPE_ANIM);
+	next_attack = sys.getTime() + 1;
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+
+void weapon_force::Pull() {
+	sys.println("NOT IMPLEMENTED");
+
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+void weapon_force::Sense() {
+	sys.println("NOT IMPLEMENTED");
+
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+
+void weapon_force::Drain() {
+	sys.println("NOT IMPLEMENTED");
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+void weapon_force::Lightning() {
+	sys.println("NOT IMPLEMENTED");
+
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+void 		weapon_force::DarkRage() {
+	sys.println("NOT IMPLEMENTED");
+
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+void weapon_force::Grip() {
+	sys.println("NOT IMPLEMENTED");
+
+
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+}
+
+void weapon_force::ExitCinematic() {	
+	hand_emit.remove();
+	weaponState( "Idle", 0 );
+}

@@ -1,0 +1,37 @@
+skin skins\ja\alora 
+{
+
+}
+
+skin skins\ja\alorablue 
+{
+	models/players/alora/alora_arms models/players/alora/alora_arms_blue
+	models/players/alora/alora_torso models/players/alora/alora_torso_blue
+	models/players/alora/alora_legs models/players/alora/alora_legs_blue
+}
+
+skin skins/ja/jedi_tf_test
+{
+	models/players/alora/alora_arms models/players/alora/alora_arms_blue
+	models/players/alora/alora_torso models/players/alora/alora_torso_blue
+	models/players/alora/alora_legs models/players/alora/alora_legs_blue
+}
+
+skin skins/ja/stormtrooper
+{
+    assets/textures/off textures/common/nodraw
+}
+
+skin skins\ja\stormtrooper_dead
+{
+	assets/textures/off textures/common/nodraw
+	models/weapons2/blaster_rifle/blaster_w textures/common/nodraw
+}
+skin skins/ja/r2d2
+{
+}
+skin skins/ja/r2d2_imperial
+{
+	models/players/r2d2/body_r2d2.tga models/players/r2d2/imp_body_r2d2.tga
+	models/players/r2d2/legs_r2d2.tga models/players/r2d2/imp_legs_r2d2.tga
+}
