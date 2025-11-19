@@ -4,18 +4,18 @@ weapon_blaster_rifle.script
 
 ***********************************************************************/
 
-#define PISTOL_FIRERATE			0.35
+#define BLASTER_RIFLE_FIRERATE			0.35
 #define BLASTER_RIFLE_ALTFIRERATE		0.15
-#define PISTOL_LOWAMMO			4
-#define PISTOL_NUMPROJECTILES	1
+#define BLASTER_RIFLE_LOWAMMO			4
+#define BLASTER_RIFLE_NUMPROJECTILES	1
 
 // blend times
-#define PISTOL_IDLE_TO_LOWER	2
-#define PISTOL_IDLE_TO_FIRE		1
-#define	PISTOL_IDLE_TO_RELOAD	3
-#define PISTOL_RAISE_TO_IDLE	3
-#define PISTOL_FIRE_TO_IDLE		4
-#define PISTOL_RELOAD_TO_IDLE	4
+#define BLASTER_RIFLE_IDLE_TO_LOWER	2
+#define BLASTER_RIFLE_IDLE_TO_FIRE		1
+#define	BLASTER_RIFLE_IDLE_TO_RELOAD	3
+#define BLASTER_RIFLE_RAISE_TO_IDLE	3
+#define BLASTER_RIFLE_FIRE_TO_IDLE		4
+#define BLASTER_RIFLE_RELOAD_TO_IDLE	4
 
 object weapon_blaster_rifle : weapon_base {
 	float		next_attack;
@@ -41,8 +41,8 @@ void weapon_blaster_rifle::init() {
 void weapon_blaster_rifle::Raise() {
 	weaponRising();
 	playAnim( ANIMCHANNEL_ALL, "raise" );
-	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_RAISE_TO_IDLE ) );
-	weaponState( "Idle", PISTOL_RAISE_TO_IDLE );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_RIFLE_RAISE_TO_IDLE ) );
+	weaponState( "Idle", BLASTER_RIFLE_RAISE_TO_IDLE );
 }
 
 void weapon_blaster_rifle::Lower() {
@@ -66,13 +66,13 @@ void weapon_blaster_rifle::Idle() {
 
 	while( 1 ) {
 		if ( WEAPON_LOWERWEAPON ) {
-			weaponState( "Lower", PISTOL_IDLE_TO_LOWER );
+			weaponState( "Lower", BLASTER_RIFLE_IDLE_TO_LOWER );
 		}
 		currentTime = sys.getTime();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
-			weaponState( "Fire", PISTOL_IDLE_TO_FIRE );
+			weaponState( "Fire", BLASTER_RIFLE_IDLE_TO_FIRE );
 		} else if ( ( currentTime >= next_attack ) && WEAPON_ATTACK_ALT) {
-			weaponState( "AltFire", PISTOL_IDLE_TO_FIRE );
+			weaponState( "AltFire", BLASTER_RIFLE_IDLE_TO_FIRE );
 		}
 		waitFrame();
 	}
@@ -85,27 +85,27 @@ void weapon_blaster_rifle::Idle() {
 	}
 	while( 1 ) {
 		if ( WEAPON_LOWERWEAPON ) {
-			weaponState( "Lower", PISTOL_IDLE_TO_LOWER );
+			weaponState( "Lower", BLASTER_RIFLE_IDLE_TO_LOWER );
 		}
 		currentTime = sys.getTime();
 		ammoClip = ammoInClip();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
 			if ( ammoClip > 0 ) {
-				weaponState( "Fire", PISTOL_IDLE_TO_FIRE );
+				weaponState( "Fire", BLASTER_RIFLE_IDLE_TO_FIRE );
 			} else if ( ammoAvailable() > 0 ) {
 				if ( autoReload() ) {
 					netReload();
-					weaponState( "Reload", PISTOL_IDLE_TO_RELOAD );
+					weaponState( "Reload", BLASTER_RIFLE_IDLE_TO_RELOAD );
 				}
 			}
 		}
 		if ( WEAPON_RELOAD && ( ammoAvailable() > ammoClip ) && ( ammoClip < clip_size ) ) {
 			netReload();
-			weaponState( "Reload", PISTOL_IDLE_TO_RELOAD );
+			weaponState( "Reload", BLASTER_RIFLE_IDLE_TO_RELOAD );
 		}
 		if ( WEAPON_NETRELOAD ) {
 			WEAPON_NETRELOAD = false;
-			weaponState( "Reload", PISTOL_IDLE_TO_RELOAD );		
+			weaponState( "Reload", BLASTER_RIFLE_IDLE_TO_RELOAD );		
 		}
 		waitFrame();
 	}*/
@@ -114,14 +114,14 @@ void weapon_blaster_rifle::Idle() {
 void weapon_blaster_rifle::Fire() {
 	float ammoClip;
 
-	next_attack = sys.getTime() + PISTOL_FIRERATE;
+	next_attack = sys.getTime() + BLASTER_RIFLE_FIRERATE;
 	
 	ammoClip = ammoInClip();
 
-	launchProjectiles( PISTOL_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
+	launchProjectiles( BLASTER_RIFLE_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
 	playAnim( ANIMCHANNEL_ALL, "fire" );
-	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_FIRE_TO_IDLE ) );
-	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_RIFLE_FIRE_TO_IDLE ) );
+	weaponState( "Idle", BLASTER_RIFLE_FIRE_TO_IDLE );
 }
 
 void weapon_blaster_rifle::AltFire() {
@@ -130,22 +130,22 @@ void weapon_blaster_rifle::AltFire() {
 	next_attack = sys.getTime() + BLASTER_RIFLE_ALTFIRERATE;
 	
 	ammoClip = ammoInClip();
-	if ( ammoClip == PISTOL_LOWAMMO ) {
+	if ( ammoClip == BLASTER_RIFLE_LOWAMMO ) {
 		startSound( "snd_lowammo", SND_CHANNEL_ITEM, true );
 	}
 
-	launchProjectiles( PISTOL_NUMPROJECTILES, spread*3, 0, 1.0, 1.0 );
+	launchProjectilesAlt( BLASTER_RIFLE_NUMPROJECTILES, spread*3, 0, 1.0, 1.0 );
 	playAnim( ANIMCHANNEL_ALL, "fire" );
-	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_FIRE_TO_IDLE ) );
-	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_RIFLE_FIRE_TO_IDLE ) );
+	weaponState( "Idle", BLASTER_RIFLE_FIRE_TO_IDLE );
 }
 
 void weapon_blaster_rifle::Reload() {
 	weaponReloading();
 	playAnim( ANIMCHANNEL_ALL, "reload" );
-	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_RELOAD_TO_IDLE ) );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_RIFLE_RELOAD_TO_IDLE ) );
 	addToClip( clipSize() );
-	weaponState( "Idle", PISTOL_RELOAD_TO_IDLE );
+	weaponState( "Idle", BLASTER_RIFLE_RELOAD_TO_IDLE );
 }
 
 void weapon_blaster_rifle::ExitCinematic() {

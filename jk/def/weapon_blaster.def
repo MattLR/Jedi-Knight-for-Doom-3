@@ -42,6 +42,7 @@ entityDef weapon_blaster {
 
 	"weapon_scriptobject"		"weapon_blaster"
 	"def_projectile"			"projectile_blaster"
+	"def_projectile_alt"		"projectile_blaster"
 	"ammoType"					"ammo_blaster"
 	"ammoRequired"				"1"
 	//"clipSize"					"0"
@@ -106,7 +107,12 @@ model viewmodel_blaster {
 	
 	anim idle					models/weapons2/blaster_pistol/blaster_pistol.md5anim
 	anim idle_empty				models/weapons2/blaster_pistol/blaster_pistol.md5anim
-	
+	anim fire_begin				models/weapons2/blaster_pistol/blaster_pistol.md5anim {
+		frame 1 				sound_weapon player_blaster_charge
+	} 
+	anim fire_alt				models/weapons2/blaster_pistol/blaster_pistol.md5anim {
+		frame 1 				sound_weapon player_blaster_fire_alt 
+	}
 	anim fire1					models/weapons2/blaster_pistol/blaster_pistol.md5anim {
 		frame 1					sound_weapon player_blaster_fire
 	}

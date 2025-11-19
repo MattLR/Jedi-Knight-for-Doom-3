@@ -66,7 +66,9 @@ void weapon_demp2::Idle() {
 		currentTime = sys.getTime();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
 				weaponState( "Fire", DEMP2_IDLE_TO_FIRE );
-			}
+			} else if ( ( currentTime >= next_attack ) && WEAPON_ATTACK_ALT ) {
+			weaponState( "AltFire", 0 );
+		}
 			waitFrame();
 		}
 		
@@ -92,6 +94,52 @@ void weapon_demp2::Fire() {
 		waitFrame();
 	}
 
+	weaponState( "Idle", DEMP2_FIRE_TO_IDLE );
+}
+
+void weapon_demp2::AltFire() {
+	float	powerScale;
+	powerScale = 1.0;
+
+	//startSound( "snd_charge", SND_WEAPON_MOVE );
+	playAnim( ANIMCHANNEL_ALL, "fire_begin" );
+
+	while ( true ) {
+			sys.waitFrame();
+
+			if ( !WEAPON_ATTACK_ALT || WEAPON_LOWERWEAPON ) {
+				break;
+			}
+
+			powerScale = powerScale + ( sys.getFrameTime() * 1.6f );
+			if ( powerScale > 5.0 ) {
+				/*
+				if ( !effectPlaying ) {
+					if ( sys.getLocalViewPlayer() != myPlayer || pm_thirdperson.getBoolValue() ) {
+						worldModel.killEffect( "fx_charge_muzzle_world" );
+						worldModel.playEffect( "fx_charge_muzzle_loop_world", "muzzle", 1 );
+					} else {
+						if ( !ironSightsEnabled ) {
+							fx2 = spawnClientEffect( "fx_charge_muzzle_loop" );
+							if ( fx2 != $null_entity ) {
+								fx2.bindToJoint( self, "muzzle", 1 );
+								fx2.setEffectLooping( 1 );
+							}
+						}
+					}
+					effectPlaying = true;
+				}
+				*/
+				powerScale = 5.0;
+			}
+				//setChannelPitchShift( SND_WEAPON_MOVE, powerScale * 2.f );
+		}
+	useAmmo(powerScale - 1);
+	next_attack = sys.getTime() + DEMP2_FIRERATE;
+	//launchProjectiles( numProjectiles, 0, getCurrentSpread(), 0, 1, powerScale );
+	launchProjectilesAlt( DEMP2_NUMPROJECTILES, spread, 0, 1.0, powerScale );
+	playAnim( ANIMCHANNEL_ALL, "fire_alt" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, DEMP2_FIRE_TO_IDLE ) );
 	weaponState( "Idle", DEMP2_FIRE_TO_IDLE );
 }
 

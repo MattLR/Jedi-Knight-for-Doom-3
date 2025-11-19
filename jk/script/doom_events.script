@@ -784,6 +784,7 @@ scriptEvent	void 	weaponRising();
 scriptEvent	void 	weaponLowering();
 scriptEvent	void 	flashlight( float enable );
 scriptEvent	void 	launchProjectiles( float num_projectiles, float spread, float fuseOffset, float launchPower, float dmgPower );
+scriptEvent	void 	launchProjectilesAlt( float num_projectiles, float spread, float fuseOffset, float launchPower, float dmgPower );
 scriptEvent entity  createProjectile();
 scriptEvent	float	melee();
 scriptEvent void	allowDrop( float allow ); // disables/enables owner dropping weapon when killed

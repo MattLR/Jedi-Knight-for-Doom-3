@@ -97,6 +97,8 @@ void weapon_thermal::Idle() {
 		}
 		if ( WEAPON_ATTACK || WEAPON_NETFIRING ) {
 			weaponState( "Fire", THERMAL_IDLE_TO_FIRE );
+		} else if ( WEAPON_ATTACK_ALT || WEAPON_NETFIRING ) {
+			weaponState( "AltFire", THERMAL_IDLE_TO_FIRE );
 		}
 		waitFrame();
 	}
@@ -160,6 +162,83 @@ void weapon_thermal::Fire() {
 		}
 
 		waitUntil( animDone( ANIMCHANNEL_ALL, THERMAL_FIRE_TO_IDLE ) );
+	}
+
+	if ( !ammoAvailable() ) {
+		weaponHolstered();
+		owner = getOwner();
+		if ( owner.getIdealWeapon() == "weapon_thermal" ) {	
+			nextWeapon();
+		}
+	} else {
+		GrenadeNade();
+		weaponState( "Idle", THERMAL_FIRE_TO_IDLE );
+	}
+}
+void weapon_thermal::AltFire() {
+	float fuse_end;
+	float current_time;
+	float time_held;
+	float power;
+	boolean exploded;
+	entity	owner;
+	
+	//This creates the projectile early so it can track and transfer the fuse time over to the nade, my alt fire thing doesn't 
+	//work properly with that yet because the create projectile thing isn't supporterd
+	projectile = createProjectile();
+
+	if ( projectile ) {
+		projectile.startSound( "snd_throw", SND_CHANNEL_BODY, true );
+	}
+
+	playAnim( ANIMCHANNEL_ALL, "throw_start" );
+	
+	current_time = sys.getTime();
+	fuse_start = current_time;
+	fuse_end = current_time + THERMAL_FUSE;
+	while( current_time < fuse_end ) {
+		if ( ( current_time > fuse_start + THERMAL_MINRELEASETIME ) && !( WEAPON_ATTACK_ALT || WEAPON_NETFIRING ) ) {
+			break;
+		}
+		waitFrame();
+		current_time = sys.getTime();
+	}
+	
+	time_held = current_time - fuse_start;
+	power = time_held + THERMAL_MINPOWER;
+	if ( power > THERMAL_MAXPOWER ) {
+		power = THERMAL_MAXPOWER;
+	}
+
+	if ( time_held < THERMAL_QUICKTHROWTIME ) {
+		playAnim( ANIMCHANNEL_ALL, "throw_quick" );
+		sys.wait( THERMAL_QUICKTHROWLAUNCH );
+		exploded = false;
+	} else if ( time_held < THERMAL_FUSE + 50 ) {
+		playAnim( ANIMCHANNEL_ALL, "throw" );
+		sys.wait( THERMAL_NORMALTHROWLAUNCH	);
+		exploded = false;
+	} else {
+		// no anim.  grenade just blows up
+		ExplodeInHand();
+		exploded = true;
+	}
+	
+	if ( !exploded ) {
+		GrenadeNoNade();
+		current_time = sys.getTime();
+		
+		if ( projectile ) {
+			projectile.show();
+			projectile.unbind();
+			launchProjectilesAlt( THERMAL_NUMPROJECTILES, spread, current_time - fuse_start, power, 1.0 );
+			projectile = $null_entity;
+		}
+		
+		
+
+		waitUntil( animDone( ANIMCHANNEL_ALL, 0 ) );
+		//launchProjectilesAlt( THERMAL_NUMPROJECTILES, spread, current_time - fuse_start, power, 1.0 );
 	}
 
 	if ( !ammoAvailable() ) {

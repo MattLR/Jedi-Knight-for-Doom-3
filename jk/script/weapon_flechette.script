@@ -7,6 +7,7 @@ weapon_flechette.script
 #define FLECHETTE_FIRERATE			0.4
 #define FLECHETTE_LOWAMMO			4
 #define FLECHETTE_NUMPROJECTILES	6
+#define FLECHETTE_NUMPROJECTILES_Alt	2
 
 // blend times
 #define FLECHETTE_IDLE_TO_LOWER	2
@@ -69,42 +70,11 @@ void weapon_flechette::Idle() {
 		currentTime = sys.getTime();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
 			weaponState( "Fire", FLECHETTE_IDLE_TO_FIRE );
+		} else if ( ( currentTime >= next_attack ) && WEAPON_ATTACK_ALT ) {
+			weaponState( "AltFire", FLECHETTE_IDLE_TO_FIRE );
 		}
 		waitFrame();
 	}
-	/*
-	weaponReady();
-	if ( !ammoInClip() ) {
-		playCycle( ANIMCHANNEL_ALL, "idle_empty" );
-	} else {
-		playCycle( ANIMCHANNEL_ALL, "idle" );
-	}
-	while( 1 ) {
-		if ( WEAPON_LOWERWEAPON ) {
-			weaponState( "Lower", FLECHETTE_IDLE_TO_LOWER );
-		}
-		currentTime = sys.getTime();
-		ammoClip = ammoInClip();
-		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
-			if ( ammoClip > 0 ) {
-				weaponState( "Fire", FLECHETTE_IDLE_TO_FIRE );
-			} else if ( ammoAvailable() > 0 ) {
-				if ( autoReload() ) {
-					netReload();
-					weaponState( "Reload", FLECHETTE_IDLE_TO_RELOAD );
-				}
-			}
-		}
-		if ( WEAPON_RELOAD && ( ammoAvailable() > ammoClip ) && ( ammoClip < clip_size ) ) {
-			netReload();
-			weaponState( "Reload", FLECHETTE_IDLE_TO_RELOAD );
-		}
-		if ( WEAPON_NETRELOAD ) {
-			WEAPON_NETRELOAD = false;
-			weaponState( "Reload", FLECHETTE_IDLE_TO_RELOAD );		
-		}
-		waitFrame();
-	}*/
 }
 
 void weapon_flechette::Fire() {
@@ -118,6 +88,22 @@ void weapon_flechette::Fire() {
 	}
 
 	launchProjectiles( FLECHETTE_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
+	playAnim( ANIMCHANNEL_ALL, "fire" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, FLECHETTE_FIRE_TO_IDLE ) );
+	weaponState( "Idle", FLECHETTE_FIRE_TO_IDLE );
+}
+
+void weapon_flechette::AltFire() {
+	float ammoClip;
+
+	next_attack = sys.getTime() + FLECHETTE_FIRERATE;
+	
+	ammoClip = ammoInClip();
+	if ( ammoClip == FLECHETTE_LOWAMMO ) {
+		startSound( "snd_lowammo", SND_CHANNEL_ITEM, true );
+	}
+
+	launchProjectilesAlt( FLECHETTE_NUMPROJECTILES_Alt, spread, 0, 1.0, 1.0 );
 	playAnim( ANIMCHANNEL_ALL, "fire" );
 	waitUntil( animDone( ANIMCHANNEL_ALL, FLECHETTE_FIRE_TO_IDLE ) );
 	weaponState( "Idle", FLECHETTE_FIRE_TO_IDLE );

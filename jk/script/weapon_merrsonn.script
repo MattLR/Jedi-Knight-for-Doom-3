@@ -68,6 +68,8 @@ void weapon_merrsonn::Idle() {
 		currentTime = sys.getTime();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
 				weaponState( "Fire", ROCKETLAUNCHER_IDLE_TO_FIRE );
+		} else if ( ( currentTime >= next_attack ) && WEAPON_ATTACK_ALT ) {
+			weaponState( "AltFire", ROCKETLAUNCHER_IDLE_TO_FIRE );
 		}
 		waitFrame();
 	}
@@ -78,6 +80,16 @@ void weapon_merrsonn::Fire() {
 	next_attack = sys.getTime() + ROCKETLAUNCHER_FIREDELAY;
 	
 	launchProjectiles( ROCKETLAUNCHER_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
+	playAnim( ANIMCHANNEL_ALL, "fire" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, ROCKETLAUNCHER_FIRE_TO_IDLE ) );
+	weaponState( "Idle", ROCKETLAUNCHER_FIRE_TO_IDLE );
+}
+
+void weapon_merrsonn::AltFire() {
+	
+	next_attack = sys.getTime() + ROCKETLAUNCHER_FIREDELAY;
+	
+	launchProjectilesAlt( ROCKETLAUNCHER_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
 	playAnim( ANIMCHANNEL_ALL, "fire" );
 	waitUntil( animDone( ANIMCHANNEL_ALL, ROCKETLAUNCHER_FIRE_TO_IDLE ) );
 	weaponState( "Idle", ROCKETLAUNCHER_FIRE_TO_IDLE );

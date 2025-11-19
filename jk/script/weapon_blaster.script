@@ -4,17 +4,17 @@ weapon_blaster.script
 
 ***********************************************************************/
 
-#define PISTOL_FIRERATE			0.4
-#define PISTOL_LOWAMMO			4
-#define PISTOL_NUMPROJECTILES	1
+#define BLASTER_FIRERATE			0.4
+#define BLASTER_LOWAMMO			4
+#define BLASTER_NUMPROJECTILES	1
 
 // blend times
-#define PISTOL_IDLE_TO_LOWER	2
-#define PISTOL_IDLE_TO_FIRE		1
-#define	PISTOL_IDLE_TO_RELOAD	3
-#define PISTOL_RAISE_TO_IDLE	3
-#define PISTOL_FIRE_TO_IDLE		4
-#define PISTOL_RELOAD_TO_IDLE	4
+#define BLASTER_IDLE_TO_LOWER	2
+#define BLASTER_IDLE_TO_FIRE		1
+#define	BLASTER_IDLE_TO_RELOAD	3
+#define BLASTER_RAISE_TO_IDLE	3
+#define BLASTER_FIRE_TO_IDLE		4
+#define BLASTER_RELOAD_TO_IDLE	4
 
 object weapon_blaster : weapon_base {
 	float		next_attack;
@@ -39,8 +39,8 @@ void weapon_blaster::init() {
 void weapon_blaster::Raise() {
 	weaponRising();
 	playAnim( ANIMCHANNEL_ALL, "raise" );
-	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_RAISE_TO_IDLE ) );
-	weaponState( "Idle", PISTOL_RAISE_TO_IDLE );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_RAISE_TO_IDLE ) );
+	weaponState( "Idle", BLASTER_RAISE_TO_IDLE );
 }
 
 void weapon_blaster::Lower() {
@@ -54,81 +54,86 @@ void weapon_blaster::Lower() {
 
 void weapon_blaster::Idle() {
 	float currentTime;
-	float ammoClip;
-	float avail;
-	float clip_size;
-	
-	clip_size = clipSize();	
+
 	weaponReady();
 	playCycle( ANIMCHANNEL_ALL, "idle" );
 
 	while( 1 ) {
 		if ( WEAPON_LOWERWEAPON ) {
-			weaponState( "Lower", PISTOL_IDLE_TO_LOWER );
+			weaponState( "Lower", BLASTER_IDLE_TO_LOWER );
 		}
 		currentTime = sys.getTime();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
-			weaponState( "Fire", PISTOL_IDLE_TO_FIRE );
+			weaponState( "Fire", BLASTER_IDLE_TO_FIRE );
+		} else if ( ( currentTime >= next_attack ) && WEAPON_ATTACK_ALT ) {
+			weaponState( "AltFire", BLASTER_IDLE_TO_FIRE );
 		}
 		waitFrame();
 	}
-	/*
-	weaponReady();
-	if ( !ammoInClip() ) {
-		playCycle( ANIMCHANNEL_ALL, "idle_empty" );
-	} else {
-		playCycle( ANIMCHANNEL_ALL, "idle" );
-	}
-	while( 1 ) {
-		if ( WEAPON_LOWERWEAPON ) {
-			weaponState( "Lower", PISTOL_IDLE_TO_LOWER );
-		}
-		currentTime = sys.getTime();
-		ammoClip = ammoInClip();
-		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
-			if ( ammoClip > 0 ) {
-				weaponState( "Fire", PISTOL_IDLE_TO_FIRE );
-			} else if ( ammoAvailable() > 0 ) {
-				if ( autoReload() ) {
-					netReload();
-					weaponState( "Reload", PISTOL_IDLE_TO_RELOAD );
-				}
-			}
-		}
-		if ( WEAPON_RELOAD && ( ammoAvailable() > ammoClip ) && ( ammoClip < clip_size ) ) {
-			netReload();
-			weaponState( "Reload", PISTOL_IDLE_TO_RELOAD );
-		}
-		if ( WEAPON_NETRELOAD ) {
-			WEAPON_NETRELOAD = false;
-			weaponState( "Reload", PISTOL_IDLE_TO_RELOAD );		
-		}
-		waitFrame();
-	}*/
 }
 
 void weapon_blaster::Fire() {
-	float ammoClip;
 
-	next_attack = sys.getTime() + PISTOL_FIRERATE;
-	
-	ammoClip = ammoInClip();
-	if ( ammoClip == PISTOL_LOWAMMO ) {
-		startSound( "snd_lowammo", SND_CHANNEL_ITEM, true );
-	}
+	next_attack = sys.getTime() + BLASTER_FIRERATE;
 
-	launchProjectiles( PISTOL_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
+	launchProjectiles( BLASTER_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
 	playAnim( ANIMCHANNEL_ALL, "fire" );
-	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_FIRE_TO_IDLE ) );
-	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_FIRE_TO_IDLE ) );
+	weaponState( "Idle", BLASTER_FIRE_TO_IDLE );
+}
+
+void weapon_blaster::AltFire() {
+	float	blasterScale;
+	blasterScale = 1.0;
+
+	//startSound( "snd_charge", SND_WEAPON_MOVE );
+	playAnim( ANIMCHANNEL_ALL, "fire_begin" );
+
+	while ( true ) {
+			sys.waitFrame();
+
+			if ( !WEAPON_ATTACK_ALT || WEAPON_LOWERWEAPON ) {
+				break;
+			}
+
+			blasterScale = blasterScale + ( sys.getFrameTime() * 1.6f );
+			if ( blasterScale > 5.0 ) {
+				/*
+				if ( !effectPlaying ) {
+					if ( sys.getLocalViewPlayer() != myPlayer || pm_thirdperson.getBoolValue() ) {
+						worldModel.killEffect( "fx_charge_muzzle_world" );
+						worldModel.playEffect( "fx_charge_muzzle_loop_world", "muzzle", 1 );
+					} else {
+						if ( !ironSightsEnabled ) {
+							fx2 = spawnClientEffect( "fx_charge_muzzle_loop" );
+							if ( fx2 != $null_entity ) {
+								fx2.bindToJoint( self, "muzzle", 1 );
+								fx2.setEffectLooping( 1 );
+							}
+						}
+					}
+					effectPlaying = true;
+				}
+				*/
+				blasterScale = 5.0;
+			}
+				//setChannelPitchShift( SND_WEAPON_MOVE, blasterScale * 2.f );
+		}
+	useAmmo(blasterScale - 1);
+	next_attack = sys.getTime() + BLASTER_FIRERATE;
+	//launchProjectiles( numProjectiles, 0, getCurrentSpread(), 0, 1, blasterScale );
+	launchProjectilesAlt( BLASTER_NUMPROJECTILES, spread, 0, 1.0, blasterScale );
+	playAnim( ANIMCHANNEL_ALL, "fire_alt" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_FIRE_TO_IDLE ) );
+	weaponState( "Idle", BLASTER_FIRE_TO_IDLE );
 }
 
 void weapon_blaster::Reload() {
 	weaponReloading();
 	playAnim( ANIMCHANNEL_ALL, "reload" );
-	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_RELOAD_TO_IDLE ) );
+	waitUntil( animDone( ANIMCHANNEL_ALL, BLASTER_RELOAD_TO_IDLE ) );
 	addToClip( clipSize() );
-	weaponState( "Idle", PISTOL_RELOAD_TO_IDLE );
+	weaponState( "Idle", BLASTER_RELOAD_TO_IDLE );
 }
 
 void weapon_blaster::ExitCinematic() {

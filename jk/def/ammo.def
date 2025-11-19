@@ -296,3 +296,135 @@ entityDef ammo_bfg_small {
 	"editor_copy100"		"inv_item"
 }
 
+entityDef ammo_blaster {
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Small shells"
+
+	"spawnclass"			"idItem"
+	"model"					"models/items/energy_cell.md3"
+	"snd_acquire"			"sound/items/shells_pickup_small.wav"
+	"size"					"32 32 32"
+	"inv_ammo_blaster"		"25"
+	"inv_item"				"4"
+	"inv_name"				"Blaster Ammo"
+	"editor_copy100"		"inv_item"
+	"snd_respawn"			"sound_item_respawn"
+}
+
+entityDef ammo_powercell {
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Power Cell"
+
+	"spawnclass"			"idItem"
+	"model"					"models/items/power_cell.md3"
+	"snd_acquire"			"sound/items/shells_pickup_small.wav"
+	"size"					"32 32 32"
+	"inv_ammo_powercell"	"3"
+	"inv_item"				"4"
+	"inv_name"				"Power Cell"
+	"editor_copy100"		"inv_item"
+	"snd_respawn"			"sound_item_respawn"
+}
+
+entityDef ammo_metallic_bolts {
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Metal Bolts"
+
+	"spawnclass"			"idItem"
+	"model"					"models/items/metallic_bolts.md3"
+	"snd_acquire"			"sound/items/shells_pickup_small.wav"
+	"size"					"32 32 32"
+	"inv_ammo_metal_bolts"	"100"
+	"inv_item"				"4"
+	"inv_name"				"Metallic Bolts"
+	"editor_copy100"		"inv_item"
+	"snd_respawn"			"sound_item_respawn"
+}
+
+entityDef ammo_detpack {
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Det Packs"
+
+	"spawnclass"			"idItem"
+	"model"					"models/weapons2/detpack/det_pack_pu.md3"
+	"snd_acquire"			"sound/items/shells_pickup_small.wav"
+	"size"					"32 32 32"
+	"inv_ammo_detpack"		"3"
+	"inv_item"				"4"
+	"inv_name"				"Det Packs"
+	"editor_copy100"		"inv_item"
+	"snd_respawn"			"sound_item_respawn"
+}
+
+entityDef ammo_rockets {
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Rockets"
+
+	"spawnclass"			"idItem"
+	"model"					"models/items/rockets.md3"
+	"snd_acquire"			"sound/items/shells_pickup_small.wav"
+	"size"					"32 32 32"
+	"inv_ammo_rockets"		"3"
+	"inv_item"				"4"
+	"inv_name"				"Rockets"
+	"editor_copy100"		"inv_item"
+	"snd_respawn"			"sound_item_respawn"
+}
+
+entityDef ammo_thermal {
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Thermal Detonators"
+
+	"spawnclass"			"idItem"
+	"model"					"models/weapons2/thermal/thermal_pu.md3"
+	"snd_acquire"			"sound/items/shells_pickup_small.wav"
+	"size"					"32 32 32"
+	"inv_ammo_thermal"		"3"
+	"inv_item"				"4"
+	"inv_name"				"Thermal Detonators"
+	"editor_copy100"		"inv_item"
+	"snd_respawn"			"sound_item_respawn"
+}
+
+entityDef ammo_tripmine {
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-16 -16 0"
+	"editor_maxs"			"16 16 32"
+	"editor_rotatable"			"1"
+
+	"editor_usage"			"Rockets"
+
+	"spawnclass"			"idItem"
+	"model"					"models/items/metallic_bolts.md3"
+	"snd_acquire"			"sound/items/shells_pickup_small.wav"
+	"size"					"32 32 32"
+	"inv_ammo_tripmine"		"3"
+	"inv_item"				"4"
+	"inv_name"				"Rockets"
+	"editor_copy100"		"inv_item"
+	"snd_respawn"			"sound_item_respawn"
+}

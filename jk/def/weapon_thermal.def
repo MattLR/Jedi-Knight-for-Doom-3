@@ -50,6 +50,7 @@ entityDef weapon_thermal {
 
 	"weapon_scriptobject"		"weapon_thermal"
 	"def_projectile"			"projectile_thermal"
+	"def_projectile_alt"		"projectile_merrsonn"
 	"def_explode_inhand"		"env_grenade_explodeinhand"
 	"def_damage_inhand"			"damage_grenadeSplash_inhand"
 	"ammoType"					"ammo_thermal"
@@ -157,7 +158,7 @@ entityDef projectile_thermal {
 	"mins"						"-3 -3 0"
 	"maxs"						"3 3 11"
 	"cylinder"					"6"
-	"model" 					"models/weapons/grenades/grenades_world.lwo"
+	"model" 					"models/weapons2/thermal/thermal_proj.md3"
 	"offsetModel"				"0 0 -5"
 
 	"def_damage"				"damage_grenadeDirect"
@@ -183,6 +184,73 @@ entityDef projectile_thermal {
 	"detonate_on_world"			"0"					// whether projectile should detonate when it hits an obstacle
 	"detonate_on_actor"			"1"					// whether projectile should detonate when it hits a character in the game
 	"detonate_on_trigger"		"1"					// whether projectile should detonate when triggered by a character in the game
+								
+	"impact_damage_effect"		"1"					// whether projectile causes blood splats from characters that bleed
+	"impact_gib"				"1"					// whether projectile can gib a character or not (for example: bullets don't gib, but rockets do)
+
+	"mtr_detonate"				"textures/decals/ballburn01"
+	"decal_size"				"300" 
+
+	"model_detonate"			"grenadeExplosion.prt"			// parametric particles -- temp
+
+	"smoke_fly"					"grenadetrail.prt"			// particle effect while in the air
+	"smoke_detonate"			""								// particle effect when detonates
+	"smoke_residue"				""								// particle effect while in the air
+	"smoke_fuse"				""
+	"smoke_bounce"				"bulletricochet.prt"
+
+	"debris_count"				"6"
+	"def_debris"				"debris_largeshrapnel"
+	"def_shrapnel"				"debris_shrapnel"
+
+	"mtr_light_shader"			""
+	"light_color"				""
+	"light_radius"				""
+	"light_offset"				""
+
+	"mtr_explode_light_shader"	"muzzleflash"
+	"explode_light_color"		"1 0.8 0.4"
+	"explode_light_radius"		"200"
+	"explode_light_fadetime"	"0.25"
+	
+	"detonation_axis"			"0 0 1"
+
+	"snd_impact"				"player_handgrenade_bounce"
+	"snd_bounce"				"player_handgrenade_bounce"
+	"snd_explode"				"rocket_impact"
+	"snd_throw"					"player_handgrenade_throw"	// For precache -- referenced in the script
+}
+
+entityDef projectile_thermal_alt {
+	"spawnclass"				"idProjectile"
+	"mins"						"-3 -3 0"
+	"maxs"						"3 3 11"
+	"cylinder"					"6"
+	"model" 					"models/weapons2/thermal/thermal_proj.md3"
+	"offsetModel"				"0 0 -5"
+
+	"def_damage"				"damage_grenadeDirect"
+	"def_splash_damage"			"damage_grenadeSplash"
+								
+	"launchFromBarrel"			"1"
+	"health"					"5"					// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"					"300 0 40"			// how fast the projectile leaves the gun (or distance if fuse is 0)
+	"angular_velocity"			"10 -10 10"			// how the projectile is rotating when it leaves the gun
+	"thrust"					"0"					// the rate of acceleration (always in the direction of the projectiles model)
+	"thrust_start"				"0"					// when to start accelerating
+	"thrust_end"				"0"					// when to stop accelerating
+	"linear_friction"			"0.6"				// "air" friction
+	"angular_friction"			"0.4"
+	"contact_friction"			"0.1"
+	"bounce"					"0.9"				// how much speed a projectile retains when it bounces off of objects (coefficient of restitution).  0 means no bounce.
+	"mass"						"10"
+	"gravity"					"1066"				// how much gravity affects the trajectory.  gravity direction is same as the entity that fired it.
+	"fuse"						"5"					// how long before the projectile is removed or self-detonates.  Use 0 for beam weapons (velocity == distance).
+						
+	"detonate_on_fuse"			"0"					// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"			"1"					// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"			"1"					// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"			"1"					// whether projectile should detonate when it hits a character in the game
 								
 	"impact_damage_effect"		"1"					// whether projectile causes blood splats from characters that bleed
 	"impact_gib"				"1"					// whether projectile can gib a character or not (for example: bullets don't gib, but rockets do)

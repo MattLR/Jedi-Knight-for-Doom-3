@@ -4,7 +4,7 @@ weapon_concussion.script
 
 ***********************************************************************/
 
-#define CONCUSSION_FIRERATE			0.8 //changed by Tim
+#define CONCUSSION_FIRERATE			0.8
 #define CONCUSSION_LOWAMMO			120
 #define CONCUSSION_NUMPROJECTILES	1
 
@@ -66,6 +66,8 @@ void weapon_concussion::Idle() {
 		currentTime = sys.getTime();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
 				weaponState( "Fire", CONCUSSION_IDLE_TO_FIRE );
+			} else if ( ( currentTime >= next_attack ) && WEAPON_ATTACK_ALT ) {
+				weaponState( "AltFire", CONCUSSION_IDLE_TO_FIRE );
 			}
 			waitFrame();
 		}
@@ -91,6 +93,22 @@ void weapon_concussion::Fire() {
 		}
 		waitFrame();
 	}
+
+	weaponState( "Idle", CONCUSSION_FIRE_TO_IDLE );
+}
+
+void weapon_concussion::AltFire() {
+	float currentTime;
+	
+	next_attack = sys.getTime() + CONCUSSION_FIRERATE;
+	
+	if ( ammoAvailable( ) < CONCUSSION_LOWAMMO ) {
+		startSound( "snd_lowammo", SND_CHANNEL_ITEM, true );
+	}
+
+	launchProjectilesAlt( CONCUSSION_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
+	playAnim( ANIMCHANNEL_ALL, "fire_alt" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, CONCUSSION_FIRE_TO_IDLE ) );
 
 	weaponState( "Idle", CONCUSSION_FIRE_TO_IDLE );
 }

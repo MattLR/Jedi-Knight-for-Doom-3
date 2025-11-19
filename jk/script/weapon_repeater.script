@@ -5,6 +5,7 @@ weapon_repeater.script
 ***********************************************************************/
 
 #define REPEATER_FIRERATE			0.05 //changed by Tim
+#define REPEATER__ALTFIRERATE				0.5
 #define REPEATER_LOWAMMO			25
 #define REPEATER_NUMPROJECTILES	1
 
@@ -66,7 +67,9 @@ void weapon_repeater::Idle() {
 		currentTime = sys.getTime();
 		if ( ( currentTime >= next_attack ) && WEAPON_ATTACK ) {
 				weaponState( "Fire", REPEATER_IDLE_TO_FIRE );
-			}
+			} else if ( ( currentTime >= next_attack ) && WEAPON_ATTACK_ALT) {
+			weaponState( "AltFire", PISTOL_IDLE_TO_FIRE );
+		}
 			waitFrame();
 		}
 		
@@ -93,6 +96,16 @@ void weapon_repeater::Fire() {
 	}
 
 	weaponState( "Idle", REPEATER_FIRE_TO_IDLE );
+}
+
+void weapon_repeater::AltFire() {
+
+	next_attack = sys.getTime() + REPEATER__ALTFIRERATE;
+	
+	launchProjectilesAlt( REPEATER_NUMPROJECTILES, spread, 0, 1.0, 1.0 );
+	playAnim( ANIMCHANNEL_ALL, "fire" );
+	waitUntil( animDone( ANIMCHANNEL_ALL, PISTOL_FIRE_TO_IDLE ) );
+	weaponState( "Idle", PISTOL_FIRE_TO_IDLE );
 }
 
 void weapon_repeater::ExitCinematic() {
