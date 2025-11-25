@@ -1,12 +1,12 @@
 MD5Version 10
 commandline ""
 numFrames 6
-numJoints 53
+numJoints 55
 frameRate 10
 numAnimatedComponents 312
 
 hierarchy {
-	"model_root"	-1 7 0
+	"origin"	-1 7 0
 	"pelvis"	0 63 3
 	"Motion"	1 63 9
 	"lfemurYZ"	1 63 15
@@ -59,6 +59,8 @@ hierarchy {
 	"rtail"	7 63 297
 	"lhang_tag_bone"	40 63 303
 	"face"	15 56 309
+	"LKnee"	5 0 0
+	"RKnee"	9 0 0
 }
 
 bounds {
