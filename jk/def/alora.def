@@ -6,9 +6,8 @@ model npc_jk_base {
 	
 	anim af_pose					models/players/humanoid/npc/ROOT.md5anim
 	anim ik_pose					models/players/humanoid/npc/ROOT.md5anim
-	//anim pain						models/players/alora2/BOTH_STAND1IDLE1.md5anim
+	anim pain						models/players/alora2/BOTH_PAIN1.md5anim
 	anim stand						models/players/humanoid/npc/BOTH_STAND1IDLE1.md5anim
-	anim stand4						models/players/humanoid/npc/BOTH_STAND4.md5anim
 //	anim talk_excuseme				models/players/alora2/BOTH_STAND1IDLE1.md5anim 
 //	anim talk_trigger				models/players/alora2/BOTH_STAND1IDLE1.md5anim 
 //	anim talk_primary				models/players/alora2/BOTH_STAND1IDLE1.md5anim 
@@ -19,6 +18,7 @@ model npc_jk_base {
 	//anim run1						models/players/alora2/BOTH_STAND1IDLE1.md5anim //models/md5/chars/medrun1.md5anim
 	anim turn_right					models/players/humanoid/npc/BOTH_TURNSTAND1.md5anim
 	anim turn_left 					models/players/humanoid/npc/BOTH_TURNSTAND1.md5anim
+	anim range_attack 				models/players/humanoid/BOTH_ATTACK3.md5anim
 }
 
 
@@ -919,4 +919,43 @@ model head_alora {
 
 model vehicle_swoop {
 	mesh models/vehicles/swoop/swoop.md5mesh
+}
+
+entityDef follower_alora {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_alora"
+	"scriptobject"					"follower"
+	"start_anim"					"idle"
+	"health"						"1"
+	"ragdoll"						"char_alora"
+	//"eye_verticle_offset"			"0"
+	//"eye_horizontal_offset"		"0"
+	"npc_name"						"Alora"
+
+	//"def_head"					"head_campbell"
+	"head_joint"					"thoracic"
+
+	"snd_death"						"alora_death1"
+}
+
+entityDef combined_alora {
+	"inherit"						"npc_jk_base"
+	"model"							"npc_jk_alora"
+	"scriptobject"					"combined"
+	"start_anim"					"idle"
+	"health"						"40"
+	"ragdoll"						"char_alora"
+	//"eye_verticle_offset"			"0"
+	//"eye_horizontal_offset"		"0"
+	"npc_name"						"Alora"
+
+	//"def_head"					"head_campbell"
+	"head_joint"					"thoracic"
+
+	"snd_death"						"alora_death1"
+	"snd_fire"						"char_sentry_fire"
+
+	"def_projectile"				"projectile_blaster_rifle"
+	"projectile_spread"				"2"
+	"num_projectiles"				"1"
 }

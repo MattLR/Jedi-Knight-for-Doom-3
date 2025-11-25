@@ -1,0 +1,707 @@
+/***********************************************************************
+
+ai_follower.script
+
+***********************************************************************/
+
+#define FOLLOW_MAXDIST	120
+#define FOLLOW_MINDIST	80
+#define FOLLOW_RUNDIST	180
+#define FIRERATE		0.1
+#define MIN_SHOTS		8
+#define COMBINED_FIRERATE				0.25
+
+object combined : ai {
+	string		customAnim;
+	boolean		inCustomAnim;
+	float		customBlendOut;
+	boolean		run;
+	boolean		fire;
+	entity		ignore_enemy;
+	float		ignore_enemy_time;
+	boolean		lead_player;
+	float		nextPositionSearch;
+	
+//
+	// States
+	//
+	void		state_Idle();
+	void		state_Killed();
+	void		state_Follow();
+	//void		state_FollowPath();
+	//void		state_Lead();
+	//void		state_Wait();
+	void		getCloser();
+	//void		state_FindPlayer();
+	void		state_Combat();
+	void		combat_chase();
+	boolean		find_attack_position();
+
+		// attack checks
+	float		check_attacks();
+	void		do_attack( float attack_flags );
+	void		combat_range();
+
+	//void		state_Begin();
+	void		init();
+	//void		destroy();
+	
+	void		ignore( entity ignore_ent );
+	boolean		checkForEnemy( float use_fov );
+
+	// path commands
+	//void		path_sentry_light_on();
+	//void		path_sentry_light_off();
+	//void		path_sentry_shutdown();
+	//void		path_sentry_unlock_door();
+	//void		path_corner();
+	//void		path_sentry_lead_player();
+	//void		path_sentry_ignore_player();
+	
+	void		playCustomCycle( string animname, float blendTime );
+	void		playCustomAnim( string animname, float blendIn, float blendOut );
+
+	float		should_turn_left();
+	float		should_turn_right();
+		
+	// torso anim states
+	void		Torso_Death();
+	void		Torso_Idle();
+	void		Torso_Pain();
+	void		Torso_RangeAttack();
+	void		Torso_CustomAnim();
+	void		Torso_CustomCycle();
+	
+	// legs anim states
+	void		Legs_Death();
+	void		Legs_Idle();
+	void		Legs_Walk();
+	void		Legs_Run();
+	void		Legs_TurnLeft();
+	void		Legs_TurnRight();
+};
+
+/***********************************************************************
+
+	Torso animation control
+
+***********************************************************************/
+
+void combined::Torso_CustomCycle() {
+	overrideAnim( ANIMCHANNEL_LEGS );
+	playCycle( ANIMCHANNEL_TORSO, customAnim );
+	eachFrame {
+		;
+	}
+}
+
+void combined::Torso_CustomAnim() {
+	inCustomAnim = true;
+	playAnim( ANIMCHANNEL_TORSO, customAnim );
+	
+	while( !( animDone( ANIMCHANNEL_TORSO, customBlendOut ) ) ) {
+		waitFrame();
+	}
+	
+	finishAction( "customAnim" );
+	inCustomAnim = false;
+	animState( ANIMCHANNEL_TORSO, "Torso_Idle", customBlendOut );
+}
+
+void combined::Torso_Death() {
+	finishAction( "dead" );
+}
+
+void combined::Torso_Idle() {
+	idleAnim( ANIMCHANNEL_TORSO, "idle" );
+	
+	eachFrame {
+		if ( AI_PAIN ) {
+			Torso_Pain();
+			idleAnim( ANIMCHANNEL_TORSO, "stand" );
+		}
+		if ( fire ) {
+			animState( ANIMCHANNEL_TORSO, "Torso_RangeAttack", 4 );
+		}
+	}
+
+	//while( !AI_PAIN ) {
+	//	waitFrame();
+	//}
+	
+	animState( ANIMCHANNEL_TORSO, "Torso_Pain", 0 );
+}
+
+void combined::Torso_Pain() {
+	string animname;
+	float nextpain;
+	float currenttime;
+	
+	animname = getPainAnim();
+	//animname = "pain";
+	playAnim( ANIMCHANNEL_TORSO, animname );
+
+	nextpain = sys.getTime() + 0.25;
+	while( !animDone( ANIMCHANNEL_TORSO, 4 ) ) {
+		if ( AI_PAIN ) {
+			currenttime = sys.getTime();
+			if ( currenttime > nextpain ) {
+				animState( ANIMCHANNEL_TORSO, "Torso_Pain", 0 );
+			}
+		}
+		waitFrame();
+	}
+	
+	finishAction( "pain" );
+	animState( ANIMCHANNEL_TORSO, "Torso_Idle", 4 );
+}
+
+void combined::Torso_RangeAttack() {
+	float endtime;
+	float firetime;
+	float numshots;
+	
+	setAnimPrefix( "" );
+		
+	playAnim( ANIMCHANNEL_TORSO, "range_attack" );
+	while( !animDone( ANIMCHANNEL_TORSO, 0 ) ) {
+		if ( AI_PAIN ) {
+			Torso_Pain();
+		}
+		waitFrame();
+	}
+	
+	numshots = 0;
+	while( fire || ( numshots < SENTRY_MIN_SHOTS ) ) {
+		endtime = RandomDelay( SENTRY_ATTACK_MIN_LENGTH, SENTRY_ATTACK_MAX_LENGTH );
+		setBlendFrames( ANIMCHANNEL_TORSO, 2 );
+		playCycle( ANIMCHANNEL_TORSO, "range_attack" );
+		firetime = sys.getTime();
+		while( ( fire || ( numshots < SENTRY_MIN_SHOTS ) ) && ( sys.getTime() < endtime ) ) {
+			if ( sys.getTime() >= firetime ) {
+				startSound( "snd_fire", SND_CHANNEL_WEAPON, false );
+				attackMissile( "rhang_tag_bone" );
+				numshots++;
+				firetime = sys.getTime() + COMBINED_FIRERATE;
+			}
+			if ( AI_PAIN ) {
+				Torso_Pain();
+				playCycle( ANIMCHANNEL_TORSO, "range_attack" );
+			}
+			waitFrame();
+		}
+
+		if ( !fire && ( numshots >= SENTRY_MIN_SHOTS ) ) {
+			break;
+		}
+
+		setBlendFrames( ANIMCHANNEL_TORSO, 2 );
+		playCycle( ANIMCHANNEL_TORSO, "range_attack_aim" );
+		endtime = RandomDelay( SENTRY_WAIT_MIN_LENGTH, SENTRY_WAIT_MAX_LENGTH );
+		while( ( fire || ( numshots < SENTRY_MIN_SHOTS ) ) && ( sys.getTime() < endtime ) ) {
+			if ( AI_PAIN ) {
+				Torso_Pain();
+			}
+			waitFrame();
+		}
+	}
+	
+	//should be range attack end need to make one
+	playAnim( ANIMCHANNEL_TORSO, "range_attack" );
+	while( !animDone( ANIMCHANNEL_TORSO, 4 ) ) {
+		if ( AI_PAIN ) {
+			Torso_Pain();
+		}
+		waitFrame();
+	}
+	
+	finishAction( "range_attack" );
+	animState( ANIMCHANNEL_TORSO, "Torso_Idle", 4 );
+}
+
+/***********************************************************************
+
+	Legs animation control
+
+***********************************************************************/
+
+void combined::Legs_Death() {
+}
+
+float combined::should_turn_left() {
+	float turnAmount;
+	
+	turnAmount = getTurnDelta();
+	if ( turnAmount > 10 ) {
+		if ( hasAnim( ANIMCHANNEL_LEGS, "turn_left" ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+float combined::should_turn_right() {
+	float turnAmount;
+	
+	turnAmount = getTurnDelta();
+	if ( turnAmount < -10 ) {
+		if ( hasAnim( ANIMCHANNEL_LEGS, "turn_right" ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+void combined::Legs_Idle() {
+	if ( !AI_FORWARD && !facingIdeal() ) {
+		if ( should_turn_left() ) {
+			animState( ANIMCHANNEL_LEGS, "Legs_TurnLeft", 4 );
+		}
+		if ( should_turn_right() ) {
+			animState( ANIMCHANNEL_LEGS, "Legs_TurnRight", 4 );
+		}
+	}
+	
+	idleAnim( ANIMCHANNEL_LEGS, "idle" );
+	eachFrame {
+		if ( AI_FORWARD ) {
+			if ( run ) {
+				animState( ANIMCHANNEL_LEGS, "Legs_Run", 12 );
+			} else {
+				animState( ANIMCHANNEL_LEGS, "Legs_Walk", 12 );
+			}
+		}
+		
+		if ( !facingIdeal() ) {
+			if ( should_turn_left() ) {
+				animState( ANIMCHANNEL_LEGS, "Legs_TurnLeft", 4 );
+			}
+			if ( should_turn_right() ) {
+				animState( ANIMCHANNEL_LEGS, "Legs_TurnRight", 4 );
+			}
+		}
+	}
+}
+
+void combined::Legs_Walk() {
+	playCycle( ANIMCHANNEL_LEGS, "walk" );
+	
+	while( AI_FORWARD && !run )	{
+		waitFrame();
+	}
+	
+	if ( AI_FORWARD && run ) {
+		animState( ANIMCHANNEL_LEGS, "Legs_Run", 12 );
+	}
+	animState( ANIMCHANNEL_LEGS, "Legs_Idle", 12 );
+}
+
+void combined::Legs_Run() {
+	playCycle( ANIMCHANNEL_LEGS, "run" );
+	
+	while( AI_FORWARD && run )	{
+		waitFrame();
+	}
+	
+	if ( AI_FORWARD ) {
+		animState( ANIMCHANNEL_LEGS, "Legs_Walk", 12 );
+	}
+	animState( ANIMCHANNEL_LEGS, "Legs_Idle", 12 );
+}
+
+void combined::Legs_TurnLeft() {
+	float turnAmount;
+	
+	turnAmount = getTurnDelta();
+	if ( turnAmount > 110 ) {
+		// do it in two turns
+		turnAmount *= 0.5;
+	}
+
+	playAnim( ANIMCHANNEL_LEGS, "turn_left" );
+	while( !animDone( ANIMCHANNEL_LEGS, 0 ) ) {
+		waitFrame();
+	}
+	
+	playAnim( ANIMCHANNEL_LEGS, "turn_right" );
+	while( !animDone( ANIMCHANNEL_LEGS, 4 ) ) {
+		waitFrame();
+	}
+	
+	animState( ANIMCHANNEL_LEGS, "Legs_Idle", 4 );
+}
+
+void combined::Legs_TurnRight() {
+	float turnAmount;
+	
+	turnAmount = getTurnDelta();
+	if ( turnAmount < -110 ) {
+		// do it in two turns
+		turnAmount *= 0.5;
+	}
+
+	playAnim( ANIMCHANNEL_LEGS, "turn_right" );
+	while( !animDone( ANIMCHANNEL_LEGS, 0 ) ) {
+		waitFrame();
+	}
+	
+	playAnim( ANIMCHANNEL_LEGS, "turn_left" );
+	while( !animDone( ANIMCHANNEL_LEGS, 4 ) ) {
+		waitFrame();
+	}
+
+	animState( ANIMCHANNEL_LEGS, "Legs_Idle", 4 );
+}
+
+/***********************************************************************
+
+	AI
+
+***********************************************************************/
+
+/*
+=====================
+combined::init
+=====================
+*/
+void combined::init() {
+	inCustomAnim = false;
+	run = true;
+	
+	float mod;
+	mod = getIntKey( "head_look" );
+	setBoneMod( mod );
+	
+	setTalkState( TALK_OK );
+
+	self.setKey( "conversationNext", "" );
+	
+	setKey( "wander", "1" );
+	
+	animState( ANIMCHANNEL_TORSO, "Torso_Idle", 0 );
+	animState( ANIMCHANNEL_LEGS, "Legs_Idle", 0 );
+	setState( "state_Idle" );
+}
+
+/*
+=====================
+combined::ignore
+=====================
+*/
+void combined::ignore( entity ignore_ent ) {
+	ignore_enemy = ignore_ent;
+	ignore_enemy_time = sys.getTime() + 2;
+}
+
+/*
+=====================
+combined::checkForEnemy
+=====================
+*/
+boolean	combined::checkForEnemy( float use_fov ) {
+	entity enemy;
+	entity ent;
+
+	enemy = $null_entity;
+	if ( lead_player && $player1.hasEnemies() ) {
+		enemy = closestReachableEnemyOfEntity( $player1 );
+		if ( ( ignore_enemy_time > sys.getTime() ) && ( ignore_enemy == enemy ) ) {
+			enemy = $null_entity;
+		}
+		if ( !enemy ) {
+			enemy = $player1.closestEnemyToPoint( getOrigin() );
+			if ( ( ignore_enemy_time > sys.getTime() ) && ( ignore_enemy == enemy ) ) {
+				enemy = $null_entity;
+			}
+		}
+	}
+	
+	if ( !enemy ) {
+		enemy = findEnemyAI( false );
+		if ( ( ignore_enemy_time > sys.getTime() ) && ( ignore_enemy == enemy ) ) {
+			enemy = $null_entity;
+		}
+	}
+
+	if ( enemy ) {
+		startSound( "snd_sight_enemy", SND_CHANNEL_VOICE, false );
+		setEnemy( enemy );
+        return true;
+	} else {
+		clearEnemy();
+	}
+
+	return false;
+}
+
+
+/*
+=====================
+combined::playCustomCycle
+=====================
+*/
+void combined::playCustomCycle( string animname, float blendTime ) {
+	customAnim = animname;
+	animState( ANIMCHANNEL_TORSO, "Torso_CustomCycle", blendTime );
+}
+
+/*
+=====================
+combined::playCustomAnim
+=====================
+*/
+void combined::playCustomAnim( string animname, float blendIn, float blendOut ) {
+	customBlendOut = blendOut;
+	customAnim = animname;
+	inCustomAnim = true;
+	animState( ANIMCHANNEL_TORSO, "Torso_CustomAnim", blendIn );
+}
+
+/***********************************************************************
+
+	States
+
+***********************************************************************/
+
+/*
+=====================
+combined::state_Idle
+=====================
+*/
+void combined::state_Idle() {
+	stopMove();
+	setTalkTarget( $null_entity );
+	while( 1 ) {
+		if ( AI_TALK ) {
+			setState( "state_Follow" );
+		}
+		if ( checkForEnemy( true ) ) {
+			setState( "state_Combat" );
+		}
+		waitFrame();
+	}
+}
+/*
+=====================
+combined::state_Combat
+=====================
+*/
+void combined::state_Combat() {
+	float attack_flags;
+
+	eachFrame {
+		faceEnemy();
+		lookAtEnemy( 1 );
+		
+		if ( AI_ENEMY_DEAD || !getEnemy() ) {
+			//startSound( "snd_target_lost", SND_CHANNEL_VOICE, false );
+			AI_ENEMY_DEAD = false;
+			clearEnemy();
+			setState( "state_Idle" );
+		}
+		
+		attack_flags = check_attacks();
+		if ( attack_flags ) {
+			do_attack( attack_flags );
+			continue;
+		}
+		
+		if ( canReachEnemy() ) {
+			combat_chase();
+		} else if ( !find_attack_position() ) {
+			ignore( getEnemy() );
+			checkForEnemy( false );
+		}
+		
+		
+		waitFrame();
+	}
+}
+
+/*
+=====================
+combined::state_Killed
+=====================
+*/
+void combined::state_Killed() {
+	stopMove();
+	animState( ANIMCHANNEL_TORSO, "Torso_Death", 0 );
+	animState( ANIMCHANNEL_LEGS, "Legs_Death", 0 );
+
+	waitAction( "dead" );
+	stopThinking();
+}
+
+/*
+=====================
+combined::state_Follow
+=====================
+*/
+void combined::state_Follow() {
+	entity leader;
+
+	leader = getTalkTarget();
+	if ( !leader ) {
+		leader = $player1;
+	}
+	setTalkTarget( $null_entity );
+	while( 1 ) {
+		lookAt( leader, 0.1 );
+		if ( AI_TALK ) {
+			setState( "state_Idle" );
+		}
+		if ( distanceTo( leader ) > FOLLOW_MAXDIST ) {
+			getCloser();
+		} else {
+			faceEntity( leader );
+		}
+		waitFrame();
+	}
+}
+
+void combined::getCloser() {
+	entity leader;
+
+	leader = getTalkTarget();
+	if ( !leader ) {
+		leader = $player1;
+	}
+	setTalkTarget( $null_entity );
+	run = false;
+	moveToEntity( leader );
+	while( !AI_DEST_UNREACHABLE && !AI_MOVE_DONE && ( distanceTo( leader ) > FOLLOW_MINDIST ) ) {
+		lookAt( leader, 0.1 );
+		if ( distanceTo( leader ) > FOLLOW_RUNDIST ) {
+			run = true;
+		}
+		if ( distanceTo( leader ) < FOLLOW_MAXDIST ) {
+			run = false;
+		}
+		if ( AI_TALK ) {
+			setState( "state_Idle" );
+		}
+			
+		waitFrame();
+	}
+	stopMove();
+}
+
+/*
+=====================
+combined::check_attacks
+=====================
+*/
+float combined::check_attacks() {
+	float attack_flags = 0;
+	
+	if ( canHitEnemyFromAnim( "range_attack" ) ) {
+		attack_flags |= ATTACK_MISSILE;
+	}
+	
+	return attack_flags;
+}
+
+/*
+=====================
+combined::combat_chase
+=====================
+*/
+void combined::combat_chase() {
+	float attack_flags;
+	
+	moveToEnemy();
+	while( !AI_DEST_UNREACHABLE ) {
+		if ( AI_ENEMY_DEAD ) {
+			startSound( "snd_target_lost", SND_CHANNEL_VOICE, false );
+			AI_ENEMY_DEAD = false;
+			clearEnemy();
+			setState( "state_Idle" );
+		}
+
+		if ( AI_MOVE_DONE ) {
+			if ( !enemyPositionValid() ) {
+				clearEnemy();
+				setState( "state_Idle" );
+			}
+			moveToEnemy();
+		}
+		
+		lookAtEnemy( 1 );
+
+		attack_flags = check_attacks();
+		if ( attack_flags ) {
+			do_attack( attack_flags );
+			return;
+		}
+		
+		waitFrame();
+	}
+	stopMove();
+}
+
+/*
+=====================
+combined::find_attack_position
+=====================
+*/
+boolean combined::find_attack_position() {
+	float attack_flags;
+
+	if ( sys.getTime() < nextPositionSearch ) {
+		return false;
+	}
+	nextPositionSearch = sys.getTime() + 1;
+	locateEnemy();
+	moveToAttackPosition( getEnemy(), "range_attack" );
+	if ( AI_DEST_UNREACHABLE ) {
+		return false;
+	}
+
+	while( !AI_MOVE_DONE ) {
+		if ( AI_ENEMY_DEAD ) {
+			startSound( "snd_target_lost", SND_CHANNEL_VOICE, false );
+			AI_ENEMY_DEAD = false;
+			clearEnemy();
+			setState( "state_Idle" );
+		}
+
+		lookAtEnemy( 1 );
+
+		attack_flags = check_attacks();
+		if ( attack_flags ) {
+			do_attack( attack_flags );
+			return true;
+		}
+		
+		waitFrame();
+	}
+	stopMove();
+
+	return true;
+}
+
+/*
+=====================
+combined::do_attack
+=====================
+*/
+void combined::do_attack( float attack_flags ) {
+	if ( attack_flags & ATTACK_MISSILE ) {
+		combat_range();
+	}
+}
+
+/*
+=====================
+combined::combat_range
+=====================
+*/
+void combined::combat_range() {
+	faceEnemy();
+	fire = true;
+	while( canHitEnemyFromAnim( "range_attack" ) ) {
+		waitFrame();
+	}
+	fire = false;
+	waitUntil( !inAnimState( ANIMCHANNEL_TORSO, "Torso_RangeAttack" ) );
+}

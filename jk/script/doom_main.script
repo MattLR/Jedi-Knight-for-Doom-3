@@ -38,7 +38,6 @@ This is the main script that is loaded before any level scripts load.
 #include "script/weapon_concussion.script"
 #include "script/weapon_saber.script"
 #include "script/weapon_thermal.script"
-#include "script/weapon_force.script"
 
 // ai
 #include "script/ai_monster_base.script"
@@ -111,6 +110,10 @@ This is the main script that is loaded before any level scripts load.
 
 // test scripts
 #include "script/ai_follower.script"
+//Dynamix
+#include "script/ai_combined.script"
+#include "script/func_train.script"
+//end Dynamix
 
 void doom_main() {
 	sys.print( "Entering doom_main()\n");
